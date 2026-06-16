@@ -54,12 +54,12 @@ export const translations = {
       viewAll: 'View Full Menu',
       from: 'From',
       items: [
-        { name: 'Butter Chicken', price: '¥1,500', desc: 'Tender chicken in a velvety tomato-cream sauce with aromatic spices. Our signature dish.', tag: 'Chef\'s Recommendation' },
-        { name: 'Cheese Naan', price: '¥480', desc: 'Hand-stretched dough filled with creamy cheese, baked golden in our clay tandoor.', tag: 'Customer Favorite' },
-        { name: 'Soup Curry', price: '¥1,600', desc: 'A Hokkaido-inspired spiced broth curry with seasonal vegetables and your choice of protein.', tag: 'Hokkaido Special' },
-        { name: 'Chicken Tikka', price: '¥1,400', desc: 'Marinated overnight in yogurt and spices, char-grilled to smoky perfection in the tandoor.', tag: 'Tandoor Fresh' },
-        { name: 'Momo', price: '¥900', desc: 'Traditional Nepalese dumplings filled with spiced chicken, served with tomato chutney.', tag: 'Nepalese Classic' },
-        { name: 'Lamb Curry', price: '¥1,700', desc: 'Slow-cooked tender lamb in a rich blend of whole spices — bold, warming, unforgettable.', tag: 'House Special' },
+        { name: 'Butter Chicken Curry', price: '¥1,380', desc: 'Tender chicken in velvety tomato-cream sauce. Our bestselling curry.', tag: 'Popular' },
+        { name: 'Cheese Naan', price: '¥500', desc: 'Hand-stretched dough filled with creamy cheese, baked golden in our tandoor.', tag: 'Customer Favorite' },
+        { name: 'Chicken & Veg Soup Curry', price: '¥1,380', desc: 'Hokkaido-style spiced broth curry with chicken and seasonal vegetables.', tag: 'Hokkaido Special' },
+        { name: 'Chicken Tikka (6pc)', price: '¥880', desc: 'Marinated overnight in yogurt and spices, char-grilled to smoky perfection.', tag: 'Tandoor Fresh' },
+        { name: 'Momo (6pc)', price: '¥780', desc: 'Traditional Nepalese dumplings with spiced filling, served with tomato chutney.', tag: 'Nepalese Classic' },
+        { name: 'Mutton Curry', price: '¥1,280', desc: 'Slow-cooked tender mutton in aromatic whole spices — bold and warming.', tag: 'House Special' },
       ],
     },
     reviews: {
@@ -75,7 +75,7 @@ export const translations = {
       ],
     },
     order: {
-      eyebrow: 'Takeout & Delivery',
+      eyebrow: 'Takeout',
       headline: 'Order Online',
       subheadline: 'Enjoy Nepal Dining from the comfort of your accommodation',
       cta: 'Order Now',
@@ -124,7 +124,7 @@ export const translations = {
       tagline: 'Authentic Nepalese & Indian cuisine in the heart of Hokkaido\'s lavender country.',
       links: 'Quick Links',
       social: 'Follow Us',
-      legal: '© 2025 Nepal Dining. All rights reserved.',
+      legal: '© 2026 Nepal Dining. All rights reserved.',
       address: 'Miyamachi 3-32, Nakafurano, Hokkaido',
     },
     contact: {
@@ -190,12 +190,12 @@ export const translations = {
       viewAll: 'メニュー全品を見る',
       from: '〜から',
       items: [
-        { name: 'バターチキンカレー', price: '¥1,500', desc: '柔らかチキンをクリーミーなトマトソースで煮込んだ当店の看板メニュー。', tag: 'シェフのおすすめ' },
-        { name: 'チーズナン', price: '¥480', desc: 'クリーミーチーズを詰めた手延べ生地をタンドール窯で黄金色に焼き上げます。', tag: '人気No.1' },
-        { name: 'スープカレー', price: '¥1,600', desc: '北海道インスパイアのスパイスブロスカレー。旬の野菜とお好みのタンパク質と共に。', tag: '北海道スペシャル' },
-        { name: 'チキンティッカ', price: '¥1,400', desc: 'ヨーグルトとスパイスで一晩漬け込み、タンドール窯で香ばしく焼き上げます。', tag: 'タンドール焼き' },
-        { name: 'モモ', price: '¥900', desc: '伝統的なネパール餃子。スパイスチキン入りでトマトチャツネを添えて。', tag: 'ネパール伝統料理' },
-        { name: 'ラムカレー', price: '¥1,700', desc: 'ホールスパイスで煮込んだ柔らかラム。力強く、体が温まる逸品。', tag: 'ハウスペシャル' },
+        { name: 'バターチキンカレー', price: '¥1,380', desc: '柔らかチキンをクリーミーなトマトソースで煮込んだ当店の一番人気。', tag: '人気' },
+        { name: 'チーズナン', price: '¥500', desc: 'クリーミーチーズを詰めた手延べ生地をタンドール窯で黄金色に焼き上げます。', tag: '人気No.1' },
+        { name: 'チキン野菜スープカレー', price: '¥1,380', desc: '北海道スタイルのスパイスブロスカレー。チキンと旬の野菜と共に。', tag: '北海道スペシャル' },
+        { name: 'チキンティッカ(6pc)', price: '¥880', desc: 'ヨーグルトとスパイスで一晩漬け込み、タンドール窯で香ばしく焼き上げます。', tag: 'タンドール焼き' },
+        { name: 'モモ(6pc)', price: '¥780', desc: '伝統的なネパール餃子。スパイス入りでトマトチャツネを添えて。', tag: 'ネパール伝統料理' },
+        { name: 'マトンカレー', price: '¥1,280', desc: 'ホールスパイスで煮込んだ柔らかマトン。力強く、体が温まる逸品。', tag: 'ハウスペシャル' },
       ],
     },
     reviews: {
@@ -211,7 +211,7 @@ export const translations = {
       ],
     },
     order: {
-      eyebrow: 'テイクアウト・デリバリー',
+      eyebrow: 'テイクアウト',
       headline: 'オンライン注文',
       subheadline: 'お泊まりのホテルや宿でネパールダイニングをお楽しみください',
       cta: '今すぐ注文する',
@@ -260,7 +260,7 @@ export const translations = {
       tagline: '北海道のラベンダーの里で楽しむ、本格ネパール・インド料理。',
       links: 'クイックリンク',
       social: 'フォローする',
-      legal: '© 2025 Nepal Dining. All rights reserved.',
+      legal: '© 2026 Nepal Dining. All rights reserved.',
       address: '北海道空知郡中富良野町宮町3-32',
     },
     contact: {

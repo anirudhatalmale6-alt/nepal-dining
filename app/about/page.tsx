@@ -24,7 +24,7 @@ export default function AboutPage() {
     <div style={{ paddingTop: 80, minHeight: '100vh', background: '#FFFDF8' }}>
       {/* Hero */}
       <section style={{ position: 'relative', padding: '80px 24px', background: 'linear-gradient(135deg, #1C1A18 0%, #2D2820 100%)', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=1400&q=60)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.15 }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(https://nepaldining.online/wp-content/uploads/2026/06/butter-chicken-curry.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.15 }} />
         <div style={{ position: 'relative', maxWidth: 800, margin: '0 auto', textAlign: 'center' }}>
           <div style={{ fontSize: 12, fontWeight: 700, color: '#D4821A', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 12 }}>{t.about.eyebrow}</div>
           <h1 style={{ fontSize: 'clamp(32px, 5vw, 60px)', fontWeight: 800, color: 'white', fontFamily: 'Georgia, serif', lineHeight: 1.15, marginBottom: 20 }}>{t.about.headline}</h1>
@@ -41,7 +41,7 @@ export default function AboutPage() {
             <p style={{ fontSize: 16, color: '#6B5E4E', lineHeight: 1.8 }}>{t.about.p3}</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-            {['https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=500&q=75','https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=500&q=75','https://images.unsplash.com/photo-1517244683847-7456b63c5969?w=500&q=75','https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&q=75'].map((src, i) => (
+            {['https://nepaldining.online/wp-content/uploads/2026/06/butter-chicken-curry.jpg','https://nepaldining.online/wp-content/uploads/2026/06/momo.jpg','https://nepaldining.online/wp-content/uploads/2026/06/garlic-naan.jpg','https://nepaldining.online/wp-content/uploads/2026/06/chicken-veg-soup-curry.jpg'].map((src, i) => (
               <div key={i} style={{ borderRadius: 12, overflow: 'hidden', aspectRatio: '1' }}>
                 <img src={src} alt="Nepal Dining" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>

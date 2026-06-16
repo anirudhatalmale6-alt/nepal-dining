@@ -9,7 +9,7 @@ const blogPosts = [
     date: { en: 'May 2025', ja: '2025年5月' },
     tag: { en: 'Food', ja: 'グルメ' },
     excerpt: { en: 'Furano has become one of Japan\'s most beloved tourist destinations, known for its spectacular lavender fields and crisp mountain air. But for those in the know, there\'s another reason to make the journey north: the curry.', ja: '富良野は日本で最も人気のある観光地の一つとなり、美しいラベンダー畑と爽やかな山の空気で知られています。しかし、知る人ぞ知る理由がもう一つあります：カレーです。' },
-    img: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=75',
+    img: 'https://nepaldining.online/wp-content/uploads/2026/06/butter-chicken-curry.jpg',
     readTime: '5 min read',
   },
   {
@@ -18,7 +18,7 @@ const blogPosts = [
     date: { en: 'Apr 2025', ja: '2025年4月' },
     tag: { en: 'Travel', ja: '旅行' },
     excerpt: { en: 'Every July, the hills of Furano and Nakafurano transform into an ocean of purple. If you\'re planning your lavender pilgrimage, here\'s everything you need to know about dining in the area — including our top recommendations.', ja: '毎年7月になると、富良野と中富良野の丘が紫色の海に変わります。ラベンダー巡礼を計画しているなら、このエリアでの食事について知っておくべきことを全て紹介します。' },
-    img: 'https://images.unsplash.com/photo-1499678329028-101435549a4e?w=800&q=75',
+    img: 'https://nepaldining.online/wp-content/uploads/2026/06/chicken-veg-soup-curry.jpg',
     readTime: '7 min read',
   },
   {
@@ -27,7 +27,7 @@ const blogPosts = [
     date: { en: 'Mar 2025', ja: '2025年3月' },
     tag: { en: 'Guide', ja: 'ガイド' },
     excerpt: { en: 'Hokkaido is increasingly popular with travelers from Malaysia, Indonesia, and the Middle East. Here\'s our honest guide to finding halal-friendly dining in the island prefecture — and how Nepal Dining fits into your itinerary.', ja: '北海道はマレーシア、インドネシア、中東からの旅行者に人気が高まっています。島の県でハラルフレンドリーな食事を見つけるための正直なガイドをお届けします。' },
-    img: 'https://images.unsplash.com/photo-1564758866811-4780aa13ab84?w=800&q=75',
+    img: 'https://nepaldining.online/wp-content/uploads/2026/06/mix-veg-curry.jpg',
     readTime: '6 min read',
   },
   {
@@ -36,7 +36,7 @@ const blogPosts = [
     date: { en: 'Feb 2025', ja: '2025年2月' },
     tag: { en: 'Food', ja: 'グルメ' },
     excerpt: { en: 'They look similar at first glance — small dumplings, thin dough, filled with meat. But bite into a Nepalese momo and you\'ll immediately understand why our guests say it\'s unlike anything they\'ve ever tasted.', ja: '一見似ています——小さな餃子、薄い生地、肉が詰まっています。しかしネパールのモモを食べると、なぜゲストが「今まで食べたことのない味」と言うかすぐにわかるでしょう。' },
-    img: 'https://images.unsplash.com/photo-1625398407796-82650a8c135f?w=800&q=75',
+    img: 'https://nepaldining.online/wp-content/uploads/2026/06/momo.jpg',
     readTime: '4 min read',
   },
   {
@@ -45,7 +45,7 @@ const blogPosts = [
     date: { en: 'Jan 2025', ja: '2025年1月' },
     tag: { en: 'Travel', ja: '旅行' },
     excerpt: { en: 'Most tourists come to Furano for the summer lavender. Fewer discover that winter Furano — with its ski slopes, pristine snow, and stark beauty — might be even better. And after a day on the mountain, nothing warms you like a bowl of our Soup Curry.', ja: 'ほとんどの観光客は夏のラベンダーを目当てに富良野を訪れます。しかし冬の富良野——スキー場、純白の雪、凛とした美しさ——がさらに素晴らしいことを知る人は少ないです。' },
-    img: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=75',
+    img: 'https://nepaldining.online/wp-content/uploads/2026/06/momo-veg-soup-curry.jpg',
     readTime: '5 min read',
   },
   {
@@ -54,7 +54,7 @@ const blogPosts = [
     date: { en: 'Dec 2024', ja: '2024年12月' },
     tag: { en: 'Food', ja: 'グルメ' },
     excerpt: { en: 'Butter chicken is one of the world\'s great culinary accidents. Born in Delhi in the 1950s, it has since conquered kitchens across the globe. Here in Furano, it has been our most-ordered dish for 15 consecutive years.', ja: 'バターチキンは世界の偉大な料理上の偶然の産物の一つです。1950年代にデリーで生まれ、その後世界中のキッチンを征服しました。ここ富良野では15年連続で最も注文される料理です。' },
-    img: 'https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=800&q=75',
+    img: 'https://nepaldining.online/wp-content/uploads/2026/06/chicken-tikka-masala.jpg',
     readTime: '6 min read',
   },
 ];
