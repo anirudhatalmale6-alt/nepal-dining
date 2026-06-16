@@ -48,6 +48,8 @@ export const translations = {
         { title: 'Fresh Baked Naan', desc: 'Hand-stretched and baked daily in our authentic tandoor clay oven.' },
         { title: 'Authentic Curry', desc: 'Spice blends brought from Nepal — the real thing, not a compromise.' },
         { title: 'Family Friendly', desc: 'Kids\' portions, high chairs, and a relaxed atmosphere for all ages.' },
+        { title: 'Dietary & Allergy Friendly', desc: 'Vegetarian, vegan, and allergy-conscious meal options available upon request.' },
+        { title: 'Free Wi-Fi', desc: 'Stay connected with complimentary high-speed Wi-Fi throughout the restaurant.' },
       ],
     },
     menu: {
@@ -187,6 +189,8 @@ export const translations = {
         { title: '焼きたてナン', desc: '毎日本格タンドール窯で手延べして焼き上げる絶品ナン。' },
         { title: '本格カレー', desc: 'ネパールから直輸入したスパイスブレンドで作る、本物の味。' },
         { title: 'ファミリー向け', desc: 'お子様メニュー、ハイチェア完備。全ての年齢層にリラックスした雰囲気でお楽しみいただけます。' },
+        { title: 'アレルギー対応', desc: 'ベジタリアン、ヴィーガン、アレルギー対応のメニューをご用意しています。お気軽にご相談ください。' },
+        { title: '無料Wi-Fi', desc: '店内全域で高速Wi-Fiを無料でご利用いただけます。' },
       ],
     },
     menu: {

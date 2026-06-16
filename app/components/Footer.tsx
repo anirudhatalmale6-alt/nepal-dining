@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useLang } from '../lib/LanguageContext';
 
 export default function Footer() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   const navLinks = [
     { href: '/', label: t.nav.home },
@@ -80,7 +80,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 style={{ fontSize: 13, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', opacity: 0.6, marginBottom: 16 }}>Contact</h4>
+            <h4 style={{ fontSize: 13, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', opacity: 0.6, marginBottom: 16 }}>{lang === 'ja' ? 'お問い合わせ' : 'Contact'}</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
                 <span style={{ fontSize: 16, marginTop: 1 }}>📍</span>
@@ -101,8 +101,8 @@ export default function Footer() {
 
           {/* CTA */}
           <div>
-            <h4 style={{ fontSize: 13, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', opacity: 0.6, marginBottom: 16 }}>Reserve</h4>
-            <p style={{ fontSize: 14, opacity: 0.85, marginBottom: 20, lineHeight: 1.6 }}>Book your table for the ultimate Himalayan dining experience in Furano.</p>
+            <h4 style={{ fontSize: 13, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', opacity: 0.6, marginBottom: 16 }}>{lang === 'ja' ? '予約' : 'Reserve'}</h4>
+            <p style={{ fontSize: 14, opacity: 0.85, marginBottom: 20, lineHeight: 1.6 }}>{lang === 'ja' ? '富良野で最高のヒマラヤ料理をお楽しみください。テーブルをご予約ください。' : 'Book your table for the ultimate Himalayan dining experience in Furano.'}</p>
             <Link href="/reservation" style={{
               display: 'inline-block', padding: '12px 24px', borderRadius: 24,
               background: 'white', color: '#769a00',

@@ -29,7 +29,7 @@ export default function HomePage() {
   ];
   const tagColors = ["#D4821A", "#769a00", "#4A90E2", "#E67E22", "#8B7BA8", "#C0392B"];
   const times = ["11:30","12:00","12:30","13:00","13:30","17:00","17:30","18:00","18:30","19:00","19:30","20:00","20:30","21:00"];
-  const icons = ["🕌", "🌏", "💬", "🫓", "🍛", "👨‍👩‍👧"];
+  const icons = ["🕌", "🌏", "💬", "🫓", "🍛", "👨‍👩‍👧", "🥜", "📶"];
   const flags: Record<string, string> = { "UK": "🇬🇧", "Japan": "🇯🇵", "Malaysia": "🇲🇾", "USA": "🇺🇸", "イギリス": "🇬🇧", "日本": "🇯🇵", "マレーシア": "🇲🇾", "アメリカ": "🇺🇸" };
   const blogImages = [
     "https://nepaldining.online/wp-content/uploads/2026/06/chicken-rara-curry.jpg",
@@ -146,7 +146,7 @@ export default function HomePage() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 28 }}>
             {t.menu.items.map((item, i) => (
-              <div key={i} className="card-hover" style={{ background: "white", borderRadius: 20, overflow: "hidden", boxShadow: "0 4px 20px rgba(28,26,24,0.08)" }}>
+              <Link key={i} href="/order" className="card-hover" style={{ background: "white", borderRadius: 20, overflow: "hidden", boxShadow: "0 4px 20px rgba(28,26,24,0.08)", textDecoration: "none", display: "block", cursor: "pointer" }}>
                 <div style={{ position: "relative", height: 200, overflow: "hidden" }}>
                   <img src={menuImages[i]} alt={item.name} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                   <div style={{ position: "absolute", top: 12, left: 12, background: tagColors[i], color: "white", fontSize: 11, fontWeight: 700, padding: "4px 10px", borderRadius: 12 }}>{item.tag}</div>
@@ -158,7 +158,7 @@ export default function HomePage() {
                   </div>
                   <p style={{ fontSize: 14, color: "#6B5E4E", lineHeight: 1.7 }}>{item.desc}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -220,8 +220,8 @@ export default function HomePage() {
               <h2 style={{ fontSize: "clamp(26px, 4vw, 44px)", fontWeight: 800, color: "#1C1A18", fontFamily: "Georgia, serif", marginBottom: 20 }}>{t.reservation.headline}</h2>
               <p style={{ fontSize: 16, color: "#6B5E4E", lineHeight: 1.7, marginBottom: 32 }}>{t.reservation.subheadline}</p>
               <div style={{ padding: "24px", background: "white", borderRadius: 16, border: "1px solid rgba(212,130,26,0.1)", marginBottom: 24 }}>
-                <div style={{ fontSize: 13, fontWeight: 700, color: "#D4821A", letterSpacing: "0.05em", marginBottom: 12, textTransform: "uppercase" }}>Business Hours</div>
-                <div style={{ fontSize: 15, color: "#1C1A18", lineHeight: 2 }}>Tue–Sun: 11:30–15:00<br />Tue–Sun: 17:00–21:30<br /><span style={{ color: "#6B5E4E", fontSize: 14 }}>Monday: Closed</span></div>
+                <div style={{ fontSize: 13, fontWeight: 700, color: "#D4821A", letterSpacing: "0.05em", marginBottom: 12, textTransform: "uppercase" }}>{t.access.hours}</div>
+                <div style={{ fontSize: 15, color: "#1C1A18", lineHeight: 2, whiteSpace: "pre-line" }}>{t.access.hoursDetail}</div>
               </div>
               <p style={{ fontSize: 14, color: "#6B5E4E" }}>{t.reservation.alt} <a href="tel:0167-44-2200" style={{ color: "#D4821A", fontWeight: 700, textDecoration: "none" }}>0167-44-2200</a></p>
             </div>

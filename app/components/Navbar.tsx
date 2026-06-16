@@ -28,26 +28,20 @@ export default function Navbar() {
       style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
         transition: 'all 0.3s ease',
-        background: '#F5F0E6',
-        borderBottom: '1px solid rgba(180,160,130,0.25)',
-        boxShadow: scrolled ? '0 2px 12px rgba(28,26,24,0.1)' : '0 1px 4px rgba(28,26,24,0.05)',
+        background: '#C0392B',
+        borderBottom: '1px solid rgba(0,0,0,0.1)',
+        boxShadow: scrolled ? '0 2px 12px rgba(0,0,0,0.15)' : '0 1px 4px rgba(0,0,0,0.08)',
       }}
     >
       <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72, transition: 'height 0.3s ease' }}>
           {/* Logo */}
           <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10 }}>
-            <div style={{
-              padding: '6px 16px', borderRadius: 6,
-              background: '#C0392B',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              flexShrink: 0,
-            }}>
-              <span style={{
-                fontSize: 20, fontWeight: 700, color: 'white',
-                fontFamily: 'Georgia, serif', letterSpacing: '0.02em',
-              }}>Nepal Dining</span>
-            </div>
+            <span style={{
+              fontSize: 28, fontWeight: 800, color: 'white',
+              fontFamily: 'Georgia, serif', letterSpacing: '0.02em',
+              textShadow: '0 1px 3px rgba(0,0,0,0.2)',
+            }}>Nepal Dining</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -55,12 +49,12 @@ export default function Navbar() {
             {links.map(l => (
               <Link key={l.href} href={l.href} style={{
                 padding: '6px 14px', fontSize: 15, fontWeight: 500,
-                color: '#3D3528',
+                color: 'rgba(255,255,255,0.9)',
                 textDecoration: 'none', borderRadius: 6,
                 transition: 'all 0.2s',
               }}
-              onMouseEnter={e => { (e.target as HTMLElement).style.color = '#C0392B'; }}
-              onMouseLeave={e => { (e.target as HTMLElement).style.color = '#3D3528'; }}
+              onMouseEnter={e => { (e.target as HTMLElement).style.color = '#FFD700'; }}
+              onMouseLeave={e => { (e.target as HTMLElement).style.color = 'rgba(255,255,255,0.9)'; }}
               >{l.label}</Link>
             ))}
           </nav>
@@ -71,10 +65,10 @@ export default function Navbar() {
             <button
               onClick={() => setLang(lang === 'en' ? 'ja' : 'en')}
               style={{
-                padding: '5px 12px', borderRadius: 20, border: '1.5px solid #C0392B',
+                padding: '5px 12px', borderRadius: 20, border: '1.5px solid rgba(255,255,255,0.7)',
                 background: 'transparent', cursor: 'pointer', fontSize: 12,
                 fontWeight: 600, letterSpacing: '0.05em',
-                color: '#C0392B',
+                color: 'white',
                 transition: 'all 0.2s',
               }}
             >{lang === 'en' ? '日本語' : 'English'}</button>
@@ -82,9 +76,9 @@ export default function Navbar() {
             {/* Reserve Button */}
             <Link href="/reservation" style={{
               padding: '8px 20px', borderRadius: 24,
-              background: '#C0392B',
-              color: 'white', textDecoration: 'none', fontSize: 13,
-              fontWeight: 600, boxShadow: '0 2px 8px rgba(192,57,43,0.3)',
+              background: 'white',
+              color: '#C0392B', textDecoration: 'none', fontSize: 13,
+              fontWeight: 700, boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
               transition: 'transform 0.2s',
               display: 'inline-block',
             }}
@@ -105,7 +99,7 @@ export default function Navbar() {
               {[0,1,2].map(i => (
                 <span key={i} style={{
                   width: 22, height: 2, borderRadius: 2,
-                  background: '#3D3528',
+                  background: 'white',
                   transition: 'all 0.3s',
                   transform: menuOpen
                     ? i === 0 ? 'rotate(45deg) translate(5px, 5px)'
@@ -123,8 +117,8 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div style={{
-          background: '#F5F0E6',
-          borderTop: '1px solid rgba(180,160,130,0.2)',
+          background: '#a82e23',
+          borderTop: '1px solid rgba(255,255,255,0.15)',
           padding: '16px 24px 24px',
         }}>
           {links.map(l => (
@@ -132,20 +126,20 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               style={{
                 display: 'block', padding: '12px 0', fontSize: 16, fontWeight: 500,
-                color: '#3D3528', textDecoration: 'none',
-                borderBottom: '1px solid rgba(180,160,130,0.15)',
+                color: 'rgba(255,255,255,0.9)', textDecoration: 'none',
+                borderBottom: '1px solid rgba(255,255,255,0.1)',
               }}
             >{l.label}</Link>
           ))}
           <div style={{ marginTop: 16, display: 'flex', gap: 12 }}>
             <Link href="/reservation" onClick={() => setMenuOpen(false)} style={{
               flex: 1, textAlign: 'center', padding: '12px', borderRadius: 24,
-              background: '#C0392B',
-              color: 'white', textDecoration: 'none', fontSize: 14, fontWeight: 600,
+              background: 'white',
+              color: '#C0392B', textDecoration: 'none', fontSize: 14, fontWeight: 600,
             }}>{t.nav.reserveBtn}</Link>
             <Link href="/order" onClick={() => setMenuOpen(false)} style={{
               flex: 1, textAlign: 'center', padding: '12px', borderRadius: 24,
-              border: '2px solid #769a00', color: '#769a00',
+              border: '2px solid white', color: 'white',
               textDecoration: 'none', fontSize: 14, fontWeight: 600,
             }}>{t.nav.orderBtn}</Link>
           </div>
