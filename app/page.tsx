@@ -54,7 +54,7 @@ export default function HomePage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
-    emailjs.send('service_nepaldining', 'template_reservation', {
+    const templateParams = {
       name: form.name,
       phone: form.phone,
       email: form.email || 'Not provided',
@@ -62,7 +62,11 @@ export default function HomePage() {
       time: form.time,
       guests: form.guests,
       notes: form.notes || 'None',
-    }).then(() => {
+    };
+    Promise.all([
+      emailjs.send('service_n95apsv', 'template_recg9pp', templateParams),
+      form.email ? emailjs.send('service_n95apsv', 'template_15ng35d', templateParams) : Promise.resolve(),
+    ]).then(() => {
       setSubmitted(true);
       setSending(false);
       setForm({ name: "", phone: "", email: "", date: "", time: "12:00", guests: "2", notes: "" });
