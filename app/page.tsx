@@ -58,7 +58,7 @@ export default function HomePage() {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(28,26,24,0.75) 0%, rgba(212,130,26,0.2) 50%, rgba(28,26,24,0.65) 100%)" }} />
         <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 4, background: "linear-gradient(90deg, #D4821A, #F0A830, #769a00)" }} />
         <div style={{ position: "relative", zIndex: 2, height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 24px" }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(212,130,26,0.15)", backdropFilter: "blur(8px)", border: "1px solid rgba(212,130,26,0.4)", borderRadius: 24, padding: "6px 18px", marginBottom: 28 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(212,130,26,0.15)", backdropFilter: "blur(8px)", border: "1px solid rgba(212,130,26,0.4)", borderRadius: 24, padding: "6px 18px", marginBottom: 28, marginTop: 40 }}>
             <span style={{ fontSize: 14, color: "#F0A830" }}>★</span>
             <span style={{ fontSize: 13, color: "rgba(255,255,255,0.9)", letterSpacing: "0.04em" }}>{t.hero.badge}</span>
           </div>
@@ -84,7 +84,7 @@ export default function HomePage() {
                 ))}
               </div>
               <div style={{ position: "absolute", bottom: -20, right: -20, background: "linear-gradient(135deg, #D4821A, #F0A830)", borderRadius: 16, padding: "16px 20px", textAlign: "center", boxShadow: "0 12px 32px rgba(212,130,26,0.4)", color: "white" }}>
-                <div style={{ fontSize: 28, fontWeight: 800, lineHeight: 1, fontFamily: "Georgia, serif" }}>4.8</div>
+                <div style={{ fontSize: 28, fontWeight: 800, lineHeight: 1, fontFamily: "Georgia, serif" }}>4.9</div>
                 <div style={{ fontSize: 14 }}>★★★★★</div>
                 <div style={{ fontSize: 10, opacity: 0.85 }}>Google Reviews</div>
               </div>
@@ -175,7 +175,7 @@ export default function HomePage() {
             </div>
             <h2 style={{ fontSize: "clamp(26px, 4vw, 44px)", fontWeight: 800, color: "white", fontFamily: "Georgia, serif", marginBottom: 20 }}>{t.reviews.headline}</h2>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 16, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 20, padding: "12px 28px" }}>
-              <div style={{ fontSize: 36, fontWeight: 800, color: "#F0A830", fontFamily: "Georgia, serif" }}>4.8</div>
+              <div style={{ fontSize: 36, fontWeight: 800, color: "#F0A830", fontFamily: "Georgia, serif" }}>4.9</div>
               <div>
                 <div style={{ color: "#F0A830", fontSize: 18 }}>★★★★★</div>
                 <div style={{ fontSize: 13, color: "rgba(255,255,255,0.6)" }}>{t.reviews.ratingCount}</div>

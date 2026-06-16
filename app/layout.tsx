@@ -43,7 +43,7 @@ const structuredData = {
   ],
   "servesCuisine": ["Nepalese","Indian"],
   "priceRange": "¥¥",
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "200", "bestRating": "5" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "200", "bestRating": "5" },
   "menu": "https://nepaldining.online/menu",
   "acceptsReservations": true
 };

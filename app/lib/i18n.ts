@@ -33,9 +33,9 @@ export const translations = {
       p6: 'We warmly invite you to experience the perfect harmony of Furano\'s fresh local produce and the authentic tastes of Nepal and India at Nepal Dining.',
       stat1: '6+',
       stat1label: 'Years Serving Furano',
-      stat2: '4.8★',
+      stat2: '4.9★',
       stat2label: 'Google Rating',
-      stat3: '50+',
+      stat3: '60+',
       stat3label: 'Authentic Dishes',
     },
     features: {
@@ -70,7 +70,7 @@ export const translations = {
     reviews: {
       eyebrow: 'Guest Reviews',
       headline: 'Loved by Furano Visitors',
-      rating: '4.8 out of 5',
+      rating: '4.9 out of 5',
       ratingCount: 'Based on 200+ Google Reviews',
       items: [
         { name: 'Sarah M.', country: 'UK', text: 'Best curry I\'ve had in Japan! The naan was perfectly fluffy and the butter chicken was absolutely divine. We came back twice during our Furano trip.' },
@@ -174,9 +174,9 @@ export const translations = {
       p6: '富良野の新鮮な地元食材とネパール・インドの本格的な味わいの完璧なハーモニーを、ネパールダイニングでぜひご体験ください。',
       stat1: '6年以上',
       stat1label: '富良野での歴史',
-      stat2: '4.8★',
+      stat2: '4.9★',
       stat2label: 'Googleレビュー評価',
-      stat3: '50種類以上',
+      stat3: '60種類以上',
       stat3label: '本格メニュー',
     },
     features: {
@@ -211,7 +211,7 @@ export const translations = {
     reviews: {
       eyebrow: 'お客様の声',
       headline: '富良野を訪れる方々に愛されています',
-      rating: '5点中4.8点',
+      rating: '5点中4.9点',
       ratingCount: 'Googleレビュー200件以上より',
       items: [
         { name: 'サラ M.', country: 'イギリス', text: '日本で食べた中で最高のカレー！ナンはふんわり完璧で、バターチキンは絶品でした。富良野旅行中に2回も来てしまいました。' },
