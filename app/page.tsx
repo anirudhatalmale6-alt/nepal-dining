@@ -90,11 +90,17 @@ export default function HomePage() {
               </div>
             </div>
             <div>
-              <SectionEyebrow>{t.about.eyebrow}</SectionEyebrow>
+              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
+                <div className="spice-divider" />
+                <span style={{ fontSize: 16, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#D4821A" }}>{t.about.eyebrow}</span>
+              </div>
               <h2 style={{ fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 800, color: "#1C1A18", fontFamily: "Georgia, serif", lineHeight: 1.2, marginBottom: 20 }}>{t.about.headline}</h2>
               <p style={{ fontSize: 16, color: "#6B5E4E", lineHeight: 1.8, marginBottom: 16 }}>{t.about.p1}</p>
               <p style={{ fontSize: 16, color: "#6B5E4E", lineHeight: 1.8, marginBottom: 16 }}>{t.about.p2}</p>
-              <p style={{ fontSize: 16, color: "#6B5E4E", lineHeight: 1.8, marginBottom: 40 }}>{t.about.p3}</p>
+              <p style={{ fontSize: 16, color: "#6B5E4E", lineHeight: 1.8, marginBottom: 16 }}>{t.about.p3}</p>
+              {t.about.p4 && <p style={{ fontSize: 16, color: "#6B5E4E", lineHeight: 1.8, marginBottom: 16 }}>{t.about.p4}</p>}
+              {t.about.p5 && <p style={{ fontSize: 16, color: "#6B5E4E", lineHeight: 1.8, marginBottom: 16 }}>{t.about.p5}</p>}
+              {t.about.p6 && <p style={{ fontSize: 16, color: "#6B5E4E", lineHeight: 1.8, marginBottom: 40 }}>{t.about.p6}</p>}
               <div style={{ display: "flex", gap: 32, flexWrap: "wrap" }}>
                 {[{ val: t.about.stat1, label: t.about.stat1label }, { val: t.about.stat2, label: t.about.stat2label }, { val: t.about.stat3, label: t.about.stat3label }].map((s, i) => (
                   <div key={i}>

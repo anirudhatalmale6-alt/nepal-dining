@@ -113,9 +113,9 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div style={{ borderTop: '1px solid rgba(255,255,255,0.15)', padding: '16px 24px', textAlign: 'center' }}>
-        <p style={{ fontSize: 13, opacity: 0.7, margin: 0 }}>{t.footer.legal}</p>
+      {/* Bottom bar - red like WordPress */}
+      <div style={{ background: '#C0392B', padding: '16px 24px', textAlign: 'center' }}>
+        <p style={{ fontSize: 13, color: 'white', margin: 0 }}>{t.footer.legal}</p>
       </div>
     </footer>
   );
