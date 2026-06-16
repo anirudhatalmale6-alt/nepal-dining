@@ -27,7 +27,7 @@ const structuredData = {
   "alternateName": "ネパールダイニング",
   "description": "Authentic Nepalese and Indian restaurant in Nakafurano, Hokkaido. Fresh baked naan, butter chicken, soup curry, momo. Halal-friendly.",
   "url": "https://nepaldining.online",
-  "telephone": "+81-167-44-2200",
+  "telephone": "+81-167-44-2444",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Miyamachi 3-32",
@@ -43,7 +43,7 @@ const structuredData = {
   ],
   "servesCuisine": ["Nepalese","Indian"],
   "priceRange": "¥¥",
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "200", "bestRating": "5" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "975", "bestRating": "5" },
   "menu": "https://nepaldining.online/menu",
   "acceptsReservations": true
 };

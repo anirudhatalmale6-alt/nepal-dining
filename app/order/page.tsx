@@ -77,7 +77,7 @@ export default function OrderPage() {
     e.preventDefault();
     if (cart.length === 0) return;
     setOrderPlaced(true);
-    window.location.href = 'tel:0167442200';
+    window.location.href = 'tel:0167442444';
   };
 
   return (
@@ -157,13 +157,13 @@ export default function OrderPage() {
               <p style={{ fontSize: 16, color: '#6B5E4E', lineHeight: 1.6, marginBottom: 20 }}>
                 Please call to confirm your order:
               </p>
-              <a href="tel:0167442200" style={{
+              <a href="tel:0167442444" style={{
                 display: 'inline-block', padding: '14px 32px', borderRadius: 14,
                 background: 'linear-gradient(135deg, #D4821A, #F0A830)', color: 'white',
                 fontSize: 20, fontWeight: 800, textDecoration: 'none', letterSpacing: '0.02em',
                 boxShadow: '0 8px 24px rgba(212,130,26,0.35)', marginBottom: 24,
               }}>
-                0167-44-2200
+                0167-44-2444
               </a>
               <div style={{ background: '#FDF8F0', borderRadius: 16, padding: '20px', marginBottom: 24, textAlign: 'left' }}>
                 {cart.map(item => (
@@ -247,14 +247,14 @@ export default function OrderPage() {
                       Place Order — ¥{total.toLocaleString()}
                     </button>
                     <p style={{ fontSize: 12, color: '#C4B5A0', textAlign: 'center', marginTop: 10 }}>
-                      You will be prompted to call 0167-44-2200 to confirm
+                      You will be prompted to call 0167-44-2444 to confirm
                     </p>
                   </form>
                 </>
               )}
 
               <p style={{ fontSize: 13, color: '#C4B5A0', textAlign: 'center', marginTop: 16 }}>
-                Or call us directly: <a href="tel:0167442200" style={{ color: '#D4821A', fontWeight: 600, textDecoration: 'none' }}>0167-44-2200</a>
+                Or call us directly: <a href="tel:0167442444" style={{ color: '#D4821A', fontWeight: 600, textDecoration: 'none' }}>0167-44-2444</a>
               </p>
             </div>
           )}

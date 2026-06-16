@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLang } from "./lib/LanguageContext";
+import emailjs from '@emailjs/browser';
 
 function SectionEyebrow({ children }: { children: React.ReactNode }) {
   return (
@@ -38,16 +39,38 @@ export default function HomePage() {
   ];
   const infoItems = [
     { icon: "📍", label: t.access.addressLabel, value: t.access.address },
-    { icon: "📞", label: t.access.phoneLabel, value: t.access.phone, link: "tel:0167442200" },
+    { icon: "📞", label: t.access.phoneLabel, value: t.access.phone, link: "tel:0167442444" },
     { icon: "🕐", label: t.access.hours, value: t.access.hoursDetail },
     { icon: "🚗", label: t.access.parking, value: t.access.parkingDetail },
     { icon: "🚃", label: t.access.transport, value: t.access.transportDetail },
   ];
 
+  const [sending, setSending] = useState(false);
+
+  useEffect(() => {
+    emailjs.init('aC1Maewluzfg6lM3L');
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
+    setSending(true);
+    emailjs.send('service_nepaldining', 'template_reservation', {
+      name: form.name,
+      phone: form.phone,
+      email: form.email || 'Not provided',
+      date: form.date,
+      time: form.time,
+      guests: form.guests,
+      notes: form.notes || 'None',
+    }).then(() => {
+      setSubmitted(true);
+      setSending(false);
+      setForm({ name: "", phone: "", email: "", date: "", time: "12:00", guests: "2", notes: "" });
+      setTimeout(() => setSubmitted(false), 5000);
+    }).catch(() => {
+      setSending(false);
+      alert('Reservation request failed. Please call 0167-44-2444 directly.');
+    });
   };
 
   return (
@@ -223,7 +246,7 @@ export default function HomePage() {
                 <div style={{ fontSize: 13, fontWeight: 700, color: "#D4821A", letterSpacing: "0.05em", marginBottom: 12, textTransform: "uppercase" }}>{t.access.hours}</div>
                 <div style={{ fontSize: 15, color: "#1C1A18", lineHeight: 2, whiteSpace: "pre-line" }}>{t.access.hoursDetail}</div>
               </div>
-              <p style={{ fontSize: 14, color: "#6B5E4E" }}>{t.reservation.alt} <a href="tel:0167-44-2200" style={{ color: "#D4821A", fontWeight: 700, textDecoration: "none" }}>0167-44-2200</a></p>
+              <p style={{ fontSize: 14, color: "#6B5E4E" }}>{t.reservation.alt} <a href="tel:0167-44-2444" style={{ color: "#D4821A", fontWeight: 700, textDecoration: "none" }}>0167-44-2444</a></p>
             </div>
             <div style={{ background: "white", borderRadius: 24, padding: "40px", boxShadow: "0 20px 60px rgba(28,26,24,0.1)", border: "1px solid rgba(212,130,26,0.08)" }}>
               {submitted ? (

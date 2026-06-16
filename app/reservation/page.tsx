@@ -50,7 +50,7 @@ export default function ReservationPage() {
             <div style={{ background: 'linear-gradient(135deg, #D4821A, #F0A830)', borderRadius: 20, padding: '24px', textAlign: 'center', color: 'white' }}>
               <div style={{ fontSize: 28, marginBottom: 8 }}>📞</div>
               <p style={{ fontSize: 14, opacity: 0.9, marginBottom: 8 }}>Prefer to call? We speak Japanese & English.</p>
-              <a href="tel:0167-44-2200" style={{ fontSize: 22, fontWeight: 800, color: 'white', textDecoration: 'none' }}>0167-44-2200</a>
+              <a href="tel:0167-44-2444" style={{ fontSize: 22, fontWeight: 800, color: 'white', textDecoration: 'none' }}>0167-44-2444</a>
             </div>
           </div>
 

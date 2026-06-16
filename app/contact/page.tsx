@@ -70,8 +70,8 @@ export default function ContactPage() {
                     </svg>
                   ),
                   label: lang === 'en' ? 'Phone' : '電話番号',
-                  value: '0167-44-2200',
-                  link: 'tel:0167442200',
+                  value: '0167-44-2444',
+                  link: 'tel:0167442444',
                 },
                 {
                   icon: (
@@ -243,8 +243,8 @@ export default function ContactPage() {
 
                   <p className="text-xs text-center text-[#9B8C7D]">
                     {lang === 'en'
-                      ? 'For faster response, you can also call us at 0167-44-2200'
-                      : 'お急ぎの場合は、お電話（0167-44-2200）にてご連絡ください'}
+                      ? 'For faster response, you can also call us at 0167-44-2444'
+                      : 'お急ぎの場合は、お電話（0167-44-2444）にてご連絡ください'}
                   </p>
                 </form>
               )}

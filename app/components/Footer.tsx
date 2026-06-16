@@ -88,7 +88,7 @@ export default function Footer() {
               </div>
               <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
                 <span style={{ fontSize: 16 }}>📞</span>
-                <a href="tel:0167-44-2200" style={{ fontSize: 14, color: 'white', textDecoration: 'none', fontWeight: 600 }}>0167-44-2200</a>
+                <a href="tel:0167-44-2444" style={{ fontSize: 14, color: 'white', textDecoration: 'none', fontWeight: 600 }}>0167-44-2444</a>
               </div>
               <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
                 <span style={{ fontSize: 16, marginTop: 1 }}>🕐</span>

@@ -133,8 +133,8 @@ export default function AccessPage() {
                     <h3 className="font-semibold text-[#1C1A18] mb-1">
                       {lang === 'en' ? 'Phone' : '電話番号'}
                     </h3>
-                    <a href="tel:0167442200" className="text-2xl font-bold text-[#D4821A] hover:text-[#F0A830] transition-colors">
-                      0167-44-2200
+                    <a href="tel:0167442444" className="text-2xl font-bold text-[#D4821A] hover:text-[#F0A830] transition-colors">
+                      0167-44-2444
                     </a>
                     <p className="text-sm text-[#6B5E4E] mt-1">
                       {lang === 'en' ? 'Reservations & Enquiries' : 'ご予約・お問い合わせ'}
@@ -224,7 +224,7 @@ export default function AccessPage() {
               className="px-8 py-4 bg-white text-[#D4821A] rounded-full font-semibold hover:bg-[#FDF8F0] transition-colors">
               {lang === 'en' ? 'Reserve a Table' : 'テーブルを予約する'}
             </Link>
-            <a href="tel:0167442200"
+            <a href="tel:0167442444"
               className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white/10 transition-colors">
               {lang === 'en' ? 'Call Us' : '電話で問い合わせ'}
             </a>
