@@ -1,17 +1,44 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import { useLang } from "../lib/LanguageContext";
 import Link from 'next/link';
 
 export default function ContactPage() {
   const { lang } = useLang();
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
+
+  useEffect(() => { emailjs.init('aC1Maewluzfg6lM3L'); }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    // Reuses the reservation template until a dedicated contact template exists,
+    // so the enquiry text rides in on the fields that template already renders.
+    const params = {
+      name: form.name,
+      email: form.email || 'Not provided',
+      phone: form.phone || 'Not provided',
+      date: 'Contact enquiry',
+      time: '-',
+      guest: '-', guests: '-',
+      adult: '-', child: '-',
+      dietary: '-', allergies: '-',
+      note: `[${form.subject || 'General enquiry'}]\n\n${form.message}`,
+      notes: `[${form.subject || 'General enquiry'}]\n\n${form.message}`,
+    };
+    emailjs.send('service_n95apsv', 'template_recg9pp', params)
+      .then(() => {
+        setSubmitted(true);
+        setForm({ name: '', email: '', phone: '', subject: '', message: '' });
+      })
+      .catch(() => alert(lang === 'en'
+        ? 'Message could not be sent. Please call 0167-44-2444.'
+        : '送信できませんでした。0167-44-2444 までお電話ください。'))
+      .finally(() => setSending(false));
   };
 
   const inputClass = "w-full px-4 py-3 rounded-xl border border-[#E8D5B7] bg-white focus:outline-none focus:ring-2 focus:ring-[#D4821A]/30 focus:border-[#D4821A] transition-all text-[#1C1A18] placeholder-[#9B8C7D]";
@@ -245,9 +272,12 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full py-4 bg-gradient-to-r from-[#D4821A] to-[#F0A830] text-white rounded-xl font-semibold text-lg hover:opacity-90 transition-all hover:shadow-lg hover:shadow-[#D4821A]/30 active:scale-[0.99]"
+                    disabled={sending}
+                    className="w-full py-4 bg-gradient-to-r from-[#D4821A] to-[#F0A830] text-white rounded-xl font-semibold text-lg hover:opacity-90 transition-all hover:shadow-lg hover:shadow-[#D4821A]/30 active:scale-[0.99] disabled:opacity-70 disabled:cursor-wait"
                   >
-                    {lang === 'en' ? 'Send Message' : 'メッセージを送信する'}
+                    {sending
+                      ? (lang === 'en' ? 'Sending…' : '送信中…')
+                      : (lang === 'en' ? 'Send Message' : 'メッセージを送信する')}
                   </button>
 
                   <p className="text-xs text-center text-[#9B8C7D]">

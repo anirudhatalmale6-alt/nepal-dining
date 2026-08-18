@@ -1,46 +1,10 @@
 'use client';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
 import { useLang } from '../lib/LanguageContext';
-import emailjs from '@emailjs/browser';
+import ReservationForm from '../components/ReservationForm';
 
 export default function AboutPage() {
   const { t, lang } = useLang();
-  const [form, setForm] = useState({ name: "", phone: "", email: "", date: "", time: "12:00", guests: "2", notes: "" });
-  const [submitted, setSubmitted] = useState(false);
-  const [sending, setSending] = useState(false);
-
-  useEffect(() => {
-    emailjs.init('aC1Maewluzfg6lM3L');
-  }, []);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSending(true);
-    const templateParams = {
-      name: form.name,
-      phone: form.phone,
-      email: form.email || 'Not provided',
-      date: form.date,
-      time: form.time,
-      guests: form.guests,
-      notes: form.notes || 'None',
-    };
-    Promise.all([
-      emailjs.send('service_n95apsv', 'template_recg9pp', templateParams),
-      form.email ? emailjs.send('service_n95apsv', 'template_15ng35d', templateParams) : Promise.resolve(),
-    ]).then(() => {
-      setSubmitted(true);
-      setSending(false);
-      setForm({ name: "", phone: "", email: "", date: "", time: "12:00", guests: "2", notes: "" });
-      setTimeout(() => setSubmitted(false), 5000);
-    }).catch(() => {
-      setSending(false);
-      alert('Reservation request failed. Please call 0167-44-2444 directly.');
-    });
-  };
-
-  const times = ["11:00","11:30","12:00","12:30","13:00","13:30","14:00","14:30","17:00","17:30","18:00","18:30","19:00","19:30","20:00","20:30"];
 
   const teamMembers = [
     {
@@ -346,52 +310,7 @@ export default function AboutPage() {
               <p style={{ fontSize: 14, color: '#6B5E4E' }}>{t.reservation.alt} <a href="tel:0167-44-2444" style={{ color: '#D4821A', fontWeight: 700, textDecoration: 'none' }}>0167-44-2444</a></p>
             </div>
             <div style={{ background: 'white', borderRadius: 24, padding: '40px', boxShadow: '0 20px 60px rgba(28,26,24,0.1)', border: '1px solid rgba(212,130,26,0.08)' }}>
-              {submitted ? (
-                <div style={{ textAlign: 'center', padding: '40px 0' }}>
-                  <div style={{ fontSize: 48, marginBottom: 16 }}>✅</div>
-                  <h3 style={{ fontSize: 20, fontWeight: 700, color: '#1C1A18' }}>{t.reservation.success}</h3>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit}>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>
-                    <div style={{ gridColumn: '1 / -1' }}>
-                      <label style={{ fontSize: 13, fontWeight: 600, color: '#1C1A18', display: 'block', marginBottom: 6 }}>{t.reservation.name} *</label>
-                      <input type="text" required value={form.name} onChange={e => setForm(p => ({ ...p, name: e.target.value }))} style={{ width: '100%', padding: '12px 16px', borderRadius: 10, border: '1.5px solid #E8E0D8', fontSize: 15 }} />
-                    </div>
-                    <div>
-                      <label style={{ fontSize: 13, fontWeight: 600, color: '#1C1A18', display: 'block', marginBottom: 6 }}>{t.reservation.phone} *</label>
-                      <input type="tel" required value={form.phone} onChange={e => setForm(p => ({ ...p, phone: e.target.value }))} style={{ width: '100%', padding: '12px 16px', borderRadius: 10, border: '1.5px solid #E8E0D8', fontSize: 15 }} />
-                    </div>
-                    <div>
-                      <label style={{ fontSize: 13, fontWeight: 600, color: '#1C1A18', display: 'block', marginBottom: 6 }}>{t.reservation.email}</label>
-                      <input type="email" value={form.email} onChange={e => setForm(p => ({ ...p, email: e.target.value }))} style={{ width: '100%', padding: '12px 16px', borderRadius: 10, border: '1.5px solid #E8E0D8', fontSize: 15 }} />
-                    </div>
-                    <div>
-                      <label style={{ fontSize: 13, fontWeight: 600, color: '#1C1A18', display: 'block', marginBottom: 6 }}>{t.reservation.date} *</label>
-                      <input type="date" required value={form.date} onChange={e => setForm(p => ({ ...p, date: e.target.value }))} style={{ width: '100%', padding: '12px 16px', borderRadius: 10, border: '1.5px solid #E8E0D8', fontSize: 15 }} />
-                    </div>
-                    <div>
-                      <label style={{ fontSize: 13, fontWeight: 600, color: '#1C1A18', display: 'block', marginBottom: 6 }}>{t.reservation.time} *</label>
-                      <select value={form.time} onChange={e => setForm(p => ({ ...p, time: e.target.value }))} style={{ width: '100%', padding: '12px 16px', borderRadius: 10, border: '1.5px solid #E8E0D8', fontSize: 15, background: 'white' }}>
-                        {times.map(ti => <option key={ti} value={ti}>{ti}</option>)}
-                      </select>
-                    </div>
-                    <div>
-                      <label style={{ fontSize: 13, fontWeight: 600, color: '#1C1A18', display: 'block', marginBottom: 6 }}>{t.reservation.guests} *</label>
-                      <select value={form.guests} onChange={e => setForm(p => ({ ...p, guests: e.target.value }))} style={{ width: '100%', padding: '12px 16px', borderRadius: 10, border: '1.5px solid #E8E0D8', fontSize: 15, background: 'white' }}>
-                        {[1,2,3,4,5,6,7,8].map(n => <option key={n} value={n}>{n}</option>)}
-                      </select>
-                    </div>
-                    <div style={{ gridColumn: '1 / -1' }}>
-                      <label style={{ fontSize: 13, fontWeight: 600, color: '#1C1A18', display: 'block', marginBottom: 6 }}>{t.reservation.notes}</label>
-                      <textarea value={form.notes} onChange={e => setForm(p => ({ ...p, notes: e.target.value }))} rows={3} style={{ width: '100%', padding: '12px 16px', borderRadius: 10, border: '1.5px solid #E8E0D8', fontSize: 15, resize: 'vertical', fontFamily: 'inherit' }} />
-                    </div>
-                  </div>
-                  <button type="submit" disabled={sending} style={{ width: '100%', padding: '16px', borderRadius: 14, background: sending ? '#ccc' : 'linear-gradient(135deg, #D4821A, #F0A830)', color: 'white', border: 'none', fontSize: 16, fontWeight: 700, cursor: sending ? 'not-allowed' : 'pointer', boxShadow: '0 8px 24px rgba(212,130,26,0.35)' }}>
-                    {sending ? (lang === 'ja' ? '送信中...' : 'Sending...') : `🍽 ${t.reservation.submit}`}
-                  </button>
-                </form>
-              )}
+              <ReservationForm />
             </div>
           </div>
         </div>
