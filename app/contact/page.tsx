@@ -1,9 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useLang } from "../lib/LanguageContext";
-import { ACTIVE } from '../lib/emailjs';
+import { CONTACT } from '../lib/emailjs';
 import Link from 'next/link';
 
 export default function ContactPage() {
@@ -12,7 +12,8 @@ export default function ContactPage() {
   const [sending, setSending] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
 
-  useEffect(() => { emailjs.init(ACTIVE.publicKey); }, []);
+  // Key passed per-send rather than via emailjs.init() — see ReservationForm.
+  const emailjsOpts = { publicKey: CONTACT.publicKey };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -53,11 +54,11 @@ export default function ContactPage() {
     };
 
     try {
-      await emailjs.send(ACTIVE.service, ACTIVE.tplContactAdmin, params);
-      // Autoreply only if the active account actually has a contact template
-      // for it — the original account does not.
-      if (ACTIVE.tplContactGuest && form.email) {
-        await emailjs.send(ACTIVE.service, ACTIVE.tplContactGuest, params);
+      await emailjs.send(CONTACT.service, CONTACT.tplAdmin, params, emailjsOpts);
+      // Autoreply only when the contact account has a spare template slot for
+      // one — while falling back to the reservation account, it does not.
+      if (CONTACT.tplGuest && form.email) {
+        await emailjs.send(CONTACT.service, CONTACT.tplGuest, params, emailjsOpts);
       }
     } catch {
       /* notification only — the stored copy already succeeded */

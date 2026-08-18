@@ -2,12 +2,12 @@
 import { useState, useEffect, useMemo } from 'react';
 import emailjs from '@emailjs/browser';
 import { useLang } from '../lib/LanguageContext';
-import { ACTIVE } from '../lib/emailjs';
+import { RESERVATION } from '../lib/emailjs';
 
-const EMAILJS_PUBLIC_KEY = ACTIVE.publicKey;
-const EMAILJS_SERVICE = ACTIVE.service;
-const EMAILJS_TPL_ADMIN = ACTIVE.tplReservationAdmin;
-const EMAILJS_TPL_CUSTOMER = ACTIVE.tplReservationGuest;
+const EMAILJS_PUBLIC_KEY = RESERVATION.publicKey;
+const EMAILJS_SERVICE = RESERVATION.service;
+const EMAILJS_TPL_ADMIN = RESERVATION.tplAdmin;
+const EMAILJS_TPL_CUSTOMER = RESERVATION.tplGuest;
 const WHATSAPP_NUMBER = '819085931555';
 const PHONE = '0167-44-2444';
 
@@ -39,7 +39,10 @@ export default function ReservationForm() {
   const [sending, setSending] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  useEffect(() => { emailjs.init(EMAILJS_PUBLIC_KEY); }, []);
+  // The key is passed per-send instead of via emailjs.init(). Reservation and
+  // contact are on different EmailJS accounts, and init() sets one global key —
+  // under client-side navigation whichever page mounted last would win.
+  const EMAILJS_OPTS = { publicKey: EMAILJS_PUBLIC_KEY };
 
   // Block past dates — computed on the client so the static HTML stays stable.
   const [minDate, setMinDate] = useState('');
@@ -99,8 +102,10 @@ export default function ReservationForm() {
       note: form.note || 'None', notes: form.note || 'None',
     };
 
-    emailjs.send(EMAILJS_SERVICE, EMAILJS_TPL_ADMIN, params)
-      .then(() => (form.email ? emailjs.send(EMAILJS_SERVICE, EMAILJS_TPL_CUSTOMER, params) : undefined))
+    emailjs.send(EMAILJS_SERVICE, EMAILJS_TPL_ADMIN, params, EMAILJS_OPTS)
+      .then(() => (form.email && EMAILJS_TPL_CUSTOMER
+        ? emailjs.send(EMAILJS_SERVICE, EMAILJS_TPL_CUSTOMER, params, EMAILJS_OPTS)
+        : undefined))
       .then(() => {
         setSubmitted(true);
         setForm(empty);
