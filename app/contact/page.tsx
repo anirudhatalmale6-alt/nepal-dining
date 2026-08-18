@@ -13,32 +13,52 @@ export default function ContactPage() {
 
   useEffect(() => { emailjs.init('aC1Maewluzfg6lM3L'); }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
+
+    // The server copy is what actually matters — it lands in the admin panel and
+    // cannot be lost to a mail filter. EmailJS is a best-effort notification on top.
+    let stored = false;
+    try {
+      const res = await fetch('/api/contact.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      stored = res.ok && (await res.json()).ok === true;
+    } catch {
+      stored = false;
+    }
+
     // Reuses the reservation template until a dedicated contact template exists,
     // so the enquiry text rides in on the fields that template already renders.
-    const params = {
-      name: form.name,
-      email: form.email || 'Not provided',
-      phone: form.phone || 'Not provided',
-      date: 'Contact enquiry',
-      time: '-',
-      guest: '-', guests: '-',
-      adult: '-', child: '-',
-      dietary: '-', allergies: '-',
-      note: `[${form.subject || 'General enquiry'}]\n\n${form.message}`,
-      notes: `[${form.subject || 'General enquiry'}]\n\n${form.message}`,
-    };
-    emailjs.send('service_n95apsv', 'template_recg9pp', params)
-      .then(() => {
-        setSubmitted(true);
-        setForm({ name: '', email: '', phone: '', subject: '', message: '' });
-      })
-      .catch(() => alert(lang === 'en'
+    try {
+      await emailjs.send('service_n95apsv', 'template_recg9pp', {
+        name: form.name,
+        email: form.email || 'Not provided',
+        phone: form.phone || 'Not provided',
+        date: 'Contact enquiry',
+        time: '-',
+        guest: '-', guests: '-',
+        adult: '-', child: '-',
+        dietary: '-', allergies: '-',
+        note: `[${form.subject || 'General enquiry'}]\n\n${form.message}`,
+        notes: `[${form.subject || 'General enquiry'}]\n\n${form.message}`,
+      });
+    } catch {
+      /* notification only — the stored copy already succeeded */
+    }
+
+    setSending(false);
+    if (stored) {
+      setSubmitted(true);
+      setForm({ name: '', email: '', phone: '', subject: '', message: '' });
+    } else {
+      alert(lang === 'en'
         ? 'Message could not be sent. Please call 0167-44-2444.'
-        : '送信できませんでした。0167-44-2444 までお電話ください。'))
-      .finally(() => setSending(false));
+        : '送信できませんでした。0167-44-2444 までお電話ください。');
+    }
   };
 
   const inputClass = "w-full px-4 py-3 rounded-xl border border-[#E8D5B7] bg-white focus:outline-none focus:ring-2 focus:ring-[#D4821A]/30 focus:border-[#D4821A] transition-all text-[#1C1A18] placeholder-[#9B8C7D]";
@@ -253,6 +273,13 @@ export default function ContactPage() {
                       <option>{lang === 'en' ? 'Other' : 'その他'}</option>
                     </select>
                   </div>
+
+                  {/* Honeypot — hidden from people, bots fill it and get dropped server-side. */}
+                  <input
+                    type="text" name="website" tabIndex={-1} autoComplete="off"
+                    aria-hidden="true"
+                    style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+                  />
 
                   <div>
                     <label className={labelClass}>
