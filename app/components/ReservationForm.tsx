@@ -53,28 +53,36 @@ export default function ReservationForm() {
   }, []);
 
   const guestNum = Number(form.guest || 0);
-  const adultNum = Number(form.adult || 0);
 
-  // Adults can't exceed the party; children fill whatever is left.
+  // Adults and children are two views of the same party, so each dropdown
+  // offers its full range and picking one re-derives the other. Capping
+  // children at "party minus adults" instead would leave it stuck on 0,
+  // because adults defaults to the whole party.
   const adultOptions = useMemo(
     () => Array.from({ length: guestNum || MAX_PARTY }, (_, i) => i + 1),
     [guestNum]
   );
-  const childOptions = useMemo(() => {
-    const maxChild = guestNum ? Math.max(guestNum - adultNum, 0) : MAX_PARTY;
-    return Array.from({ length: maxChild + 1 }, (_, i) => i);
-  }, [guestNum, adultNum]);
+  // One adult always stays on the booking, so children stop one short.
+  const childOptions = useMemo(
+    () => Array.from({ length: guestNum || MAX_PARTY }, (_, i) => i),
+    [guestNum]
+  );
 
   const set = (k: keyof typeof empty, v: string) => setForm(p => ({ ...p, [k]: v }));
 
   const onGuestChange = (v: string) => {
-    // Default the whole party to adults, then let them move some to children.
+    // Whole party starts as adults; the guest then moves some into children.
     setForm(p => ({ ...p, guest: v, adult: v, child: '0' }));
   };
 
   const onAdultChange = (v: string) => {
-    const maxChild = Math.max(guestNum - Number(v || 0), 0);
-    setForm(p => ({ ...p, adult: v, child: Number(p.child) > maxChild ? String(maxChild) : p.child }));
+    const rest = Math.max(guestNum - Number(v || 0), 0);
+    setForm(p => ({ ...p, adult: v, child: guestNum ? String(rest) : p.child }));
+  };
+
+  const onChildChange = (v: string) => {
+    const rest = Math.max(guestNum - Number(v || 0), 0);
+    setForm(p => ({ ...p, child: v, adult: guestNum ? String(rest) : p.adult }));
   };
 
   const validate = () => {
@@ -203,7 +211,7 @@ export default function ReservationForm() {
 
         <div>
           <label style={labelStyle}>{t.reservation.children}</label>
-          <select value={form.child} onChange={e => set('child', e.target.value)} style={selectStyle}>
+          <select value={form.child} onChange={e => onChildChange(e.target.value)} style={selectStyle}>
             {childOptions.map(n => <option key={n} value={n}>{n === 0 ? t.reservation.none : n}</option>)}
           </select>
         </div>
