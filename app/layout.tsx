@@ -46,7 +46,11 @@ const structuredData = {
   ],
   "servesCuisine": ["Nepalese","Indian"],
   "priceRange": "¥¥",
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "975", "bestRating": "5" },
+  // No aggregateRating here on purpose. Since 2019 Google ignores review
+  // markup a business publishes about itself ("self-serving") on LocalBusiness
+  // types, so this only ever risked going stale — it was claiming 975 reviews
+  // when the real count had passed 1,000. Google shows the live rating from the
+  // Business Profile instead, which stays correct without anyone editing it.
   "menu": "https://nepaldining.online/menu",
   "acceptsReservations": true
 };

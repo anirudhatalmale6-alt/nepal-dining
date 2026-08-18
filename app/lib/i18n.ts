@@ -71,7 +71,7 @@ export const translations = {
       eyebrow: 'Guest Reviews',
       headline: 'Loved by Furano Visitors',
       rating: '4.9 out of 5',
-      ratingCount: 'Based on 975+ Google Reviews',
+      ratingCount: 'Based on 1,000+ Google Reviews',
       items: [
         { name: 'Sarah M.', country: 'UK', text: 'Best curry I\'ve had in Japan! The naan was perfectly fluffy and the butter chicken was absolutely divine. We came back twice during our Furano trip.' },
         { name: 'Tanaka Kenji', country: 'Japan', text: 'ラベンダー観光の後に立ち寄りました。スープカレーが絶品で、スタッフもとても親切でした。また絶対来ます！', stars: 5 },
@@ -230,7 +230,7 @@ export const translations = {
       eyebrow: 'お客様の声',
       headline: '富良野を訪れる方々に愛されています',
       rating: '5点中4.9点',
-      ratingCount: 'Googleレビュー975件以上より',
+      ratingCount: 'Googleレビュー1,000件以上より',
       items: [
         { name: 'サラ M.', country: 'イギリス', text: '日本で食べた中で最高のカレー！ナンはふんわり完璧で、バターチキンは絶品でした。富良野旅行中に2回も来てしまいました。' },
         { name: '田中 健二', country: '日本', text: 'ラベンダー観光の後に立ち寄りました。スープカレーが絶品で、スタッフもとても親切でした。また絶対来ます！', stars: 5 },
