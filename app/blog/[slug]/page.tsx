@@ -2,12 +2,18 @@ import BlogPostClient from './BlogPostClient';
 
 export function generateStaticParams() {
   return [
-    { slug: 'best-curry-hokkaido' },
-    { slug: 'lavender-season-dining' },
-    { slug: 'halal-dining-hokkaido' },
+    { slug: 'best-restaurants-in-furano' },
+    { slug: 'furano-lavender-guide' },
+    { slug: 'halal-food-in-furano' },
+    { slug: 'nepalese-food-guide' },
+    { slug: 'hokkaido-food-guide' },
+    { slug: 'biei-blue-pond-guide' },
+    { slug: 'furano-winter-travel-guide' },
+    { slug: 'furano-family-travel-guide' },
   ];
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  return <BlogPostClient slug={params.slug} />;
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  return <BlogPostClient slug={slug} />;
 }

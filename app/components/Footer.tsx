@@ -31,17 +31,9 @@ export default function Footer() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 48 }}>
           {/* Brand */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-              <div style={{
-                width: 44, height: 44, borderRadius: '50%',
-                background: 'rgba(255,255,255,0.15)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: 20, fontWeight: 800, fontFamily: 'Georgia, serif',
-              }}>N</div>
-              <div>
-                <div style={{ fontSize: 20, fontWeight: 700, fontFamily: 'Georgia, serif' }}>Nepal Dining</div>
-                <div style={{ fontSize: 11, opacity: 0.7, letterSpacing: '0.08em', textTransform: 'uppercase' }}>Nakafurano, Hokkaido</div>
-              </div>
+            <div style={{ marginBottom: 16 }}>
+              <div style={{ fontSize: 24, fontWeight: 800, fontFamily: 'Georgia, serif', letterSpacing: '0.02em' }}>Nepal Dining</div>
+              <div style={{ fontSize: 11, opacity: 0.7, letterSpacing: '0.08em', textTransform: 'uppercase', marginTop: 4 }}>Nakafurano, Hokkaido</div>
             </div>
             <p style={{ fontSize: 14, lineHeight: 1.7, opacity: 0.85, marginBottom: 20 }}>{t.footer.tagline}</p>
             {/* Social Links */}
@@ -84,7 +76,7 @@ export default function Footer() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
                 <span style={{ fontSize: 16, marginTop: 1 }}>📍</span>
-                <span style={{ fontSize: 13, lineHeight: 1.6, opacity: 0.85 }}>{t.footer.address}</span>
+                <span style={{ fontSize: 13, lineHeight: 1.6, opacity: 0.85 }}>{lang === 'ja' ? '北海道空知郡中富良野町曙町3-19' : 'Hokkaido, Sorachi Gun, Nakafurano Cho, Akatsukimachi 3-19'}</span>
               </div>
               <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
                 <span style={{ fontSize: 16 }}>📞</span>
@@ -93,7 +85,7 @@ export default function Footer() {
               <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
                 <span style={{ fontSize: 16, marginTop: 1 }}>🕐</span>
                 <div style={{ fontSize: 13, lineHeight: 1.6, opacity: 0.85 }}>
-                  Tue–Sun: 11:30–15:00<br />17:00–21:30<br /><span style={{ opacity: 0.7 }}>Monday: Closed</span>
+                  {lang === 'ja' ? '火〜日: 11:00〜15:00 / 17:00〜21:00' : 'Tue–Sun: 11:00–15:00 / 17:00–21:00'}<br /><span style={{ opacity: 0.7 }}>{lang === 'ja' ? '定休日: 第2・第4水曜日' : '2nd & 4th Wed: Closed'}</span>
                 </div>
               </div>
             </div>
