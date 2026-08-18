@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { useLang } from "../lib/LanguageContext";
+import { ACTIVE } from '../lib/emailjs';
 import Link from 'next/link';
 
 export default function ContactPage() {
@@ -11,7 +12,7 @@ export default function ContactPage() {
   const [sending, setSending] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
 
-  useEffect(() => { emailjs.init('aC1Maewluzfg6lM3L'); }, []);
+  useEffect(() => { emailjs.init(ACTIVE.publicKey); }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -31,21 +32,33 @@ export default function ContactPage() {
       stored = false;
     }
 
-    // Reuses the reservation template until a dedicated contact template exists,
-    // so the enquiry text rides in on the fields that template already renders.
+    // Params are sent under several names so this works whether the active
+    // account has a real contact template or is still reusing the reservation
+    // one (which renders date/time/guest fields and ignores the rest).
+    const subject = form.subject || 'General enquiry';
+    const params = {
+      name: form.name,
+      email: form.email || 'Not provided',
+      phone: form.phone || 'Not provided',
+      subject,
+      title: subject,
+      message: form.message,
+      date: 'Contact enquiry',
+      time: '-',
+      guest: '-', guests: '-',
+      adult: '-', child: '-',
+      dietary: '-', allergies: '-',
+      note: `[${subject}]\n\n${form.message}`,
+      notes: `[${subject}]\n\n${form.message}`,
+    };
+
     try {
-      await emailjs.send('service_n95apsv', 'template_recg9pp', {
-        name: form.name,
-        email: form.email || 'Not provided',
-        phone: form.phone || 'Not provided',
-        date: 'Contact enquiry',
-        time: '-',
-        guest: '-', guests: '-',
-        adult: '-', child: '-',
-        dietary: '-', allergies: '-',
-        note: `[${form.subject || 'General enquiry'}]\n\n${form.message}`,
-        notes: `[${form.subject || 'General enquiry'}]\n\n${form.message}`,
-      });
+      await emailjs.send(ACTIVE.service, ACTIVE.tplContactAdmin, params);
+      // Autoreply only if the active account actually has a contact template
+      // for it — the original account does not.
+      if (ACTIVE.tplContactGuest && form.email) {
+        await emailjs.send(ACTIVE.service, ACTIVE.tplContactGuest, params);
+      }
     } catch {
       /* notification only — the stored copy already succeeded */
     }

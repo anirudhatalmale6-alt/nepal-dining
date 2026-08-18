@@ -2,11 +2,12 @@
 import { useState, useEffect, useMemo } from 'react';
 import emailjs from '@emailjs/browser';
 import { useLang } from '../lib/LanguageContext';
+import { ACTIVE } from '../lib/emailjs';
 
-const EMAILJS_PUBLIC_KEY = 'aC1Maewluzfg6lM3L';
-const EMAILJS_SERVICE = 'service_n95apsv';
-const EMAILJS_TPL_ADMIN = 'template_recg9pp';
-const EMAILJS_TPL_CUSTOMER = 'template_15ng35d';
+const EMAILJS_PUBLIC_KEY = ACTIVE.publicKey;
+const EMAILJS_SERVICE = ACTIVE.service;
+const EMAILJS_TPL_ADMIN = ACTIVE.tplReservationAdmin;
+const EMAILJS_TPL_CUSTOMER = ACTIVE.tplReservationGuest;
 const WHATSAPP_NUMBER = '819085931555';
 const PHONE = '0167-44-2444';
 
