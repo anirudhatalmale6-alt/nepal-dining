@@ -142,8 +142,8 @@ export default function ContactPage() {
                   ),
                   label: lang === 'en' ? 'Hours' : '営業時間',
                   value: lang === 'en'
-                    ? 'Tue–Sun: 11:00–15:00 / 17:00–21:00\n1st & 2nd Wed: Closed'
-                    : '火〜日: 11:00〜15:00 / 17:00〜21:00\n第1・第2水曜日: 定休日',
+                    ? 'Tue–Sun: 11:00–15:00 / 17:00–21:00\n2nd & 4th Wed: Closed'
+                    : '火〜日: 11:00〜15:00 / 17:00〜21:00\n定休日: 第2・第4水曜日',
                   link: null,
                 },
               ].map((item) => (

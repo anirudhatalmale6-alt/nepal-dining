@@ -30,16 +30,19 @@ const structuredData = {
   "telephone": "+81-167-44-2444",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Miyamachi 3-32",
+    "streetAddress": "Akatsukimachi 3-19",
     "addressLocality": "Nakafurano",
     "addressRegion": "Hokkaido",
     "postalCode": "071-0714",
     "addressCountry": "JP"
   },
   "geo": { "@type": "GeoCoordinates", "latitude": 43.5167, "longitude": 142.4167 },
+  // Wednesday stays listed: the restaurant is open on the 1st, 3rd and 5th
+  // Wednesday of each month. Schema.org has no way to express "2nd and 4th
+  // Wednesday closed", so those two dates are handled on the pages themselves.
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:30", "closes": "15:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "17:00", "closes": "21:30" }
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "15:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "17:00", "closes": "21:00" }
   ],
   "servesCuisine": ["Nepalese","Indian"],
   "priceRange": "¥¥",
