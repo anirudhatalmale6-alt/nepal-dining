@@ -71,8 +71,15 @@ export default function ReservationForm() {
   const set = (k: keyof typeof empty, v: string) => setForm(p => ({ ...p, [k]: v }));
 
   const onGuestChange = (v: string) => {
-    // Whole party starts as adults; the guest then moves some into children.
-    setForm(p => ({ ...p, guest: v, adult: v, child: '0' }));
+    // Keep any children already chosen instead of resetting them to none, so
+    // the three dropdowns can be filled in any order. Adults takes the
+    // remainder. The old site cleared children here, which is what made them
+    // look unselectable.
+    const g = Number(v || 0);
+    setForm(p => {
+      const child = Math.min(Number(p.child || 0), Math.max(g - 1, 0));
+      return { ...p, guest: v, child: String(child), adult: String(Math.max(g - child, 0)) };
+    });
   };
 
   const onAdultChange = (v: string) => {
