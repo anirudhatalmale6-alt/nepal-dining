@@ -53,15 +53,16 @@ export default function ContactPage() {
       notes: `[${subject}]\n\n${form.message}`,
     };
 
-    // The admin template addresses itself to {{email}}, so sending the
-    // enquirer's address there mails the notice straight back to them and the
-    // restaurant gets nothing. Override the recipient and keep their real
-    // address in the body so it is still replyable. See CONTACT_INBOX.
+    // The admin template now carries a fixed "To Email" (owner set it 2026-08-20,
+    // verified by probe), so {{email}} no longer decides the recipient — it is
+    // free to hold the enquirer's address again, which is what the template's
+    // Reply To reads. Falls back to CONTACT_INBOX when the enquirer left the
+    // email box empty, so Reply To never resolves to an unmailable string.
     const sender = form.email || 'Not provided';
     const adminParams = {
       ...params,
-      email: CONTACT_INBOX,
-      reply_to: form.email || '',
+      email: form.email || CONTACT_INBOX,
+      reply_to: form.email || CONTACT_INBOX,
       from_email: sender,
       note: `From: ${form.name} <${sender}>  ${form.phone || 'no phone'}\n\n[${subject}]\n\n${form.message}`,
       notes: `From: ${form.name} <${sender}>  ${form.phone || 'no phone'}\n\n[${subject}]\n\n${form.message}`,

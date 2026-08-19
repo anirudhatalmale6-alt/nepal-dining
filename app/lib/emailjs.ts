@@ -38,21 +38,30 @@ export const RESERVATION: EmailJSAccount = {
 };
 
 /**
- * Where a contact-form notice must land.
+ * The restaurant's contact inbox. Used only as a fallback now — see below.
  *
- * WHY THIS EXISTS: `template_d5o12zs` (contact admin) has its "To Email" field
- * set to `{{email}}`, so it addresses the notice to whoever filled in the form
- * — the restaurant never received an enquiry. Proved 2026-08-20 by POSTing each
- * template with the `email` param omitted: the two guest templates and the
- * contact admin one returned 422 "The recipients address is empty" (so their To
- * is `{{email}}`), while the reservation admin template returned 200 (its To is
- * a fixed address, and it is correct — do not touch it).
+ * HISTORY: `template_d5o12zs` (contact admin) used to have its "To Email" set
+ * to `{{email}}`, so every enquiry notice was addressed to whoever filled in
+ * the form and the restaurant never received one. The owner set it to a fixed
+ * address on 2026-08-20 and that is now the live config.
  *
- * The clean fix is one field in the EmailJS dashboard, which only the owner can
- * reach. Until then the admin send below overrides `email` with this address,
- * and carries the enquirer's own address in the body instead. Setting the
- * template's To Email to a fixed address later does NOT break this — the
- * override just stops mattering.
+ * HOW TO CHECK A TEMPLATE'S "To Email" WITHOUT THE DASHBOARD: POST it with the
+ * `email` param omitted. `422 "The recipients address is empty"` means its To
+ * is `{{email}}`; `200` means it is a fixed address. Sanity-check the run with
+ * a deliberately-bad template id (expect `400`). Must be sent from a browser on
+ * an allowlisted origin — plain curl is rejected as a non-browser app.
+ *
+ * Current, verified 2026-08-20:
+ *   template_recg9pp  reservation admin  fixed -> krishshivalaya82@gmail.com
+ *   template_15ng35d  reservation guest  {{email}}
+ *   template_d5o12zs  contact admin      fixed -> nepaldining.hp@gmail.com
+ *   template_9x8vvxs  contact guest      {{email}}
+ *
+ * Because the admin To is fixed, `email` carries the enquirer's address again
+ * so the template's Reply To can resolve to it. If that To Email is ever set
+ * back to `{{email}}`, contact notices will bounce to the enquirer again —
+ * re-run the probe before believing any report of "mail going to the wrong
+ * place".
  */
 export const CONTACT_INBOX = 'nepaldining.hp@gmail.com';
 
