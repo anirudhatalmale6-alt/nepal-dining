@@ -379,6 +379,7 @@ function showToast(msg, isError) {
     <h1><span>Nepal Dining</span> Blog Admin</h1>
     <div class="topbar-right">
         <a href="menu.php">Menu</a>
+        <a href="team.php">Team</a>
         <a href="messages.php">Messages<?= $unreadMsgs ? " ($unreadMsgs)" : "" ?></a>
         <a href="/" target="_blank">View Site</a>
         <a href="/blog/" target="_blank">View Blog</a>

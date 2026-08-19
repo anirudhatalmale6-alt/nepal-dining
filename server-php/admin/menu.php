@@ -352,6 +352,7 @@ tr.off td { background: #fbfbfb; opacity: 0.6; }
   <h1>Nepal<span>Dining</span> — Menu Manager</h1>
   <div class="topbar-right">
     <a href="menu.php" class="on">Menu</a>
+    <a href="team.php">Team</a>
     <a href="index.php">Blog</a>
     <a href="messages.php">Messages<?= $unreadMsgs ? '<span class="pill">' . $unreadMsgs . '</span>' : '' ?></a>
     <a href="https://nepaldining.online/menu/" target="_blank">View site ↗</a>

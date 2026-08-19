@@ -81,6 +81,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif
     <div class="topbar-right">
         <a href="index.php">Blog Posts</a>
         <a href="menu.php">Menu</a>
+        <a href="team.php">Team</a>
         <a href="/" target="_blank">View Site</a>
         <a href="index.php?logout=1">Logout</a>
     </div>

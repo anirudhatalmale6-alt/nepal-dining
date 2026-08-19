@@ -2,44 +2,13 @@
 import Link from 'next/link';
 import { useLang } from '../lib/LanguageContext';
 import ReservationForm from '../components/ReservationForm';
+import { useTeam } from '../lib/teamData';
 
 export default function AboutPage() {
   const { t, lang } = useLang();
 
-  const teamMembers = [
-    {
-      name: 'KHATRI NARAYAN',
-      role: lang === 'ja' ? 'ヘッドシェフ' : 'Head Chef',
-      desc: lang === 'ja'
-        ? 'ネパールの小さな村で生まれたナラヤンは、13年以上の料理経験と伝統をすべての料理に注ぎ込んでいます。本格的なネパール・インド料理への情熱と、代々受け継がれてきた家族のレシピが、ネパールダイニングのメニューの核心を形作っています。'
-        : 'Born in a small village in Nepal, Narayan brings over 13 years of culinary experience and tradition to every dish. His passion for authentic Nepalese and Indian cuisine, combined with treasured family recipes passed down through generations, forms the heart of Nepal Dining\'s menu.',
-      emoji: '👨‍🍳',
-    },
-    {
-      name: 'SHREESH BHARAT KUMAR',
-      role: lang === 'ja' ? 'シニアクック' : 'Senior Cook',
-      desc: lang === 'ja'
-        ? 'シュリーシュは初期からネパールダイニングの重要なメンバーです。当店の料理に関する豊富な知識と富良野コミュニティへの深い理解により、レストランの成長と成功に重要な役割を果たしてきました。'
-        : 'Shreesh has been an important part of Nepal Dining since its early years. With extensive knowledge of our cuisine and a strong understanding of the Furano community, he has played a key role in the restaurant\'s growth and success. His experience, dedication, and commitment to quality continue to help maintain the high standards our guests appreciate.',
-      emoji: '👨‍🍳',
-    },
-    {
-      name: 'TAMANG ANUPRAJ',
-      role: lang === 'ja' ? 'クック' : 'Cook',
-      desc: lang === 'ja'
-        ? 'アヌプラジは2025年末にネパールダイニングに加わり、本格的なネパール料理と当店の看板メニューである手作りモモを専門としています。伝統的な調理法と質の高い食材へのこだわりが、すべての料理に本物のネパールの味わいを届けます。'
-        : 'Anupraj joined Nepal Dining in late 2025 and specializes in authentic Nepali cuisine and our signature handmade momos. His attention to traditional cooking methods and quality ingredients helps bring the genuine flavors of Nepal to every meal he prepares.',
-      emoji: '👨‍🍳',
-    },
-    {
-      name: 'KHATRI ASMITA',
-      role: lang === 'ja' ? 'ホールスタッフ' : 'Hall Staff',
-      desc: lang === 'ja'
-        ? 'アスミタはネパールダイニングの日常のホール業務をサポートし、お客様にスムーズで温かいお食事体験を提供しています。フルタイムスタッフではありませんが、ホールサービスの管理、お客様のサポート、おもてなしの基準の維持に重要な役割を果たしています。'
-        : 'Asmita supports the daily hall operations at Nepal Dining and helps ensure a smooth and welcoming dining experience for our guests. Although not a full-time staff member, she plays an important role in managing hall service, assisting customers, and maintaining our hospitality standards. Her dedication and friendly approach help create a comfortable atmosphere for both local residents and visitors.',
-      emoji: '👩',
-    },
-  ];
+  // Live list from /team-data/team.json (admin/team.php). See app/lib/teamData.ts.
+  const teamMembers = useTeam();
 
   const timeline = [
     {
@@ -243,18 +212,23 @@ export default function AboutPage() {
       </section>
 
       {/* Meet the Team */}
-      <section style={{ padding: '80px 24px', background: '#1C1A18' }}>
+      <section id="team" style={{ padding: '80px 24px', background: '#1C1A18', scrollMarginTop: 80 }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <h2 style={{ fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 800, color: 'white', fontFamily: 'Georgia, serif', marginBottom: 48, textAlign: 'center' }}>
             {lang === 'ja' ? 'チーム紹介' : 'Meet the Team'}
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 20 }}>
-            {teamMembers.map((member, i) => (
-              <div key={i} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: 16, padding: '24px 20px', border: '1px solid rgba(255,255,255,0.08)', textAlign: 'center' }}>
-                <div style={{ width: 64, height: 64, borderRadius: '50%', background: 'linear-gradient(135deg, #D4821A, #769a00)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28, margin: '0 auto 14px' }}>{member.emoji}</div>
+            {teamMembers.map(member => (
+              <div key={member.id} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: 16, padding: '24px 20px', border: '1px solid rgba(255,255,255,0.08)', textAlign: 'center' }}>
+                {member.photo ? (
+                  <img src={member.photo} alt={member.name} loading="lazy"
+                    style={{ width: 96, height: 96, borderRadius: '50%', objectFit: 'cover', margin: '0 auto 14px', display: 'block', border: '3px solid rgba(212,130,26,0.5)' }} />
+                ) : (
+                  <div style={{ width: 96, height: 96, borderRadius: '50%', background: 'linear-gradient(135deg, #D4821A, #769a00)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 40, margin: '0 auto 14px' }}>{member.emoji}</div>
+                )}
                 <h3 style={{ fontSize: 15, fontWeight: 700, color: 'white', marginBottom: 4 }}>{member.name}</h3>
-                <div style={{ fontSize: 12, color: '#D4821A', fontWeight: 600, marginBottom: 10, letterSpacing: '0.03em' }}>{member.role}</div>
-                <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>{member.desc}</p>
+                <div style={{ fontSize: 12, color: '#D4821A', fontWeight: 600, marginBottom: 10, letterSpacing: '0.03em' }}>{lang === 'ja' ? member.roleJa : member.role}</div>
+                <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>{lang === 'ja' ? member.descJa : member.desc}</p>
               </div>
             ))}
           </div>
