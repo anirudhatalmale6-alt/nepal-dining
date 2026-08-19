@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useLang } from "../lib/LanguageContext";
-import { CONTACT } from '../lib/emailjs';
+import { CONTACT, CONTACT_INBOX } from '../lib/emailjs';
 import Link from 'next/link';
 
 export default function ContactPage() {
@@ -53,8 +53,22 @@ export default function ContactPage() {
       notes: `[${subject}]\n\n${form.message}`,
     };
 
+    // The admin template addresses itself to {{email}}, so sending the
+    // enquirer's address there mails the notice straight back to them and the
+    // restaurant gets nothing. Override the recipient and keep their real
+    // address in the body so it is still replyable. See CONTACT_INBOX.
+    const sender = form.email || 'Not provided';
+    const adminParams = {
+      ...params,
+      email: CONTACT_INBOX,
+      reply_to: form.email || '',
+      from_email: sender,
+      note: `From: ${form.name} <${sender}>  ${form.phone || 'no phone'}\n\n[${subject}]\n\n${form.message}`,
+      notes: `From: ${form.name} <${sender}>  ${form.phone || 'no phone'}\n\n[${subject}]\n\n${form.message}`,
+    };
+
     try {
-      await emailjs.send(CONTACT.service, CONTACT.tplAdmin, params, emailjsOpts);
+      await emailjs.send(CONTACT.service, CONTACT.tplAdmin, adminParams, emailjsOpts);
       // Autoreply only when the contact account has a spare template slot for
       // one — while falling back to the reservation account, it does not.
       if (CONTACT.tplGuest && form.email) {

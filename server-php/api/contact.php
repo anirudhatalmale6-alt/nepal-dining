@@ -16,7 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 define('MESSAGES_FILE', __DIR__ . '/../blog-data/messages.json');
-define('NOTIFY_EMAIL', 'krishshivalaya@yahoo.com');
+// Was krishshivalaya@yahoo.com, taken from the old WordPress admin_email.
+// Owner confirmed 2026-08-20 that the Yahoo address is retired and contact
+// mail belongs on the Gmail account behind the contact EmailJS service.
+define('NOTIFY_EMAIL', 'nepaldining.hp@gmail.com');
 
 $raw = file_get_contents('php://input');
 $in  = json_decode($raw, true);
