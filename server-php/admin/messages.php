@@ -80,6 +80,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif
     <h1><span>Nepal Dining</span> Messages</h1>
     <div class="topbar-right">
         <a href="index.php">Blog Posts</a>
+        <a href="menu.php">Menu</a>
         <a href="/" target="_blank">View Site</a>
         <a href="index.php?logout=1">Logout</a>
     </div>

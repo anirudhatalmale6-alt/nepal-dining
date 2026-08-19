@@ -1,19 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useLang } from '../lib/LanguageContext';
-
-interface OrderMenuItem {
-  cat: string;
-  name: string;
-  nameJa: string;
-  price: number;
-  desc: string;
-  descJa: string;
-  img: string;
-  spice: number;
-  hasNaanRice?: boolean;
-  hasLargePortion?: boolean;
-}
+import { useMenuData, SPICE_LEVELS as spiceLevels } from '../lib/menuData';
 
 interface CartItem {
   name: string;
@@ -28,67 +16,15 @@ interface CartItem {
   naanRiceExtra: number;
 }
 
-const orderItems: OrderMenuItem[] = [
-  // Curry
-  { cat: 'Curry', name: 'Butter Chicken Curry', nameJa: 'バターチキンカレー', price: 1380, desc: 'Tender chicken in velvety tomato-cream sauce.', descJa: '柔らかチキンをクリーミーなトマトソースで。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/butter-chicken-curry.jpg', spice: 1, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Chicken Tikka Masala Curry', nameJa: 'チキンティッカマサラカレー', price: 1380, desc: 'Tikka pieces in rich masala sauce.', descJa: 'ティッカをリッチなマサラソースで。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/chicken-tikka-masala.jpg', spice: 2, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Chicken Rara Curry', nameJa: 'チキンララカレー', price: 1380, desc: 'Minced and tender chicken in spiced gravy.', descJa: 'ミンチと柔らかチキンのグレービー。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/chicken-rara-curry.jpg', spice: 2, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Mix Seafood Curry', nameJa: 'ミックスシーフードカレー', price: 1480, desc: 'Assorted seafood in aromatic curry.', descJa: 'シーフードの香り豊かなカレー。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/mix-seafood-curry.jpg', spice: 2, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Prawn Curry', nameJa: 'エビカレー', price: 1480, desc: 'Juicy prawns in rich curry sauce.', descJa: 'プリプリエビのリッチカレー。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/prawn-curry.jpg', spice: 2, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Dal Mutton Curry', nameJa: 'ダルマトンカレー', price: 1480, desc: 'Lentils slow-cooked with tender mutton.', descJa: 'レンズ豆と柔らかマトンの煮込み。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/mutton-curry.jpg', spice: 2, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Chicken Curry', nameJa: 'チキンカレー', price: 1180, desc: 'Classic chicken curry with aromatic spices.', descJa: '定番のチキンカレー。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/chicken-curry.jpg', spice: 1, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Mutton Curry', nameJa: 'マトンカレー', price: 1280, desc: 'Slow-cooked mutton in aromatic spices.', descJa: 'ホールスパイスで煮込んだマトン。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/mutton-curry.jpg', spice: 2, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Mutton Sag Curry', nameJa: 'マトンサグカレー', price: 1280, desc: 'Mutton with fresh spinach gravy.', descJa: 'マトンとほうれん草。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/mutton-sag-curry.jpg', spice: 2, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Chicken Sag Curry', nameJa: 'チキンサグカレー', price: 1280, desc: 'Chicken with fresh spinach gravy.', descJa: 'チキンとほうれん草。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/chicken-sag-curry.jpg', spice: 1, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Keema Egg Curry', nameJa: 'キーマエッグカレー', price: 1280, desc: 'Minced meat with boiled eggs.', descJa: 'キーマとゆで卵。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/keema-egg-curry.jpg', spice: 2, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Sag Keema Curry', nameJa: 'サグキーマカレー', price: 1280, desc: 'Spinach with spiced minced meat.', descJa: 'ほうれん草とキーマ。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/sag-keema-curry.jpg', spice: 2, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Dal Chicken Curry', nameJa: 'ダルチキンカレー', price: 1280, desc: 'Lentils with tender chicken.', descJa: 'レンズ豆と柔らかチキン。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/chicken-curry.jpg', spice: 1, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Mutton Vegetable Curry', nameJa: 'マトン野菜カレー', price: 1280, desc: 'Mutton with seasonal vegetables.', descJa: 'マトンと季節の野菜。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/mutton-curry.jpg', spice: 2, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Chicken Cheese Curry', nameJa: 'チキンチーズカレー', price: 1280, desc: 'Creamy cheese and chicken.', descJa: 'クリーミーチーズとチキン。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/chicken-curry.jpg', spice: 1, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Eggplant Chicken Curry', nameJa: 'ナスチキンカレー', price: 1280, desc: 'Eggplant with tender chicken.', descJa: 'ナスと柔らかチキン。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/eggplant-keema-curry.jpg', spice: 1, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Eggplant Keema Curry', nameJa: 'ナスキーマカレー', price: 1280, desc: 'Eggplant with minced meat.', descJa: 'ナスとキーマ。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/eggplant-keema-curry.jpg', spice: 2, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Mix Vegetable Curry', nameJa: 'ミックス野菜カレー', price: 1280, desc: 'Assorted vegetables in curry.', descJa: 'ミックス野菜カレー。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/mix-veg-curry.jpg', spice: 1, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Curry', name: 'Chicken & Vegetable Curry', nameJa: 'チキン野菜カレー', price: 1280, desc: 'Chicken with seasonal vegetables.', descJa: 'チキンと季節の野菜。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/chicken-veg-curry.jpg', spice: 1, hasNaanRice: true, hasLargePortion: true },
-
-  // Soup Curry
-  { cat: 'Soup Curry', name: 'Momo & Vegetable Soup Curry', nameJa: 'モモ野菜スープカレー', price: 1380, desc: 'Hokkaido style with momo and vegetables.', descJa: '北海道スタイル、モモと野菜。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/momo-veg-soup-curry.jpg', spice: 1, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Soup Curry', name: 'Mix Vegetable Soup Curry', nameJa: 'ミックス野菜スープカレー', price: 1380, desc: 'Hokkaido style with assorted vegetables.', descJa: '北海道スタイル、ミックス野菜。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/mix-veg-soup-curry.jpg', spice: 1, hasNaanRice: true, hasLargePortion: true },
-  { cat: 'Soup Curry', name: 'Chicken & Vegetable Soup Curry', nameJa: 'チキン野菜スープカレー', price: 1380, desc: 'Hokkaido style with chicken and vegetables.', descJa: '北海道スタイル、チキンと野菜。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/chicken-veg-soup-curry.jpg', spice: 1, hasNaanRice: true, hasLargePortion: true },
-
-  // Naan & Rice (standalone)
-  { cat: 'Naan & Rice', name: 'Rice', nameJa: 'ライス', price: 250, desc: 'Steamed basmati rice.', descJa: 'バスマティライス。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/rice.jpg', spice: 0 },
-  { cat: 'Naan & Rice', name: 'Plain Naan', nameJa: 'プレーンナン', price: 350, desc: 'Classic from tandoor.', descJa: 'タンドール窯焼きの定番ナン。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/plain-naan.jpg', spice: 0 },
-  { cat: 'Naan & Rice', name: 'Garlic Naan', nameJa: 'ガーリックナン', price: 450, desc: 'Fresh baked with garlic butter.', descJa: 'ガーリックバターで焼き上げ。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/garlic-naan.jpg', spice: 0 },
-  { cat: 'Naan & Rice', name: 'Cheese Naan', nameJa: 'チーズナン', price: 500, desc: 'Stuffed with creamy cheese.', descJa: 'クリーミーチーズ入り。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/cheese-naan.jpg', spice: 0 },
-
-  // Tandoori
-  { cat: 'Tandoori', name: 'Chicken Tikka (6pc)', nameJa: 'チキンティッカ（6個）', price: 880, desc: 'Char-grilled marinated chicken.', descJa: 'タンドール窯焼きマリネチキン。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/chicken-tikka.jpg', spice: 2, hasLargePortion: true },
-  { cat: 'Tandoori', name: 'Tandoori Chicken', nameJa: 'タンドリーチキン', price: 980, desc: 'Half chicken, yogurt & spices.', descJa: 'ヨーグルトとスパイスの半身チキン。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/tandoori-chicken.jpg', spice: 2, hasLargePortion: true },
-
-  // Sides
-  { cat: 'Sides', name: 'Momo (6pc)', nameJa: 'モモ（6個）', price: 780, desc: 'Traditional Nepalese dumplings.', descJa: '伝統的なネパール餃子。', img: 'https://nepaldining.online/wp-content/uploads/2026/06/momo.jpg', spice: 1 },
-];
-
-const categories = ['All', 'Curry', 'Soup Curry', 'Naan & Rice', 'Tandoori', 'Sides'];
-const categoriesJa = ['すべて', 'カレー', 'スープカレー', 'ナン＆ライス', 'タンドリー', 'サイド'];
-
-const spiceLevels = [
-  { en: 'Mild', ja: 'マイルド', color: '#27AE60', icon: '🌶' },
-  { en: 'Medium', ja: '中辛', color: '#F39C12', icon: '🌶🌶' },
-  { en: 'Hot', ja: '辛口', color: '#E67E22', icon: '🌶🌶🌶' },
-  { en: 'Very Hot', ja: '大辛', color: '#E74C3C', icon: '🌶🌶🌶🌶' },
-  { en: 'Extra Hot', ja: '激辛', color: '#8B0000', icon: '🌶🌶🌶🌶🌶' },
-];
-
-const naanRiceOptions = [
-  { en: 'Plain Naan', ja: 'プレーンナン', extra: 0 },
-  { en: 'Garlic Naan', ja: 'ガーリックナン', extra: 100 },
-  { en: 'Cheese Naan', ja: 'チーズナン', extra: 150 },
-  { en: 'Rice', ja: 'ライス', extra: 0 },
-];
-
 export default function OrderPage() {
   const { t, lang } = useLang();
+  // Same live list the Menu page uses — one edit in the admin panel updates both.
+  const menu = useMenuData();
+  const orderItems = menu.items;
+  const naanRiceOptions = menu.options.naanRice;
+  const categories = ['All', ...menu.categories.map(c => c.key)];
+  const categoriesJa = ['すべて', ...menu.categories.map(c => c.ja)];
+
   const [activeCategory, setActiveCategory] = useState('All');
   const [cart, setCart] = useState<CartItem[]>([]);
   const [orderPlaced, setOrderPlaced] = useState(false);
@@ -100,7 +36,9 @@ export default function OrderPage() {
   const [modalNaanRice, setModalNaanRice] = useState(0);
   const [modalQty, setModalQty] = useState(1);
 
-  const filtered = activeCategory === 'All' ? orderItems : orderItems.filter(i => i.cat === activeCategory);
+  const filtered = activeCategory === 'All' || !categories.includes(activeCategory)
+    ? orderItems
+    : orderItems.filter(i => i.cat === activeCategory);
   const total = cart.reduce((sum, item) => sum + item.totalPrice * item.qty, 0);
 
   const openModal = (idx: number) => {
@@ -116,7 +54,7 @@ export default function OrderPage() {
     if (showModal === null) return;
     const item = orderItems[showModal];
     const naanOpt = item.hasNaanRice ? naanRiceOptions[modalNaanRice] : null;
-    const largeCost = modalLarge && item.hasLargePortion ? 200 : 0;
+    const largeCost = modalLarge && item.hasLargePortion ? menu.options.largeExtra : 0;
     const naanExtra = naanOpt ? naanOpt.extra : 0;
     const unitPrice = item.price + largeCost + naanExtra;
 
@@ -265,7 +203,7 @@ export default function OrderPage() {
                       )}
                       {item.hasLargePortion && (
                         <span style={{ fontSize: 10, fontWeight: 600, color: '#D4821A', background: 'rgba(212,130,26,0.08)', padding: '2px 6px', borderRadius: 6 }}>
-                          {lang === 'ja' ? '大盛り可' : 'Large +¥200'}
+                          {lang === 'ja' ? '大盛り可' : `Large +¥${menu.options.largeExtra}`}
                         </span>
                       )}
                       {item.hasNaanRice && (
@@ -467,7 +405,7 @@ export default function OrderPage() {
           }} onClick={e => e.stopPropagation()}>
             {(() => {
               const item = orderItems[showModal];
-              const largeCost = modalLarge && item.hasLargePortion ? 200 : 0;
+              const largeCost = modalLarge && item.hasLargePortion ? menu.options.largeExtra : 0;
               const naanExtra = item.hasNaanRice ? naanRiceOptions[modalNaanRice].extra : 0;
               const unitPrice = item.price + largeCost + naanExtra;
               return (
@@ -540,7 +478,7 @@ export default function OrderPage() {
                             color: modalLarge ? 'white' : '#6B5E4E',
                             transition: 'all 0.2s',
                           }}>
-                            {lang === 'ja' ? '大盛り +¥200' : 'Large +¥200'}
+                            {lang === 'ja' ? `大盛り +¥${menu.options.largeExtra}` : `Large +¥${menu.options.largeExtra}`}
                           </button>
                         </div>
                       </div>

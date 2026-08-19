@@ -1,0 +1,15 @@
+# menu.json is fetched by the website itself, so it must stay publicly readable.
+# It only ever contains menu text and prices — nothing private.
+# Browsers must not cache it, or a price change would keep showing the old
+# number until the visitor hard-refreshes.
+<IfModule mod_headers.c>
+    <Files "menu.json">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+    </Files>
+</IfModule>
+
+# The rollback copy is not for the public.
+<Files "menu.json.bak">
+    Order Allow,Deny
+    Deny from all
+</Files>
