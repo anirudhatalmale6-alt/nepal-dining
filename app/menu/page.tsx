@@ -61,6 +61,18 @@ export default function MenuPage() {
             </span>
           ))}
         </div>
+
+        {/*
+          The owner asked for this to be written down: vegan, allergy and
+          nut-free requests are all handled, but only if the guest asks BEFORE
+          the food is cooked. It belongs on the menu page rather than only in a
+          blog article, because this is the screen where people decide.
+        */}
+        <p style={{ marginTop: 16, padding: '12px 16px', background: '#FFF8EE', border: '1px solid rgba(212,130,26,0.25)', borderRadius: 10, fontSize: 13, lineHeight: 1.7, color: '#6B5E4E' }}>
+          {lang === 'ja'
+            ? 'ベジタリアン・ヴィーガン対応、アレルギー、ナッツ不使用のご要望は、ご注文の際にスタッフまでお申し付けください。モモはチキンと野菜からお選びいただけます。通常のナン生地には乳製品と卵を使用していますが、ご要望に応じて使わずにお作りします。当店はハラールフレンドリーです（ハラール認証店ではありません）。'
+            : 'Vegetarian, vegan, allergy and nut-free requests are all welcome — please tell our staff when you order, not after the food arrives. Momo comes with a chicken or a vegetable filling. Our standard naan dough contains dairy and egg, but we will prepare it without them on request. We are halal-friendly (not halal-certified).'}
+        </p>
       </div>
 
       {/* Menu Grid */}

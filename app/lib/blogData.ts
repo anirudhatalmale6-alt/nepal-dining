@@ -164,8 +164,8 @@ export const blogPosts: BlogPost[] = [
       ja: '富良野のベジタリアン・ヴィーガン対応料理：何を頼めばいいか',
     },
     description: {
-      en: 'Vegetarian food in the Furano area of Hokkaido. The plant-based dishes on our menu, what we can adjust, what we cannot promise, and how to order so the kitchen gets it right.',
-      ja: '北海道富良野エリアのベジタリアン料理。当店の植物性メニュー、調整できること、お約束できないこと、そして厨房に正しく伝わるご注文の仕方をご案内します。',
+      en: 'Vegetarian food in the Furano area of Hokkaido. The plant-based dishes on our menu, vegan and nut-free cooking on request, and how to order so the kitchen gets it right.',
+      ja: '北海道富良野エリアのベジタリアン料理。当店の植物性メニュー、ご要望に応じたヴィーガン・ナッツ不使用の調理、そして厨房に正しく伝わるご注文の仕方をご案内します。',
     },
     date: '2026-08-25',
     author: 'Nepal Dining Team',
@@ -200,22 +200,26 @@ export const blogPosts: BlogPost[] = [
             ja: 'ミックス野菜カレーは日常的な一皿で、辛さは控えめ、お子様にも向いており、季節の野菜を使っています。ミックス野菜スープカレーは北海道スタイル。とろみのあるソースではなく、スパイスの効いたさらりとしたスープで、寒い一日の後にはこちらがおすすめです。どちらもライスかナンをお選びいただけます。',
           },
           {
-            en: 'On the bread side, Plain Naan, Garlic Naan and Cheese Naan are all baked to order in the tandoor. Rice is available on its own. Between a vegetable curry, a naan and a soup curry to share, a vegetarian table eats as well here as anyone else does, which is not something we can say about every restaurant in the valley.',
-            ja: 'パンはプレーンナン、ガーリックナン、チーズナンをタンドールでその都度焼き上げます。ライス単品もございます。野菜カレーとナン、それにスープカレーを取り分ければ、ベジタリアンの方も他のお客様と変わらない食卓になります。この谷のすべてのレストランについて同じことが言えるわけではありません。',
+            en: 'Momo, the Nepalese steamed dumpling, comes with either a chicken or a vegetable filling — ask for the vegetable one when you order. That also applies to the Momo and Vegetable Soup Curry, which is the dish most likely to be new to you and the one people come back for.',
+            ja: 'ネパールの蒸し餃子モモは、チキンと野菜の2種類の餡からお選びいただけます。ご注文の際に「野菜」とお伝えください。モモ野菜スープカレーも同様です。初めての方が最も多く、そしてリピーターの多い一品です。',
+          },
+          {
+            en: 'On the bread side, Plain Naan, Garlic Naan and Cheese Naan are all baked to order in the tandoor. Rice is available on its own. Between a vegetable curry, a naan, some momo and a soup curry to share, a vegetarian table eats as well here as anyone else does, which is not something we can say about every restaurant in the valley.',
+            ja: 'パンはプレーンナン、ガーリックナン、チーズナンをタンドールでその都度焼き上げます。ライス単品もございます。野菜カレーとナン、モモ、それにスープカレーを取り分ければ、ベジタリアンの方も他のお客様と変わらない食卓になります。この谷のすべてのレストランについて同じことが言えるわけではありません。',
           },
         ],
       },
       {
-        heading: { en: 'Vegan: What We Can and Cannot Promise', ja: 'ヴィーガン対応：できることとできないこと' },
+        heading: { en: 'Vegan, Allergies and Nut-Free: Please Just Ask', ja: 'ヴィーガン・アレルギー・ナッツ不使用：お気軽にお尋ねください' },
         level: 2,
         paragraphs: [
           {
-            en: 'Vegetarian and vegan are not the same request and we would rather be useful than agreeable. Cheese Naan obviously contains dairy. Several curries are finished with cream or yoghurt, which is what gives Butter Chicken and Tikka Masala their texture. If you are vegan, say so clearly when you order and ask specifically about butter, cream, yoghurt and ghee, and our staff will tell you what a given dish actually contains rather than guessing on your behalf.',
-            ja: 'ベジタリアンとヴィーガンは別のご要望です。当たり障りのない返事より、役に立つ返事をしたいと考えています。チーズナンには当然乳製品が入ります。いくつかのカレーは仕上げに生クリームやヨーグルトを使い、それがバターチキンやティッカマサラの口当たりをつくっています。ヴィーガンの方は、ご注文時にその旨をはっきりお伝えいただき、バター・生クリーム・ヨーグルト・ギーについて具体的にお尋ねください。スタッフが推測ではなく、実際の内容をお答えします。',
+            en: 'Vegetarian and vegan are not the same request, so here is the honest detail. Our standard naan dough is made with dairy and egg, and several curries are finished with cream or yoghurt — that is what gives Butter Chicken and Tikka Masala their texture. So the default versions of those are not vegan.',
+            ja: 'ベジタリアンとヴィーガンは別のご要望ですので、正確にお伝えします。当店の通常のナン生地には乳製品と卵を使用しており、いくつかのカレーは仕上げに生クリームやヨーグルトを使います。バターチキンやティッカマサラの口当たりはそこから生まれています。つまり、これらの通常版はヴィーガン対応ではありません。',
           },
           {
-            en: 'That is the honest position: a good vegetarian meal is easy here, and a vegan meal is usually possible with a conversation. Have the conversation at the start of the meal rather than the end.',
-            ja: '正直なところ、当店では良いベジタリアンの食事は簡単にご用意でき、ヴィーガンの食事も多くの場合ご相談のうえで可能です。そのご相談は、食事の終わりではなく最初にお願いいたします。',
+            en: 'What we can do is make them vegan on request. Tell us when you order and the kitchen will prepare your dishes — naan included — without dairy or egg. The same goes for allergies and for nut-free cooking: ask our staff, tell them exactly what you need to avoid, and they will work with the kitchen. We would far rather have that conversation before the food is cooked than after it reaches the table.',
+            ja: 'ご要望をいただければ、ヴィーガン対応でお作りします。ご注文時にお申し付けください。ナンを含め、乳製品・卵を使わずにご用意いたします。アレルギーやナッツ不使用のご要望も同様です。避けたいものを具体的にスタッフにお伝えいただければ、厨房と調整いたします。お料理がテーブルに届いてからより、つくる前にお話しいただけるほうがずっと確実です。',
           },
         ],
       },
@@ -247,7 +251,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         q: { en: 'Do you have vegan options?', ja: 'ヴィーガン対応はありますか？' },
-        a: { en: 'Often, but not automatically. Several curries are finished with dairy. Tell us you are vegan when you order and ask about butter, cream, yoghurt and ghee — we will tell you what is actually in each dish.', ja: '多くの場合可能ですが、自動的ではありません。いくつかのカレーは乳製品で仕上げています。ご注文時にヴィーガンである旨をお伝えのうえ、バター・生クリーム・ヨーグルト・ギーについてお尋ねください。各料理の実際の内容をお答えします。' },
+        a: { en: 'Yes, on request. Our standard naan dough contains dairy and egg and several curries are finished with cream or yoghurt, so the default versions are not vegan — but tell us when you order and the kitchen will prepare your dishes, naan included, without dairy or egg.', ja: 'はい、ご要望に応じて対応いたします。当店の通常のナン生地には乳製品と卵を使用し、いくつかのカレーは生クリームやヨーグルトで仕上げるため、通常版はヴィーガン対応ではありません。ご注文時にお申し付けいただければ、ナンを含め乳製品・卵を使わずにお作りします。' },
       },
       {
         q: { en: 'Does your vegetable curry contain fish stock?', ja: '野菜カレーに魚のだしは入っていますか？' },
@@ -256,6 +260,14 @@ export const blogPosts: BlogPost[] = [
       {
         q: { en: 'Can you make the vegetarian dishes less spicy for children?', ja: '子ども向けに辛さを抑えられますか？' },
         a: { en: 'Yes, spice is adjustable and our default is already mild, because most of our regulars are local families.', ja: 'はい、辛さは調整できます。常連のお客様の多くが地元のご家族のため、標準の辛さはもともと控えめです。' },
+      },
+      {
+        q: { en: 'Is the momo vegetarian?', ja: 'モモはベジタリアンですか？' },
+        a: { en: 'It comes both ways — chicken or vegetable. Ask for the vegetable filling when you order, and the same applies to the Momo and Vegetable Soup Curry.', ja: 'チキンと野菜の2種類からお選びいただけます。ご注文の際に「野菜」とお伝えください。モモ野菜スープカレーも同様です。' },
+      },
+      {
+        q: { en: 'Can you cook nut-free, or around an allergy?', ja: 'ナッツ不使用やアレルギー対応はできますか？' },
+        a: { en: 'Please ask our staff and tell them exactly what needs to be avoided — they will work it out with the kitchen. Do it when you order rather than after the food arrives.', ja: 'スタッフに、避けたいものを具体的にお伝えください。厨房と調整いたします。お料理が届いてからではなく、ご注文時にお願いいたします。' },
       },
       {
         q: { en: 'Is there vegetarian food near Furano Ski Resort?', ja: '富良野スキー場の近くにベジタリアン料理はありますか？' },
@@ -512,8 +524,8 @@ export const blogPosts: BlogPost[] = [
         level: 2,
         paragraphs: [
           {
-            en: 'Furano, Nakafurano, Kamifurano and Biei read like four separate destinations on a map and behave like one long road in practice. Furano to Nakafurano is about six kilometres. Nakafurano to Kamifurano is about eight. Biei sits further north, roughly forty minutes by car in winter, and is the only one of the four that feels like a proper journey rather than a hop.',
-            ja: '富良野、中富良野、上富良野、美瑛は地図の上では4つの別々の目的地に見えますが、実際には一本の長い道のように移動できます。富良野から中富良野まで約6キロ、中富良野から上富良野まで約8キロ。美瑛はさらに北にあり、冬季は車でおよそ40分。4つの中で唯一、「ちょっと移動する」ではなく「旅をする」感覚のある区間です。',
+            en: 'Furano, Nakafurano, Kamifurano and Biei read like four separate destinations on a map and behave like one long road in practice. Furano to Nakafurano is about six kilometres. Nakafurano to Kamifurano is about eight. Biei sits further north, roughly thirty minutes by car in winter, and is the only one of the four that feels like a proper journey rather than a hop.',
+            ja: '富良野、中富良野、上富良野、美瑛は地図の上では4つの別々の目的地に見えますが、実際には一本の長い道のように移動できます。富良野から中富良野まで約6キロ、中富良野から上富良野まで約8キロ。美瑛はさらに北にあり、冬季は車でおよそ30分。4つの中で唯一、「ちょっと移動する」ではなく「旅をする」感覚のある区間です。',
           },
           {
             en: 'That matters when you are hungry, because it means you are rarely more than twenty minutes from anywhere in the valley — and it means the honest answer to "where should we eat" is usually not "in the town we happen to be standing in". Nepal Dining is based in Nakafurano, near the middle of that road, which is a geographical accident we have come to appreciate.',
@@ -550,8 +562,8 @@ export const blogPosts: BlogPost[] = [
         level: 2,
         paragraphs: [
           {
-            en: 'Biei is the one that takes planning. The Blue Pond and the patchwork hills are the reason people go, and in winter the light is gone by mid-afternoon, which catches out visitors who assumed they could sightsee and then find dinner at leisure. Allow around forty minutes to drive down to Nakafurano, and bear in mind that our kitchen stops serving at 21:00.',
-            ja: '美瑛は計画が必要な一箇所です。青い池とパッチワークの丘を目当てに多くの方が訪れますが、冬は午後の半ばには日が落ちます。観光の後にゆっくり夕食を探せると考えていた旅行者が、これで慌てることになります。中富良野まで車でおよそ40分をみておき、当店の厨房が21:00でお料理を終えることも頭に入れておいてください。',
+            en: 'Biei is the one that takes planning. The Blue Pond and the patchwork hills are the reason people go, and in winter the light is gone by mid-afternoon, which catches out visitors who assumed they could sightsee and then find dinner at leisure. Allow around thirty minutes to drive down to Nakafurano, and bear in mind that our kitchen stops serving at 21:00.',
+            ja: '美瑛は計画が必要な一箇所です。青い池とパッチワークの丘を目当てに多くの方が訪れますが、冬は午後の半ばには日が落ちます。観光の後にゆっくり夕食を探せると考えていた旅行者が、これで慌てることになります。中富良野まで車でおよそ30分をみておき、当店の厨房が21:00でお料理を終えることも頭に入れておいてください。',
           },
           {
             en: 'If you are driving the Biei-to-Furano route in a single day, the practical move is to eat in the middle rather than at either end. That is the case for stopping in Nakafurano, and we would make it even if we were not standing in it.',
@@ -577,7 +589,7 @@ export const blogPosts: BlogPost[] = [
     faq: [
       {
         q: { en: 'How far is Biei from Furano?', ja: '美瑛から富良野までどのくらいですか？' },
-        a: { en: 'Around forty minutes by car in winter conditions, with Nakafurano roughly in between. Plan dinner around it rather than assuming you will find something at the end of the drive.', ja: '冬季の路面状況で車におよそ40分、中富良野はそのほぼ中間にあります。着いてから探すのではなく、夕食を計画に入れておくことをおすすめします。' },
+        a: { en: 'Around thirty minutes by car in winter conditions, with Nakafurano roughly in between. Plan dinner around it rather than assuming you will find something at the end of the drive.', ja: '冬季の路面状況で車におよそ30分、中富良野はそのほぼ中間にあります。着いてから探すのではなく、夕食を計画に入れておくことをおすすめします。' },
       },
       {
         q: { en: 'Is there an Indian restaurant in the Furano area?', ja: '富良野エリアにインド料理店はありますか？' },
@@ -804,8 +816,8 @@ export const blogPosts: BlogPost[] = [
             ja: 'ムスリムのお客様の多くはチキンとマトンのカレーから始められます。バターチキンカレーはマイルドで、お子様にも安心です。チキンティッカマサラカレーは当店の一番人気。マトンカレーとマトンサグカレーはネパール出身の常連さんが選ぶ味で、チキンララカレーはチェーン店では出会えないネパールの調理法です。汁気の少ないものをお好みなら、タンドールで焼くタンドリーチキンやチキンティッカもございます。',
           },
           {
-            en: 'For vegetables, Mix Vegetable Curry and Mix Vegetable Soup Curry are both entirely plant-based in their main ingredients. Rice and freshly baked naan come alongside. If you have questions about the naan, the momo filling or anything with dairy in it, ask us at the table and we will tell you exactly what is in it.',
-            ja: '野菜料理では、ミックス野菜カレーとミックス野菜スープカレーが、主な材料をすべて植物性で構成しています。ライスや焼きたてのナンをお添えください。ナンの生地、モモの餡、乳製品を含むものについてご質問があれば、テーブルでお尋ねください。内容を正確にお伝えします。',
+            en: 'For vegetables, Mix Vegetable Curry and Mix Vegetable Soup Curry are both entirely plant-based in their main ingredients, and momo can be ordered with a vegetable filling instead of chicken. Rice and freshly baked naan come alongside. Our standard naan dough contains dairy and egg, but the kitchen will prepare dishes without them on request — and the same goes for allergies and nut-free cooking. Ask when you order.',
+            ja: '野菜料理では、ミックス野菜カレーとミックス野菜スープカレーが主な材料をすべて植物性で構成しており、モモもチキンではなく野菜の餡でご注文いただけます。ライスや焼きたてのナンをお添えください。当店の通常のナン生地には乳製品と卵を使用していますが、ご要望に応じて使わずにお作りします。アレルギーやナッツ不使用のご要望も同様です。ご注文の際にお申し付けください。',
           },
         ],
       },
@@ -814,8 +826,8 @@ export const blogPosts: BlogPost[] = [
         level: 2,
         paragraphs: [
           {
-            en: 'From Furano town and from Furano Ski Resort it is about six kilometres, near enough fifteen minutes on a normal winter road. From Kamifurano it is a similar distance in the other direction. From Biei, the run down through the hills takes longer and is worth allowing around forty minutes for in winter. There is free parking on site, which is a small thing until you are in ski boots with a car full of gear.',
-            ja: '富良野市街・富良野スキー場からは約6キロ、通常の冬道でおよそ15分です。上富良野からは反対方向に同程度の距離。美瑛からは丘を越えるため、冬季は40分ほどをみておくと安心です。敷地内に無料駐車場があり、スキーブーツのまま荷物を積んだ車で来られる方にはありがたいはずです。',
+            en: 'From Furano town and from Furano Ski Resort it is about six kilometres, near enough fifteen minutes on a normal winter road. From Kamifurano it is a similar distance in the other direction. From Biei, the run down through the hills takes longer and is worth allowing around thirty minutes for in winter. There is free parking on site, which is a small thing until you are in ski boots with a car full of gear.',
+            ja: '富良野市街・富良野スキー場からは約6キロ、通常の冬道でおよそ15分です。上富良野からは反対方向に同程度の距離。美瑛からは丘を越えるため、冬季は30分ほどをみておくと安心です。敷地内に無料駐車場があり、スキーブーツのまま荷物を積んだ車で来られる方にはありがたいはずです。',
           },
           {
             en: 'If you are travelling by train, Nakafurano Station is about 1.4 kilometres away, which is a short taxi ride or a walk in better weather. In deep winter, with snow banked up along the pavements, most guests drive.',
