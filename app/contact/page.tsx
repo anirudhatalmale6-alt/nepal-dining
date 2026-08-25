@@ -292,7 +292,7 @@ export default function ContactPage() {
                       <option>{lang === 'en' ? 'Reservation Enquiry' : 'ご予約について'}</option>
                       <option>{lang === 'en' ? 'Menu & Dietary Questions' : 'メニュー・アレルギーについて'}</option>
                       <option>{lang === 'en' ? 'Group Booking' : '団体予約'}</option>
-                      <option>{lang === 'en' ? 'Halal Certification' : 'ハラール認証について'}</option>
+                      <option>{lang === 'en' ? 'Halal-Friendly Options' : 'ハラールフレンドリー対応について'}</option>
                       <option>{lang === 'en' ? 'Other' : 'その他'}</option>
                     </select>
                   </div>
