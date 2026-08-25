@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { FacebookIcon, InstagramIcon, TikTokIcon, XIcon, LineIcon, YouTubeIcon, TripadvisorIcon, MapPinIcon } from './SocialIcons';
 import { useLang } from '../lib/LanguageContext';
 
 export default function Footer() {
@@ -20,15 +21,17 @@ export default function Footer() {
   // before (nepaldiningfurano on Facebook/Instagram/YouTube) were invented and
   // did not exist — the old YouTube one returned a hard 404. He supplied the
   // real channel on 2026-08-25. LINE matters most of these in Japan.
+  // Real brand marks, not emoji — see SocialIcons.tsx for why the emoji
+  // versions were invisible on some devices.
   const socials = [
-    { name: 'Facebook', href: 'https://www.facebook.com/nepaldining', icon: 'f' },
-    { name: 'Instagram', href: 'https://www.instagram.com/nepal_dining_nakafu', icon: '📷' },
-    { name: 'TikTok', href: 'https://www.tiktok.com/@nepal.dining', icon: '♪' },
-    { name: 'X', href: 'https://x.com/nepaldining', icon: '𝕏' },
-    { name: 'LINE', href: 'https://lin.ee/Xn5x4lI', icon: '💬' },
-    { name: 'YouTube', href: 'https://www.youtube.com/@nepaldining', icon: '▶' },
-    { name: 'Tripadvisor', href: 'https://www.tripadvisor.com/Restaurant_Review-g1120352-d21322199-Reviews-Nepal_Dining_Nakafurano-Nakafurano_cho_Sorachi_gun_Hokkaido.html', icon: '🦉' },
-    { name: 'Google Maps', href: 'https://www.google.com/maps?cid=4351573888716021956', icon: '📍' },
+    { name: 'Facebook', href: 'https://www.facebook.com/nepaldining', Icon: FacebookIcon },
+    { name: 'Instagram', href: 'https://www.instagram.com/nepal_dining_nakafu', Icon: InstagramIcon },
+    { name: 'TikTok', href: 'https://www.tiktok.com/@nepal.dining', Icon: TikTokIcon },
+    { name: 'X', href: 'https://x.com/nepaldining', Icon: XIcon },
+    { name: 'LINE', href: 'https://lin.ee/Xn5x4lI', Icon: LineIcon },
+    { name: 'YouTube', href: 'https://www.youtube.com/@nepaldining', Icon: YouTubeIcon },
+    { name: 'Tripadvisor', href: 'https://www.tripadvisor.com/Restaurant_Review-g1120352-d21322199-Reviews-Nepal_Dining_Nakafurano-Nakafurano_cho_Sorachi_gun_Hokkaido.html', Icon: TripadvisorIcon },
+    { name: 'Google Maps', href: 'https://www.google.com/maps?cid=4351573888716021956', Icon: MapPinIcon },
   ];
 
   return (
@@ -51,13 +54,13 @@ export default function Footer() {
                     width: 36, height: 36, borderRadius: '50%',
                     background: 'rgba(255,255,255,0.15)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: 14, textDecoration: 'none',
+                    color: 'white', textDecoration: 'none',
                     transition: 'background 0.2s',
                   }}
                   aria-label={s.name}
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.3)'; }}
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.15)'; }}
-                >{s.icon}</a>
+                >{<s.Icon size={18} />}</a>
               ))}
             </div>
           </div>
