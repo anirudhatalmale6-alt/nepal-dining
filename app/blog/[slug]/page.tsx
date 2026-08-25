@@ -83,6 +83,24 @@ export default async function BlogPostPage({
     keywords: post.tags.join(', '),
   };
 
+  // The page already renders a Home / Blog / post breadcrumb; this just
+  // describes it to Google, which is what turns the URL line in a search
+  // result into a readable trail.
+  const breadcrumbSchema = post && {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog/` },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.title.en,
+        item: `${SITE_URL}/blog/${post.slug}/`,
+      },
+    ],
+  };
+
   // The FAQs were already written into blogData.ts and rendered on the page;
   // marking them up is what makes them eligible to appear as expandable
   // questions under the search result.
@@ -103,6 +121,12 @@ export default async function BlogPostPage({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
+      )}
+      {breadcrumbSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
       )}
       {faqSchema && (

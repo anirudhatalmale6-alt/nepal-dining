@@ -48,6 +48,116 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'where-to-eat-after-skiing-furano',
+    title: {
+      en: 'Best Restaurants Near Furano Ski Resort: Where to Eat After Skiing',
+      ja: '富良野スキー場周辺のおすすめレストラン：スキー後の食事ガイド',
+    },
+    description: {
+      en: 'Where to eat after a day on the slopes at Furano Ski Resort — warming soup curry, fresh naan, halal-friendly and vegetarian options, about 15 minutes away with free parking.',
+      ja: '富良野スキー場で滑った後の食事ガイド — 体を温めるスープカレー、焼きたてナン、ハラール対応・ベジタリアン対応。車で約15分、無料駐車場あり。',
+    },
+    date: '2026-08-25',
+    author: 'Nepal Dining Team',
+    authorRole: { en: 'Winter Sports Writer', ja: 'ウィンタースポーツライター' },
+    category: 'seasonal-events',
+    tags: ['furano ski resort restaurant', 'where to eat after skiing furano', 'curry after skiing furano', 'halal food near furano ski resort', 'vegetarian food furano', 'dinner near furano ski resort'],
+    image: 'https://nepaldining.online/wp-content/uploads/2026/06/chicken-veg-soup-curry.jpg',
+    featured: true,
+    popular: true,
+    readingTime: '6 min',
+    sections: [
+      {
+        heading: { en: 'How Far Is It From the Slopes?', ja: 'ゲレンデからどのくらい？' },
+        level: 2,
+        paragraphs: [
+          {
+            en: 'Nepal Dining sits about 6 kilometres from Furano Ski Resort, in Nakafurano — roughly 15 minutes by car on a normal winter day, and an easy stop on the way back to Kamifurano, Biei or your accommodation. There is free parking on site, which matters more than it sounds when you are still in ski boots and the car is full of gear.',
+            ja: 'ネパールダイニングは富良野スキー場から約6キロ、中富良野町にあります。通常の冬の日なら車で約15分。上富良野や美瑛、宿へ戻る道すがら気軽に立ち寄れる場所です。敷地内に無料駐車場があります — スキーブーツのまま、荷物を積んだ車で向かうときには、これが想像以上にありがたいはずです。',
+          },
+          {
+            en: 'We are not inside Furano city itself. We are in Nakafurano, the next town along the valley, which is why the drive is short but the prices and the atmosphere are noticeably more relaxed than the resort strip.',
+            ja: '当店は富良野市内ではなく、谷筋をひとつ進んだ中富良野町にあります。だからこそ移動は短時間で済み、それでいて価格も雰囲気もリゾート中心部よりずっと落ち着いています。',
+          },
+        ],
+      },
+      {
+        heading: { en: 'Why Curry After a Day on the Mountain', ja: 'スキーの後にカレーがいい理由' },
+        level: 2,
+        paragraphs: [
+          {
+            en: 'A full day at Furano burns through a lot of energy, and the cold does as much of that as the skiing. What you want afterwards is something hot, salty and substantial that arrives quickly. Soup curry does exactly that — it is a Hokkaido speciality for good reason, and it is close to the ideal recovery meal after a day in the snow.',
+            ja: '富良野で一日滑ると、想像以上に体力を消耗します。しかもその多くは滑走そのものよりむしろ寒さによるもの。だから後に欲しくなるのは、熱くて、しっかり塩気があって、すぐに出てくる食事です。スープカレーはまさにそれ — 北海道の名物になったのには理由があり、雪の中で過ごした一日の後の回復食としてほぼ理想的です。',
+          },
+        ],
+      },
+      {
+        heading: { en: 'What to Order After Skiing', ja: 'スキー後におすすめのメニュー' },
+        level: 2,
+        paragraphs: [
+          {
+            en: 'Soup curry is the obvious first choice — a thin, spiced broth with vegetables and your choice of chicken or vegetables, and you set the spice level yourself. Butter chicken is the other favourite with skiers: rich, mild and warming, and it goes well with a family sharing several dishes.',
+            ja: 'まず選んでいただきたいのはスープカレー。スパイスの効いたさらりとしたスープに野菜、そしてチキンか野菜をお選びいただけます。辛さはお好みで調整可能です。もうひとつスキーヤーに人気なのがバターチキン — コクがあり、マイルドで、体が温まります。数皿を家族でシェアするスタイルにもよく合います。',
+          },
+          {
+            en: 'Order the naan fresh from the tandoor — we bake it to order, and cheese naan in particular tends to disappear fast at a table of hungry skiers. Momo, Nepalese steamed dumplings, make a good starter while the curries are being prepared.',
+            ja: 'ナンはタンドールで焼きたてをどうぞ — ご注文をいただいてから焼き上げます。とくにチーズナンは、お腹を空かせたスキーヤーのテーブルではあっという間になくなります。カレーをお待ちいただく間の前菜には、ネパールの蒸し餃子モモがおすすめです。',
+          },
+        ],
+      },
+      {
+        heading: { en: 'Halal-Friendly and Vegetarian Options', ja: 'ハラール対応・ベジタリアン対応について' },
+        level: 2,
+        paragraphs: [
+          {
+            en: 'Nepal Dining is halal-friendly. To be clear about what that means: we are not a halal-certified restaurant, and we will not tell you otherwise. What we can do is prepare a great many of our dishes without pork or alcohol, and our staff will tell you honestly what is in anything you ask about. Please mention your requirements when you order.',
+            ja: '当店はハラールフレンドリーです。ただし、その意味は正確にお伝えします。当店はハラール認証店ではなく、そう名乗ることもいたしません。できるのは、多くのメニューを豚肉・アルコールを使わずにご用意することと、お尋ねいただいた料理の内容をスタッフが正直にお伝えすることです。ご注文の際にご要望をお知らせください。',
+          },
+          {
+            en: 'Vegetarian visitors are well covered. Vegetable curries, dal, mixed vegetable dishes and vegetarian momo are all on the regular menu rather than hidden away as substitutions, and the same applies — ask us and we will tell you exactly what is in a dish.',
+            ja: 'ベジタリアンの方にも十分な選択肢があります。野菜カレー、ダル、ミックスベジタブル、ベジモモなどは代替メニューではなく通常メニューとしてご用意しています。こちらも同様に、お尋ねいただければ料理の内容を正確にお答えします。',
+          },
+        ],
+      },
+      {
+        heading: { en: 'Hours, Winter Driving and Booking Ahead', ja: '営業時間・冬の道路・ご予約について' },
+        level: 2,
+        paragraphs: [
+          {
+            en: 'We are open 11:00–15:00 for lunch and 17:00–21:00 for dinner, Tuesday to Sunday. We close on the 2nd and 4th Wednesday of each month, so it is worth checking before you set out. Last orders are before 21:00, which is earlier than many visitors expect after a late afternoon on the slopes.',
+            ja: '営業時間はランチ11:00〜15:00、ディナー17:00〜21:00、火曜〜日曜です。毎月第2・第4水曜日は定休日ですので、お出かけ前にご確認ください。ラストオーダーは21:00前 — 夕方遅くまで滑った後だと、思ったより早いと感じられるかもしれません。',
+          },
+          {
+            en: 'Roads in the valley are cleared regularly but they are snow-covered for most of the season, so allow more time than the map suggests and use winter tyres. In peak ski season, and especially for groups, please call ahead on 0167-44-2444 or book a table online — a full restaurant and a hungry group after dark is not a happy combination.',
+            ja: '谷沿いの道路は定期的に除雪されますが、シーズン中の大半は雪道です。地図の所要時間より余裕をもって、冬タイヤでお越しください。スキーシーズンのピーク時、とくにグループでのご来店は、事前に 0167-44-2444 までお電話いただくか、オンラインでのご予約をおすすめします。暗くなってから満席でお待たせするのは、私たちも本意ではありません。',
+          },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: { en: 'How far is Nepal Dining from Furano Ski Resort?', ja: '富良野スキー場からどのくらいの距離ですか？' },
+        a: { en: 'About 6 kilometres, roughly 15 minutes by car in normal winter conditions. We are in Nakafurano, the next town along from Furano, and there is free parking on site.', ja: '約6キロ、通常の冬の路面状況で車で約15分です。富良野の隣、中富良野町にあり、無料駐車場をご用意しています。' },
+      },
+      {
+        q: { en: 'What time do you close in ski season?', ja: 'スキーシーズンの閉店時間は？' },
+        a: { en: 'Dinner service runs 17:00–21:00, Tuesday to Sunday, with last orders before 21:00. We are closed on the 2nd and 4th Wednesday of each month.', ja: 'ディナーは火曜〜日曜の17:00〜21:00、ラストオーダーは21:00前です。毎月第2・第4水曜日は定休日です。' },
+      },
+      {
+        q: { en: 'Is there halal food near Furano Ski Resort?', ja: '富良野スキー場の近くでハラール対応の食事はできますか？' },
+        a: { en: 'Nepal Dining is halal-friendly, about 15 minutes from the resort. We are not halal-certified, but many dishes are prepared without pork or alcohol and our staff will tell you exactly what is in any dish. Please mention your requirements when ordering.', ja: 'ネパールダイニングはハラールフレンドリーで、スキー場から約15分です。ハラール認証店ではありませんが、多くの料理を豚肉・アルコールなしでご用意でき、スタッフが料理の内容を正確にお伝えします。ご注文時にご要望をお知らせください。' },
+      },
+      {
+        q: { en: 'Do you have vegetarian food?', ja: 'ベジタリアン向けの料理はありますか？' },
+        a: { en: 'Yes. Vegetable curries, dal, mixed vegetable dishes and vegetarian momo are all on the regular menu, not special-order substitutions.', ja: 'はい。野菜カレー、ダル、ミックスベジタブル、ベジモモなどを通常メニューとしてご用意しています。特別対応の代替メニューではありません。' },
+      },
+      {
+        q: { en: 'Do I need to book in ski season?', ja: 'スキーシーズンは予約が必要ですか？' },
+        a: { en: 'It is strongly recommended for groups and on busy evenings. Call 0167-44-2444 or book a table through the website.', ja: 'グループでのご来店や混雑する夜は、ご予約を強くおすすめします。0167-44-2444 までお電話いただくか、ウェブサイトからご予約ください。' },
+      },
+    ],
+  },
+  {
     slug: 'best-restaurants-in-furano',
     title: {
       en: 'Best Restaurants in Furano 2025: Your Complete Dining Guide',
