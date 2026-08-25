@@ -99,7 +99,15 @@ const structuredData = {
     "https://www.instagram.com/nepal_dining_nakafu",
     "https://www.tiktok.com/@nepal.dining",
     "https://x.com/nepaldining",
-    "https://lin.ee/Xn5x4lI"
+    "https://www.youtube.com/@nepaldining",
+    // Two LINE official accounts, both his and both actively used (confirmed
+    // 2026-08-25). They are NOT duplicates: lin.ee/IfaVwoj resolves to
+    // page.line.me/754doyws "ネパールダイニング 中富良野店" (this branch), and
+    // lin.ee/Xn5x4lI to page.line.me/374cexud "ネパール　ダイニング" (general).
+    // Both listed so Google ties either one to this business; the visible
+    // button uses the general account, which is the one he sent for the site.
+    "https://lin.ee/Xn5x4lI",
+    "https://lin.ee/IfaVwoj"
   ]
 };
 

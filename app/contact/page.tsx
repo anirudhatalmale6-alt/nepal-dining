@@ -199,6 +199,9 @@ export default function ContactPage() {
                     { href: 'https://lin.ee/Xn5x4lI', label: 'LINE', color: '#06C755', icon: (
                       <span className="text-base">💬</span>
                     )},
+                    { href: 'https://www.youtube.com/@nepaldining', label: 'YouTube', color: '#FF0000', icon: (
+                      <span className="text-base">▶</span>
+                    )},
                     { href: 'https://www.tripadvisor.com/Restaurant_Review-g1120352-d21322199-Reviews-Nepal_Dining_Nakafurano-Nakafurano_cho_Sorachi_gun_Hokkaido.html', label: 'Tripadvisor', color: '#34E0A1', icon: (
                       <span className="text-base">🦉</span>
                     )},
