@@ -98,7 +98,7 @@ export const FALLBACK_MENU: MenuData = {
     {"id":"tandoori-chicken","cat":"Tandoori","name":"Tandoori Chicken","nameJa":"タンドリーチキン","price":880,"desc":"Half chicken marinated in yogurt and spices.","descJa":"ヨーグルトとスパイスでマリネした半身チキン。","tag":"Signature","tagJa":"シグネチャー","img":"https://nepaldining.online/wp-content/uploads/2026/06/tandoori-chicken.jpg","spice":2,"hasNaanRice":false,"hasLargePortion":true,"available":true},
     {"id":"momo-6pc","cat":"Sides","name":"Momo (6pc)","nameJa":"モモ（6個）","price":980,"desc":"Traditional Nepalese dumplings with spiced filling.","descJa":"伝統的なネパール餃子、スパイス入り。","tag":"Nepalese","tagJa":"ネパール料理","img":"https://nepaldining.online/wp-content/uploads/2026/06/momo.jpg","spice":1,"hasNaanRice":false,"hasLargePortion":false,"available":true},
   ],
-};;;;;;;;;;;;
+};;;;;;;;;;;;;
 
 export const SPICE_LEVELS = [
   { en: 'Mild', ja: 'マイルド', color: '#27AE60', icon: '🌶' },

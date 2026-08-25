@@ -182,7 +182,7 @@ export default function OrderPage() {
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 20px rgba(212,130,26,0.15)'; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.boxShadow = '0 2px 12px rgba(28,26,24,0.07)'; }}
                 >
-                  <img src={item.img} alt={lang === 'ja' ? item.nameJa : item.name} style={{ width: 80, height: 80, borderRadius: 12, objectFit: 'cover', flexShrink: 0 }} />
+                  <img src={item.img} alt={lang === 'ja' ? item.nameJa : item.name} loading="lazy" decoding="async" style={{ width: 80, height: 80, borderRadius: 12, objectFit: 'cover', flexShrink: 0 }} />
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                       <h3 style={{ fontSize: 15, fontWeight: 700, color: '#1C1A18', margin: 0 }}>
@@ -412,7 +412,7 @@ export default function OrderPage() {
                 <>
                   {/* Modal Header with Image */}
                   <div style={{ position: 'relative', height: 200, overflow: 'hidden', borderRadius: '24px 24px 0 0' }}>
-                    <img src={item.img} alt={lang === 'ja' ? item.nameJa : item.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img src={item.img} alt={lang === 'ja' ? item.nameJa : item.name} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: 'linear-gradient(transparent, rgba(0,0,0,0.7))', padding: '40px 24px 16px' }}>
                       <h3 style={{ fontSize: 22, fontWeight: 800, color: 'white', fontFamily: 'Georgia, serif', margin: 0 }}>
                         {lang === 'ja' ? item.nameJa : item.name}

@@ -118,7 +118,7 @@ function ArticleSidebar({ post, lang }: { post: BlogPost; lang: 'en' | 'ja' }) {
               <li key={p.slug} style={{ padding: '10px 0', borderBottom: i < popular.length - 1 ? '1px solid #f5f0eb' : 'none' }}>
                 <Link href={`/blog/${p.slug}`} style={{ display: 'flex', gap: 10, textDecoration: 'none', alignItems: 'start' }}>
                   <div style={{ width: 50, height: 50, borderRadius: 8, overflow: 'hidden', flexShrink: 0 }}>
-                    <img src={p.image} alt={p.title[lang]} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img src={p.image} alt={p.title[lang]} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <div>
                     <p style={{ fontSize: 12, fontWeight: 600, color: '#1C1A18', lineHeight: 1.4, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{p.title[lang]}</p>
@@ -154,7 +154,7 @@ function ArticleSidebar({ post, lang }: { post: BlogPost; lang: 'en' | 'ja' }) {
           {related.map((p, i) => (
             <Link key={p.slug} href={`/blog/${p.slug}`} style={{ display: 'flex', gap: 10, textDecoration: 'none', padding: '10px 0', borderBottom: i < related.length - 1 ? '1px solid #f5f0eb' : 'none' }}>
               <div style={{ width: 50, height: 50, borderRadius: 8, overflow: 'hidden', flexShrink: 0 }}>
-                <img src={p.image} alt={p.title[lang]} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={p.image} alt={p.title[lang]} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div>
                 <p style={{ fontSize: 12, fontWeight: 600, color: '#1C1A18', lineHeight: 1.4, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{p.title[lang]}</p>
@@ -195,7 +195,7 @@ export default function BlogPostClient({ slug }: { slug: string }) {
     <div style={{ paddingTop: 72, minHeight: '100vh', background: '#FAFAF8' }}>
       {/* Hero Image */}
       <div style={{ position: 'relative', height: '55vh', minHeight: 350, maxHeight: 500, overflow: 'hidden' }}>
-        <img src={post.image} alt={post.title[lang]} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        <img src={post.image} alt={post.title[lang]} fetchPriority="high" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(28,26,24,0.85) 0%, rgba(28,26,24,0.3) 50%, transparent 100%)' }} />
         <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '32px', maxWidth: 900, margin: '0 auto' }}>
           <span style={{ display: 'inline-block', background: color, color: 'white', fontSize: 11, fontWeight: 700, padding: '4px 14px', borderRadius: 14, marginBottom: 14, textTransform: 'uppercase', letterSpacing: '0.05em' }}>{catName}</span>

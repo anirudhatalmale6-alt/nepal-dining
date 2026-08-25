@@ -19,7 +19,7 @@ function postUrl(slug: string) {
   return STATIC_SLUGS.has(slug) ? `/blog/${slug}/` : `/blog/${slug}/`;
 }
 
-function BlogCard({ post, lang, variant = 'default' }: { post: BlogPost; lang: 'en' | 'ja'; variant?: 'featured' | 'default' | 'horizontal' }) {
+function BlogCard({ post, lang, variant = 'default', priority = false }: { post: BlogPost; lang: 'en' | 'ja'; variant?: 'featured' | 'default' | 'horizontal'; priority?: boolean }) {
   const color = CATEGORY_COLORS[post.category];
   const catName = CATEGORIES[post.category]?.[lang] || post.category;
   const dateStr = formatDate(post.date, lang);
@@ -28,7 +28,7 @@ function BlogCard({ post, lang, variant = 'default' }: { post: BlogPost; lang: '
   if (variant === 'featured') {
     return (
       <Link href={href} style={{ display: 'block', position: 'relative', borderRadius: 16, overflow: 'hidden', height: 360, textDecoration: 'none' }}>
-        <img src={post.image} alt={post.title[lang]} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        <img src={post.image} alt={post.title[lang]} {...(priority ? { fetchPriority: 'high' as const } : { loading: 'lazy' as const })} decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, transparent 100%)' }} />
         <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: 24 }}>
           <span style={{ display: 'inline-block', background: color, color: 'white', fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 12, marginBottom: 10 }}>{catName}</span>
@@ -48,7 +48,7 @@ function BlogCard({ post, lang, variant = 'default' }: { post: BlogPost; lang: '
     return (
       <Link href={`/blog/${post.slug}`} style={{ display: 'flex', gap: 16, textDecoration: 'none', padding: 12, background: 'white', borderRadius: 12, border: '1px solid #f0f0f0', transition: 'box-shadow 0.2s' }}>
         <div style={{ width: 110, height: 90, borderRadius: 10, overflow: 'hidden', flexShrink: 0 }}>
-          <img src={post.image} alt={post.title[lang]} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <img src={post.image} alt={post.title[lang]} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', minWidth: 0 }}>
           <span style={{ display: 'inline-block', background: `${color}15`, color: color, fontSize: 10, fontWeight: 700, padding: '2px 8px', borderRadius: 8, marginBottom: 6, width: 'fit-content' }}>{catName}</span>
@@ -66,7 +66,7 @@ function BlogCard({ post, lang, variant = 'default' }: { post: BlogPost; lang: '
   return (
     <article style={{ background: 'white', borderRadius: 16, overflow: 'hidden', border: '1px solid #f0f0f0', display: 'flex', flexDirection: 'column' }}>
       <Link href={`/blog/${post.slug}`} style={{ display: 'block', height: 180, overflow: 'hidden' }}>
-        <img src={post.image} alt={post.title[lang]} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s' }} />
+        <img src={post.image} alt={post.title[lang]} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s' }} />
       </Link>
       <div style={{ padding: 20, display: 'flex', flexDirection: 'column', flex: 1 }}>
         <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 10 }}>
@@ -341,7 +341,7 @@ export default function BlogPage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
               {featured.map((post, i) => (
-                <BlogCard key={post.slug} post={post} lang={lang} variant="featured" />
+                <BlogCard key={post.slug} post={post} lang={lang} variant="featured" priority={i === 0} />
               ))}
             </div>
           </section>

@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useLang } from '../lib/LanguageContext';
+import { altFromImageUrl } from '../lib/imageAlt';
 import ReservationForm from '../components/ReservationForm';
 import { useTeam } from '../lib/teamData';
 
@@ -155,7 +156,7 @@ export default function AboutPage() {
         <div style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12 }}>
           {['butter-chicken-curry','momo','garlic-naan','chicken-veg-soup-curry'].map((img, i) => (
             <div key={i} style={{ borderRadius: 14, overflow: 'hidden', aspectRatio: '1' }}>
-              <img src={`https://nepaldining.online/wp-content/uploads/2026/06/${img}.jpg`} alt="Nepal Dining" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src={`https://nepaldining.online/wp-content/uploads/2026/06/${img}.jpg`} alt={altFromImageUrl(img, lang)} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
           ))}
         </div>

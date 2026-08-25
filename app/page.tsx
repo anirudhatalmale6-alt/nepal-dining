@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useLang } from "./lib/LanguageContext";
+import { altFromImageUrl } from "./lib/imageAlt";
 import ReservationForm from "./components/ReservationForm";
 
 function SectionEyebrow({ children }: { children: React.ReactNode }) {
@@ -15,7 +16,7 @@ function SectionEyebrow({ children }: { children: React.ReactNode }) {
 }
 
 export default function HomePage() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   const menuImages = [
     "https://nepaldining.online/wp-content/uploads/2026/06/butter-chicken-curry.jpg",
@@ -70,7 +71,7 @@ export default function HomePage() {
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, borderRadius: 20, overflow: "hidden" }}>
                 {["https://nepaldining.online/wp-content/uploads/2026/06/chicken-tikka-masala.jpg","https://nepaldining.online/wp-content/uploads/2026/06/garlic-naan.jpg","https://nepaldining.online/wp-content/uploads/2026/06/mix-veg-curry.jpg","https://nepaldining.online/wp-content/uploads/2026/06/momo-veg-soup-curry.jpg"].map((src, i) => (
                   <div key={i} style={{ aspectRatio: "1", overflow: "hidden", borderRadius: 12, boxShadow: "0 8px 24px rgba(28,26,24,0.12)" }}>
-                    <img src={src} alt="Nepal Dining" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                    <img src={src} alt={altFromImageUrl(src, lang)} loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                   </div>
                 ))}
               </div>
