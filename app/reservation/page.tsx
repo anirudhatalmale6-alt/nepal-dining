@@ -22,7 +22,7 @@ export default function ReservationPage() {
               <h3 style={{ fontSize: 18, fontWeight: 700, color: '#1C1A18', fontFamily: 'Georgia, serif', marginBottom: 20 }}>Before You Visit</h3>
               {[
                 { icon: '🕐', title: 'Business Hours', desc: 'Tue–Sun: 11:00–15:00 / 17:00–21:00\n2nd & 4th Wednesday: Closed' },
-                { icon: '📍', title: 'Location', desc: 'Akatsukimachi 3-19, Nakafurano\nHokkaido 071-0714' },
+                { icon: '📍', title: 'Location', desc: 'Akatsukimachi 3-19, Nakafurano\nHokkaido 071-0770' },
                 { icon: '🌸', title: 'Lavender Season', desc: 'June–August is peak season. Reserve at least 2 weeks in advance.' },
                 { icon: '🕌', title: 'Halal Friendly', desc: 'Please mention dietary requirements in the special requests field.' },
                 { icon: '👨‍👩‍👧', title: 'Families Welcome', desc: 'High chairs and kids\' portions available. Just ask!' },

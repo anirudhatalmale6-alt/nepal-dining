@@ -84,7 +84,7 @@ export default function AccessPage() {
                       : 'Hokkaido, Sorachi Gun, Nakafurano Cho, Akatsukimachi 3-19'}
                   </p>
                   <a
-                    href="https://maps.google.com/?q=Nepal+Dining+Nakafurano"
+                    href="https://www.google.com/maps?cid=4351573888716021956"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 12, fontSize: 14, color: '#D4821A', fontWeight: 600, textDecoration: 'none' }}

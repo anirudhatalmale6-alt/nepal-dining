@@ -57,10 +57,19 @@ const structuredData = {
     "streetAddress": "Akatsukimachi 3-19",
     "addressLocality": "Nakafurano",
     "addressRegion": "Hokkaido",
-    "postalCode": "071-0714",
+    // 071-0770 per the owner's own Google Business Profile and the Access
+    // page. The site previously carried 071-0714 here and on the reservation
+    // page — a NAP mismatch, and Google treats address disagreement between a
+    // site and its Business Profile as a reason to trust the listing less.
+    "postalCode": "071-0770",
     "addressCountry": "JP"
   },
-  "geo": { "@type": "GeoCoordinates", "latitude": 43.5167, "longitude": 142.4167 },
+  // Taken from the owner's own Google Business Profile pin, 2026-08-25. The
+  // previous pair (43.5167, 142.4167) was the Nakafurano town centroid and sat
+  // 13.5 km north of the restaurant — telling Google the wrong location for a
+  // business whose whole ranking case is "near me".
+  "geo": { "@type": "GeoCoordinates", "latitude": 43.3954305, "longitude": 142.4125147 },
+  "hasMap": "https://www.google.com/maps?cid=4351573888716021956",
   // Wednesday stays listed: the restaurant is open on the 1st, 3rd and 5th
   // Wednesday of each month. Schema.org has no way to express "2nd and 4th
   // Wednesday closed", so those two dates are handled on the pages themselves.
@@ -79,9 +88,10 @@ const structuredData = {
   "acceptsReservations": true,
   // sameAs is how Google confirms this website and the off-site listings are
   // one business rather than several — a direct local-ranking signal. Owner
-  // supplied the TripAdvisor URL 2026-08-25; add the Google Business Profile,
-  // Instagram and Facebook URLs here as soon as he sends them.
+  // supplied both URLs 2026-08-25; add Instagram/Facebook here if he sends them.
+  // The Maps entry is the stable ?cid= form, not a share link or a text search.
   "sameAs": [
+    "https://www.google.com/maps?cid=4351573888716021956",
     "https://www.tripadvisor.com/Restaurant_Review-g1120352-d21322199-Reviews-Nepal_Dining_Nakafurano-Nakafurano_cho_Sorachi_gun_Hokkaido.html"
   ]
 };

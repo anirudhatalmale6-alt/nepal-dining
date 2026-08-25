@@ -196,7 +196,7 @@ export default function ContactPage() {
                     { href: 'https://www.tripadvisor.com/Restaurant_Review-g1120352-d21322199-Reviews-Nepal_Dining_Nakafurano-Nakafurano_cho_Sorachi_gun_Hokkaido.html', label: 'Tripadvisor', color: '#34E0A1', icon: (
                       <span className="text-base">🦉</span>
                     )},
-                    { href: 'https://maps.google.com/?q=Nepal+Dining+Nakafurano', label: 'Google Maps', color: '#4285F4', icon: (
+                    { href: 'https://www.google.com/maps?cid=4351573888716021956', label: 'Google Maps', color: '#4285F4', icon: (
                       <span className="text-base">📍</span>
                     )},
                   ].map((s) => (

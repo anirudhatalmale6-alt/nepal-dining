@@ -236,7 +236,7 @@ export default function HomePage() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 40 }}>
             <div style={{ borderRadius: 20, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.3)", minHeight: 300 }}>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11641.947!2d142.3916!3d43.5067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b357b2d2a1d0b%3A0x4a4b2a1b2c3d4e5f!2sNakafurano%2C+Hokkaido!5e0!3m2!1sen!2sjp!4v1234567890" width="100%" height="100%" style={{ border: 0, minHeight: 300 }} allowFullScreen loading="lazy" title="Nepal Dining Location" />
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d362.38966754500626!2d142.41261125952713!3d43.395476788068905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0cb3a23bd01435%3A0x3c63e5656ac8a0c4!2sNepal%20Dining!5e0!3m2!1sen!2sjp!4v1781850016320!5m2!1sen!2sjp" width="100%" height="100%" style={{ border: 0, minHeight: 300 }} allowFullScreen loading="lazy" title="Nepal Dining Location" />
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
               {infoItems.map((item, i) => (
@@ -252,7 +252,7 @@ export default function HomePage() {
                   </div>
                 </div>
               ))}
-              <a href="https://maps.google.com/?q=Nakafurano+Hokkaido" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "14px", borderRadius: 14, background: "linear-gradient(135deg, #D4821A, #F0A830)", color: "white", textDecoration: "none", fontSize: 15, fontWeight: 700 }}>📍 Open in Google Maps</a>
+              <a href="https://www.google.com/maps?cid=4351573888716021956" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "14px", borderRadius: 14, background: "linear-gradient(135deg, #D4821A, #F0A830)", color: "white", textDecoration: "none", fontSize: 15, fontWeight: 700 }}>📍 Open in Google Maps</a>
             </div>
           </div>
         </div>
