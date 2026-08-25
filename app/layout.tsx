@@ -76,7 +76,14 @@ const structuredData = {
   // when the real count had passed 1,000. Google shows the live rating from the
   // Business Profile instead, which stays correct without anyone editing it.
   "menu": "https://nepaldining.online/menu",
-  "acceptsReservations": true
+  "acceptsReservations": true,
+  // sameAs is how Google confirms this website and the off-site listings are
+  // one business rather than several — a direct local-ranking signal. Owner
+  // supplied the TripAdvisor URL 2026-08-25; add the Google Business Profile,
+  // Instagram and Facebook URLs here as soon as he sends them.
+  "sameAs": [
+    "https://www.tripadvisor.com/Restaurant_Review-g1120352-d21322199-Reviews-Nepal_Dining_Nakafurano-Nakafurano_cho_Sorachi_gun_Hokkaido.html"
+  ]
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

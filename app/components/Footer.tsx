@@ -20,7 +20,7 @@ export default function Footer() {
     { name: 'Facebook', href: 'https://facebook.com/nepaldiningfurano', icon: 'f' },
     { name: 'Instagram', href: 'https://instagram.com/nepaldiningfurano', icon: '📷' },
     { name: 'YouTube', href: 'https://youtube.com/@nepaldiningfurano', icon: '▶' },
-    { name: 'Tripadvisor', href: 'https://tripadvisor.com', icon: '🦉' },
+    { name: 'Tripadvisor', href: 'https://www.tripadvisor.com/Restaurant_Review-g1120352-d21322199-Reviews-Nepal_Dining_Nakafurano-Nakafurano_cho_Sorachi_gun_Hokkaido.html', icon: '🦉' },
     { name: 'Google Maps', href: 'https://maps.google.com/?q=Nepal+Dining+Nakafurano', icon: '📍' },
   ];
 
