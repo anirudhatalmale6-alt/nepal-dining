@@ -118,7 +118,7 @@ function ArticleSidebar({ post, lang }: { post: BlogPost; lang: 'en' | 'ja' }) {
               <li key={p.slug} style={{ padding: '10px 0', borderBottom: i < popular.length - 1 ? '1px solid #f5f0eb' : 'none' }}>
                 <Link href={`/blog/${p.slug}`} style={{ display: 'flex', gap: 10, textDecoration: 'none', alignItems: 'start' }}>
                   <div style={{ width: 50, height: 50, borderRadius: 8, overflow: 'hidden', flexShrink: 0 }}>
-                    <img src={p.image} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img src={p.image} alt={p.title[lang]} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <div>
                     <p style={{ fontSize: 12, fontWeight: 600, color: '#1C1A18', lineHeight: 1.4, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{p.title[lang]}</p>
@@ -154,7 +154,7 @@ function ArticleSidebar({ post, lang }: { post: BlogPost; lang: 'en' | 'ja' }) {
           {related.map((p, i) => (
             <Link key={p.slug} href={`/blog/${p.slug}`} style={{ display: 'flex', gap: 10, textDecoration: 'none', padding: '10px 0', borderBottom: i < related.length - 1 ? '1px solid #f5f0eb' : 'none' }}>
               <div style={{ width: 50, height: 50, borderRadius: 8, overflow: 'hidden', flexShrink: 0 }}>
-                <img src={p.image} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={p.image} alt={p.title[lang]} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div>
                 <p style={{ fontSize: 12, fontWeight: 600, color: '#1C1A18', lineHeight: 1.4, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{p.title[lang]}</p>
