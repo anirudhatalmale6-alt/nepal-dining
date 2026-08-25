@@ -4,20 +4,41 @@ import { LanguageProvider } from "./lib/LanguageContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
+import { SITE_URL, OG_IMAGE } from "./lib/site";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Nepal Dining | Authentic Nepalese & Indian Restaurant in Furano, Hokkaido",
   description: "Nepal Dining – Furano's highest-rated Nepalese and Indian restaurant in Nakafurano, Hokkaido. Fresh baked naan, butter chicken, soup curry, momo. Halal-friendly. English spoken. Dine in or takeout.",
   keywords: "Nepal Dining, Furano restaurant, Nakafurano curry, Hokkaido Indian food, halal Furano, naan Hokkaido, Nepalese restaurant Japan, 富良野カレー, ネパール料理, 中富良野レストラン",
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Nepal Dining | Authentic Nepalese & Indian Restaurant in Furano",
     description: "Fresh baked naan, authentic curry, and warm Himalayan hospitality in the heart of Hokkaido's lavender country.",
-    url: "https://nepaldining.online",
+    url: SITE_URL,
     siteName: "Nepal Dining",
     locale: "ja_JP",
     alternateLocale: ["en_US"],
     type: "website",
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Nepal Dining, Nakafurano" }],
   },
-  robots: { index: true, follow: true },
+  twitter: { card: "summary_large_image", images: [OG_IMAGE] },
+  robots: {
+    index: true,
+    follow: true,
+    // Google Discover only ever surfaces a page as a large image card if the
+    // page grants a large image preview. The default ("index, follow" alone)
+    // caps previews at a thumbnail, which makes a page Discover-ineligible in
+    // practice however good its content is. max-snippet/max-video-preview are
+    // the same opt-in for text and video.
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 const structuredData = {
@@ -27,6 +48,9 @@ const structuredData = {
   "alternateName": "ネパールダイニング",
   "description": "Authentic Nepalese and Indian restaurant in Nakafurano, Hokkaido. Fresh baked naan, butter chicken, soup curry, momo. Halal-friendly.",
   "url": "https://nepaldining.online",
+  // Google wants an image on a LocalBusiness before it will consider it for
+  // rich presentation. Points at a real uploaded photo, not a logo.
+  "image": OG_IMAGE,
   "telephone": "+81-167-44-2444",
   "address": {
     "@type": "PostalAddress",
