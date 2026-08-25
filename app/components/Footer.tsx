@@ -16,10 +16,16 @@ export default function Footer() {
     { href: '/contact', label: t.nav.contact },
   ];
 
+  // Real accounts, supplied by the owner 2026-08-25. The handles that were here
+  // before (nepaldiningfurano on Facebook/Instagram/YouTube) were invented and
+  // did not exist — the YouTube one returned a hard 404, so it is gone rather
+  // than kept pointing at nothing. LINE matters most of the four in Japan.
   const socials = [
-    { name: 'Facebook', href: 'https://facebook.com/nepaldiningfurano', icon: 'f' },
-    { name: 'Instagram', href: 'https://instagram.com/nepaldiningfurano', icon: '📷' },
-    { name: 'YouTube', href: 'https://youtube.com/@nepaldiningfurano', icon: '▶' },
+    { name: 'Facebook', href: 'https://www.facebook.com/nepaldining', icon: 'f' },
+    { name: 'Instagram', href: 'https://www.instagram.com/nepal_dining_nakafu', icon: '📷' },
+    { name: 'TikTok', href: 'https://www.tiktok.com/@nepal.dining', icon: '♪' },
+    { name: 'X', href: 'https://x.com/nepaldining', icon: '𝕏' },
+    { name: 'LINE', href: 'https://lin.ee/Xn5x4lI', icon: '💬' },
     { name: 'Tripadvisor', href: 'https://www.tripadvisor.com/Restaurant_Review-g1120352-d21322199-Reviews-Nepal_Dining_Nakafurano-Nakafurano_cho_Sorachi_gun_Hokkaido.html', icon: '🦉' },
     { name: 'Google Maps', href: 'https://www.google.com/maps?cid=4351573888716021956', icon: '📍' },
   ];

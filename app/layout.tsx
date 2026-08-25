@@ -86,13 +86,20 @@ const structuredData = {
   // Business Profile instead, which stays correct without anyone editing it.
   "menu": "https://nepaldining.online/menu",
   "acceptsReservations": true,
-  // sameAs is how Google confirms this website and the off-site listings are
-  // one business rather than several — a direct local-ranking signal. Owner
-  // supplied both URLs 2026-08-25; add Instagram/Facebook here if he sends them.
+  // sameAs is how Google confirms this website and the off-site profiles are
+  // one business rather than several — a direct local-ranking signal. All
+  // supplied by the owner 2026-08-25. Tracking parameters are stripped: the
+  // Instagram link arrived with ?igsi=&utm_source=qr, which identifies a scan
+  // session rather than the profile and does not belong in an identity claim.
   // The Maps entry is the stable ?cid= form, not a share link or a text search.
   "sameAs": [
     "https://www.google.com/maps?cid=4351573888716021956",
-    "https://www.tripadvisor.com/Restaurant_Review-g1120352-d21322199-Reviews-Nepal_Dining_Nakafurano-Nakafurano_cho_Sorachi_gun_Hokkaido.html"
+    "https://www.tripadvisor.com/Restaurant_Review-g1120352-d21322199-Reviews-Nepal_Dining_Nakafurano-Nakafurano_cho_Sorachi_gun_Hokkaido.html",
+    "https://www.facebook.com/nepaldining",
+    "https://www.instagram.com/nepal_dining_nakafu",
+    "https://www.tiktok.com/@nepal.dining",
+    "https://x.com/nepaldining",
+    "https://lin.ee/Xn5x4lI"
   ]
 };
 
