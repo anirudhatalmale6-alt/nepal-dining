@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "sync": "node scripts/sync-menu.mjs && node scripts/sync-team.mjs && node scripts/sync-blog.mjs",
+    "build": "npm run sync && next build",
+    "build:nosync": "next build",
     "start": "next start",
     "lint": "eslint"
   },

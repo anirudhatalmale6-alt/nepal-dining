@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 
 import { SITE_URL } from './lib/site';
 import { blogPosts } from './lib/blogData';
+import { cmsPosts } from './lib/cmsPosts';
 
 // Required by `output: 'export'` — tells Next this route is a build-time file.
 export const dynamic = 'force-static';
@@ -31,5 +32,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...pages, ...posts];
+  // Posts the owner wrote in the admin panel have no entry in blogData.ts and
+  // no static page — view.php serves them. They were absent from the sitemap
+  // entirely. Deduped by slug so a post that exists in both lists is listed
+  // once, with the blogData entry winning.
+  const known = new Set(blogPosts.map((p) => p.slug));
+  const ownPosts: MetadataRoute.Sitemap = cmsPosts
+    .filter((p) => !known.has(p.slug))
+    .map((p) => ({
+      url: `${SITE_URL}/blog/${p.slug}/`,
+      lastModified: new Date(p.date),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    }));
+
+  return [...pages, ...posts, ...ownPosts];
 }

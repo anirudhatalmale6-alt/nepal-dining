@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { LanguageProvider } from "./lib/LanguageContext";
 import Navbar from "./components/Navbar";
@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   description: "Nepal Dining – Furano's highest-rated Nepalese and Indian restaurant in Nakafurano, Hokkaido. Fresh baked naan, butter chicken, soup curry, momo. Halal-friendly. English spoken. Dine in or takeout.",
   keywords: "Nepal Dining, Furano restaurant, Nakafurano curry, Hokkaido Indian food, halal Furano, naan Hokkaido, Nepalese restaurant Japan, 富良野カレー, ネパール料理, 中富良野レストラン",
   alternates: { canonical: "/" },
+  // app/favicon.ico and app/apple-icon.png are picked up by convention; the
+  // manifest is a plain file in public/ so it survives `output: 'export'`
+  // without needing a route.
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "Nepal Dining | Authentic Nepalese & Indian Restaurant in Furano",
     description: "Fresh baked naan, authentic curry, and warm Himalayan hospitality in the heart of Hokkaido's lavender country.",
@@ -41,16 +45,29 @@ export const metadata: Metadata = {
   },
 };
 
+// Since Next 14 themeColor belongs on the viewport export, not on metadata —
+// left on metadata it is silently dropped and never reaches the head.
+export const viewport: Viewport = {
+  // Saffron, the site's own brand colour — this tints the mobile browser bar,
+  // so it should match the page the visitor is looking at, not the red logo.
+  themeColor: "#D4821A",
+};
+
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "name": "Nepal Dining",
   "alternateName": "ネパールダイニング",
   "description": "Authentic Nepalese and Indian restaurant in Nakafurano, Hokkaido. Fresh baked naan, butter chicken, soup curry, momo. Halal-friendly.",
-  "url": "https://nepaldining.online",
+  // SITE_URL, not a hand-typed copy: the canonical tag says www and this said
+  // non-www, which asks Google to reconcile two identities for one restaurant.
+  "url": SITE_URL,
   // Google wants an image on a LocalBusiness before it will consider it for
   // rich presentation. Points at a real uploaded photo, not a logo.
   "image": OG_IMAGE,
+  // The owner's own logo. Separate from "image" on purpose: image is the photo
+  // Google shows, logo is the brand mark it can attach to the business.
+  "logo": `${SITE_URL}/nepal-dining-logo.png`,
   "telephone": "+81-167-44-2444",
   "address": {
     "@type": "PostalAddress",
@@ -115,7 +132,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja">
       <head>
-        <meta name="theme-color" content="#D4821A" />
+        {/* theme-color now comes from the viewport export above — declaring it
+            here as well emitted the tag twice. */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </head>
       <body className="antialiased">
