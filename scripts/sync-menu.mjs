@@ -12,8 +12,17 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const URL_ = process.env.MENU_URL || 'https://nepaldining.online/menu-data/menu.json';
+const URL_ = process.env.MENU_URL || 'https://www.nepaldining.online/menu-data/menu.json';
 const FILE = path.join(process.cwd(), 'app/lib/menuData.ts');
+
+/**
+ * The admin panel stores image URLs on the bare host. Since non-www 301s to
+ * www, leaving them alone would put a redirect hop in front of every dish
+ * photo on the menu and order pages. Rewrite on the way into the build; the
+ * owner's own JSON is left exactly as he saved it.
+ */
+const canonicalHost = (u) =>
+  typeof u === 'string' ? u.replace(/^https?:\/\/nepaldining\.online/i, 'https://www.nepaldining.online') : u;
 
 const res = await fetch(URL_, { cache: 'no-store' });
 if (!res.ok) throw new Error(`${URL_} → HTTP ${res.status}`);
@@ -35,7 +44,7 @@ const naan = live.options.naanRice
 const items = live.items.map(i => '    ' + JSON.stringify({
   id: i.id, cat: i.cat, name: i.name, nameJa: i.nameJa, price: Number(i.price) || 0,
   desc: i.desc || '', descJa: i.descJa || '', tag: i.tag || '', tagJa: i.tagJa || '',
-  img: i.img || '', spice: Number(i.spice) || 0,
+  img: canonicalHost(i.img) || '', spice: Number(i.spice) || 0,
   hasNaanRice: !!i.hasNaanRice, hasLargePortion: !!i.hasLargePortion,
   available: i.available !== false,
 }) + ',').join('\n');

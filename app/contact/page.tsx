@@ -99,7 +99,7 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="relative py-24 bg-[#1C1A18] overflow-hidden">
         <div className="absolute inset-0 opacity-20"
-          style={{ backgroundImage: "url('https://nepaldining.online/wp-content/uploads/2026/06/chicken-tikka-masala.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
+          style={{ backgroundImage: "url('https://www.nepaldining.online/wp-content/uploads/2026/06/chicken-tikka-masala.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <p className="text-[#D4821A] uppercase tracking-[0.2em] text-sm font-semibold mb-4">
             {lang === 'en' ? 'Get in Touch' : 'お問い合わせ'}

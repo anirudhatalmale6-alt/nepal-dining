@@ -97,7 +97,7 @@ export default function AboutPage() {
     <div style={{ paddingTop: 72, minHeight: '100vh', background: '#FFFDF8' }}>
       {/* Hero */}
       <section style={{ position: 'relative', padding: '80px 24px 60px', background: 'linear-gradient(135deg, #1C1A18 0%, #2D2820 100%)', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(https://nepaldining.online/wp-content/uploads/2026/06/butter-chicken-curry.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.15 }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(https://www.nepaldining.online/wp-content/uploads/2026/06/butter-chicken-curry.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.15 }} />
         <div style={{ position: 'relative', maxWidth: 800, margin: '0 auto', textAlign: 'center' }}>
           <div style={{ fontSize: 12, fontWeight: 700, color: '#D4821A', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 12 }}>{lang === 'ja' ? '私たちのストーリー' : 'Our Story'}</div>
           <h1 style={{ fontSize: 'clamp(32px, 5vw, 56px)', fontWeight: 800, color: 'white', fontFamily: 'Georgia, serif', lineHeight: 1.15, marginBottom: 20 }}>
@@ -156,7 +156,7 @@ export default function AboutPage() {
         <div style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12 }}>
           {['butter-chicken-curry','momo','garlic-naan','chicken-veg-soup-curry'].map((img, i) => (
             <div key={i} style={{ borderRadius: 14, overflow: 'hidden', aspectRatio: '1' }}>
-              <img src={`https://nepaldining.online/wp-content/uploads/2026/06/${img}.jpg`} alt={altFromImageUrl(img, lang)} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src={`https://www.nepaldining.online/wp-content/uploads/2026/06/${img}.jpg`} alt={altFromImageUrl(img, lang)} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
           ))}
         </div>

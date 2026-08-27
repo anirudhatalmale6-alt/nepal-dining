@@ -11,8 +11,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const URL_ = process.env.TEAM_URL || 'https://nepaldining.online/team-data/team.json';
+const URL_ = process.env.TEAM_URL || 'https://www.nepaldining.online/team-data/team.json';
 const FILE = path.join(process.cwd(), 'app/lib/teamData.ts');
+
+// See sync-menu.mjs — non-www 301s to www, so a photo URL saved on the bare
+// host would cost a redirect hop on every render.
+const canonicalHost = (u) =>
+  typeof u === 'string' ? u.replace(/^https?:\/\/nepaldining\.online/i, 'https://www.nepaldining.online') : u;
 
 const res = await fetch(URL_, { cache: 'no-store' });
 if (!res.ok) throw new Error(`${URL_} → HTTP ${res.status}`);
@@ -31,7 +36,7 @@ const rows = live.map(m => '  ' + JSON.stringify({
   id: m.id, name: m.name,
   role: m.role || '', roleJa: m.roleJa || '',
   desc: m.desc || '', descJa: m.descJa || '',
-  emoji: m.emoji || '👤', photo: m.photo || '',
+  emoji: m.emoji || '👤', photo: canonicalHost(m.photo) || '',
   available: m.available !== false,
 }) + ',').join('\n');
 

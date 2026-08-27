@@ -19,20 +19,20 @@ export default function HomePage() {
   const { t, lang } = useLang();
 
   const menuImages = [
-    "https://nepaldining.online/wp-content/uploads/2026/06/butter-chicken-curry.jpg",
-    "https://nepaldining.online/wp-content/uploads/2026/06/cheese-naan.jpg",
-    "https://nepaldining.online/wp-content/uploads/2026/06/chicken-veg-soup-curry.jpg",
-    "https://nepaldining.online/wp-content/uploads/2026/06/chicken-tikka.jpg",
-    "https://nepaldining.online/wp-content/uploads/2026/06/momo.jpg",
-    "https://nepaldining.online/wp-content/uploads/2026/06/mutton-curry.jpg",
+    "https://www.nepaldining.online/wp-content/uploads/2026/06/butter-chicken-curry.jpg",
+    "https://www.nepaldining.online/wp-content/uploads/2026/06/cheese-naan.jpg",
+    "https://www.nepaldining.online/wp-content/uploads/2026/06/chicken-veg-soup-curry.jpg",
+    "https://www.nepaldining.online/wp-content/uploads/2026/06/chicken-tikka.jpg",
+    "https://www.nepaldining.online/wp-content/uploads/2026/06/momo.jpg",
+    "https://www.nepaldining.online/wp-content/uploads/2026/06/mutton-curry.jpg",
   ];
   const tagColors = ["#D4821A", "#769a00", "#4A90E2", "#E67E22", "#8B7BA8", "#C0392B"];
   const icons = ["🕌", "🌏", "💬", "🫓", "🍛", "👨‍👩‍👧", "🥜", "📶"];
   const flags: Record<string, string> = { "UK": "🇬🇧", "Japan": "🇯🇵", "Malaysia": "🇲🇾", "USA": "🇺🇸", "イギリス": "🇬🇧", "日本": "🇯🇵", "マレーシア": "🇲🇾", "アメリカ": "🇺🇸" };
   const blogImages = [
-    "https://nepaldining.online/wp-content/uploads/2026/06/chicken-rara-curry.jpg",
-    "https://nepaldining.online/wp-content/uploads/2026/06/prawn-curry.jpg",
-    "https://nepaldining.online/wp-content/uploads/2026/06/mix-veg-soup-curry.jpg",
+    "https://www.nepaldining.online/wp-content/uploads/2026/06/chicken-rara-curry.jpg",
+    "https://www.nepaldining.online/wp-content/uploads/2026/06/prawn-curry.jpg",
+    "https://www.nepaldining.online/wp-content/uploads/2026/06/mix-veg-soup-curry.jpg",
   ];
   const infoItems = [
     { icon: "📍", label: t.access.addressLabel, value: t.access.address },
@@ -46,7 +46,7 @@ export default function HomePage() {
     <>
       {/* HERO */}
       <section style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, backgroundImage: "url(https://nepaldining.online/wp-content/uploads/2026/06/butter-chicken-curry.jpg)", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div style={{ position: "absolute", inset: 0, backgroundImage: "url(https://www.nepaldining.online/wp-content/uploads/2026/06/butter-chicken-curry.jpg)", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(28,26,24,0.75) 0%, rgba(212,130,26,0.2) 50%, rgba(28,26,24,0.65) 100%)" }} />
         <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 4, background: "linear-gradient(90deg, #D4821A, #F0A830, #769a00)" }} />
         <div style={{ position: "relative", zIndex: 2, height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 24px" }}>
@@ -69,7 +69,7 @@ export default function HomePage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 64, alignItems: "center" }}>
             <div style={{ position: "relative" }}>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, borderRadius: 20, overflow: "hidden" }}>
-                {["https://nepaldining.online/wp-content/uploads/2026/06/chicken-tikka-masala.jpg","https://nepaldining.online/wp-content/uploads/2026/06/garlic-naan.jpg","https://nepaldining.online/wp-content/uploads/2026/06/mix-veg-curry.jpg","https://nepaldining.online/wp-content/uploads/2026/06/momo-veg-soup-curry.jpg"].map((src, i) => (
+                {["https://www.nepaldining.online/wp-content/uploads/2026/06/chicken-tikka-masala.jpg","https://www.nepaldining.online/wp-content/uploads/2026/06/garlic-naan.jpg","https://www.nepaldining.online/wp-content/uploads/2026/06/mix-veg-curry.jpg","https://www.nepaldining.online/wp-content/uploads/2026/06/momo-veg-soup-curry.jpg"].map((src, i) => (
                   <div key={i} style={{ aspectRatio: "1", overflow: "hidden", borderRadius: 12, boxShadow: "0 8px 24px rgba(28,26,24,0.12)" }}>
                     <img src={src} alt={altFromImageUrl(src, lang)} loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                   </div>

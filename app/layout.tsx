@@ -101,7 +101,7 @@ const structuredData = {
   // types, so this only ever risked going stale — it was claiming 975 reviews
   // when the real count had passed 1,000. Google shows the live rating from the
   // Business Profile instead, which stays correct without anyone editing it.
-  "menu": "https://nepaldining.online/menu",
+  "menu": `${SITE_URL}/menu/`,
   "acceptsReservations": true,
   // sameAs is how Google confirms this website and the off-site profiles are
   // one business rather than several — a direct local-ranking signal. All

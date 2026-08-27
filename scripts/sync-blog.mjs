@@ -15,7 +15,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const URL_ = process.env.BLOG_URL || 'https://nepaldining.online/blog-data/posts.json';
+const URL_ = process.env.BLOG_URL || 'https://www.nepaldining.online/blog-data/posts.json';
 const FILE = path.join(process.cwd(), 'app/lib/cmsPosts.ts');
 
 const res = await fetch(URL_, { cache: 'no-store' });

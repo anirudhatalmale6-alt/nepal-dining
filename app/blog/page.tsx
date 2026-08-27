@@ -15,19 +15,36 @@ function formatDate(dateStr: string, lang: string) {
   return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 }
 
-function postUrl(slug: string) {
-  return STATIC_SLUGS.has(slug) ? `/blog/${slug}/` : `/blog/${slug}/`;
+/**
+ * Links to a post, choosing the right kind of navigation for it.
+ *
+ * Posts the owner wrote in the admin panel have no Next route — .htaccess
+ * hands them to /blog/view.php. Routing to one through <Link> makes Next
+ * prefetch an RSC payload that cannot exist (a 404 in the console on every
+ * blog-index visit) and then attempt a client transition into a page React
+ * does not own. A plain anchor is not a workaround here, it is the correct
+ * navigation: those pages are rendered by PHP, so they need a real page load.
+ */
+function PostLink({ slug, style, children }: {
+  slug: string;
+  style?: React.CSSProperties;
+  children: React.ReactNode;
+}) {
+  const href = `/blog/${slug}/`;
+  if (STATIC_SLUGS.has(slug)) {
+    return <Link href={href} style={style}>{children}</Link>;
+  }
+  return <a href={href} style={style}>{children}</a>;
 }
 
 function BlogCard({ post, lang, variant = 'default', priority = false }: { post: BlogPost; lang: 'en' | 'ja'; variant?: 'featured' | 'default' | 'horizontal'; priority?: boolean }) {
   const color = CATEGORY_COLORS[post.category];
   const catName = CATEGORIES[post.category]?.[lang] || post.category;
   const dateStr = formatDate(post.date, lang);
-  const href = postUrl(post.slug);
 
   if (variant === 'featured') {
     return (
-      <Link href={href} style={{ display: 'block', position: 'relative', borderRadius: 16, overflow: 'hidden', height: 360, textDecoration: 'none' }}>
+      <PostLink slug={post.slug} style={{ display: 'block', position: 'relative', borderRadius: 16, overflow: 'hidden', height: 360, textDecoration: 'none' }}>
         <img src={post.image} alt={post.title[lang]} {...(priority ? { fetchPriority: 'high' as const } : { loading: 'lazy' as const })} decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, transparent 100%)' }} />
         <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: 24 }}>
@@ -40,13 +57,13 @@ function BlogCard({ post, lang, variant = 'default', priority = false }: { post:
             <span>{post.readingTime} {lang === 'ja' ? '読了' : 'read'}</span>
           </div>
         </div>
-      </Link>
+      </PostLink>
     );
   }
 
   if (variant === 'horizontal') {
     return (
-      <Link href={`/blog/${post.slug}`} style={{ display: 'flex', gap: 16, textDecoration: 'none', padding: 12, background: 'white', borderRadius: 12, border: '1px solid #f0f0f0', transition: 'box-shadow 0.2s' }}>
+      <PostLink slug={post.slug} style={{ display: 'flex', gap: 16, textDecoration: 'none', padding: 12, background: 'white', borderRadius: 12, border: '1px solid #f0f0f0', transition: 'box-shadow 0.2s' }}>
         <div style={{ width: 110, height: 90, borderRadius: 10, overflow: 'hidden', flexShrink: 0 }}>
           <img src={post.image} alt={post.title[lang]} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         </div>
@@ -59,29 +76,29 @@ function BlogCard({ post, lang, variant = 'default', priority = false }: { post:
             <span>{post.readingTime} {lang === 'ja' ? '読了' : 'read'}</span>
           </div>
         </div>
-      </Link>
+      </PostLink>
     );
   }
 
   return (
     <article style={{ background: 'white', borderRadius: 16, overflow: 'hidden', border: '1px solid #f0f0f0', display: 'flex', flexDirection: 'column' }}>
-      <Link href={`/blog/${post.slug}`} style={{ display: 'block', height: 180, overflow: 'hidden' }}>
+      <PostLink slug={post.slug} style={{ display: 'block', height: 180, overflow: 'hidden' }}>
         <img src={post.image} alt={post.title[lang]} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s' }} />
-      </Link>
+      </PostLink>
       <div style={{ padding: 20, display: 'flex', flexDirection: 'column', flex: 1 }}>
         <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 10 }}>
           <span style={{ background: `${color}15`, color: color, fontSize: 10, fontWeight: 700, padding: '3px 10px', borderRadius: 10, border: `1px solid ${color}30` }}>{catName}</span>
           <span style={{ fontSize: 11, color: '#aaa' }}>{dateStr}</span>
         </div>
         <h3 style={{ fontSize: 16, fontWeight: 700, color: '#1C1A18', lineHeight: 1.4, marginBottom: 8, fontFamily: 'Georgia, serif', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-          <Link href={`/blog/${post.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>{post.title[lang]}</Link>
+          <PostLink slug={post.slug} style={{ textDecoration: 'none', color: 'inherit' }}>{post.title[lang]}</PostLink>
         </h3>
         <p style={{ fontSize: 13, color: '#6B5E4E', lineHeight: 1.6, flex: 1, marginBottom: 14, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{post.description[lang]}</p>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 12, borderTop: '1px solid #f5f0eb' }}>
           <span style={{ fontSize: 11, color: '#999' }}>{post.readingTime} {lang === 'ja' ? '読了' : 'read'}</span>
-          <Link href={`/blog/${post.slug}`} style={{ fontSize: 12, fontWeight: 700, color: '#C0392B', textDecoration: 'none' }}>
+          <PostLink slug={post.slug} style={{ fontSize: 12, fontWeight: 700, color: '#C0392B', textDecoration: 'none' }}>
             {lang === 'ja' ? '記事を読む' : 'Read More'} →
-          </Link>
+          </PostLink>
         </div>
       </div>
     </article>
@@ -162,7 +179,7 @@ function Sidebar({ lang, activeCategory, onCategoryChange, onSearch, allPosts, p
           <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
             {popular.map((post, i) => (
               <li key={post.slug} style={{ padding: '10px 0', borderBottom: i < popular.length - 1 ? '1px solid #f5f0eb' : 'none' }}>
-                <Link href={`/blog/${post.slug}`} style={{ display: 'flex', gap: 10, textDecoration: 'none', alignItems: 'start' }}>
+                <PostLink slug={post.slug} style={{ display: 'flex', gap: 10, textDecoration: 'none', alignItems: 'start' }}>
                   <span style={{ width: 26, height: 26, borderRadius: '50%', background: '#FFF5EE', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 800, color: '#C0392B', flexShrink: 0 }}>
                     {i + 1}
                   </span>
@@ -170,7 +187,7 @@ function Sidebar({ lang, activeCategory, onCategoryChange, onSearch, allPosts, p
                     <p style={{ fontSize: 13, fontWeight: 600, color: '#1C1A18', lineHeight: 1.4, marginBottom: 3, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{post.title[lang]}</p>
                     <p style={{ fontSize: 11, color: '#aaa' }}>{formatDate(post.date, lang)}</p>
                   </div>
-                </Link>
+                </PostLink>
               </li>
             ))}
           </ul>
@@ -268,7 +285,7 @@ export default function BlogPage() {
     <div style={{ paddingTop: 72, minHeight: '100vh', background: '#FAFAF8' }}>
       {/* Hero Header */}
       <div style={{ background: 'linear-gradient(135deg, #1C1A18, #2D2820, #3a1515)', color: 'white', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(https://nepaldining.online/wp-content/uploads/2026/06/butter-chicken-curry.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.15 }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(https://www.nepaldining.online/wp-content/uploads/2026/06/butter-chicken-curry.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.15 }} />
         <div style={{ position: 'relative', maxWidth: 1100, margin: '0 auto', padding: '60px 24px 44px', textAlign: 'center' }}>
           <span style={{ display: 'inline-block', background: 'rgba(212,130,26,0.2)', color: '#D4821A', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '5px 14px', borderRadius: 20, marginBottom: 16 }}>
             {lang === 'ja' ? '旅行ブログ' : 'Travel Blog'}

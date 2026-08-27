@@ -11,4 +11,4 @@ export const SITE_URL = 'https://www.nepaldining.online';
 
 /** Default share/Discover card image. Absolute — crawlers don't resolve relatives. */
 export const OG_IMAGE =
-  'https://nepaldining.online/wp-content/uploads/2026/06/butter-chicken-curry.jpg';
+  'https://www.nepaldining.online/wp-content/uploads/2026/06/butter-chicken-curry.jpg';
