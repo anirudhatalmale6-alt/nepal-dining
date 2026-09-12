@@ -1043,8 +1043,8 @@ export const blogPosts: BlogPost[] = [
         "ja": "富良野ラベンダー畑：完全ガイド"
       },
       "description": {
-        "en": "Everything you need to know about visiting Furano's world-famous lavender fields — best time to visit, top farms, photo spots, and where to eat nearby.",
-        "ja": "富良野の世界的に有名なラベンダー畑訪問に必要な情報 — ベストシーズン、人気農園、フォトスポット、近くのグルメ情報。"
+        "en": "Furano lavender season: when it actually peaks, how the crowds and the traffic behave, and how to plan meals around a day in the fields.",
+        "ja": "富良野のラベンダーシーズン。実際の見頃、混雑と渋滞の傾向、そして花畑で過ごす一日の食事の組み立て方をご案内します。"
       },
       "date": "2025-04-22",
       "author": "Yuki Tanaka",
@@ -1062,52 +1062,52 @@ export const blogPosts: BlogPost[] = [
       "image": "https://www.nepaldining.online/wp-content/uploads/2026/06/chicken-veg-soup-curry.jpg",
       "featured": true,
       "popular": true,
-      "readingTime": "7 min",
+      "readingTime": "5 min",
       "sections": [
         {
           "heading": {
-            "en": "Furano: Japan's Lavender Capital",
-            "ja": "富良野：日本のラベンダーの首都"
+            "en": "When It Actually Peaks",
+            "ja": "実際の見頃"
           },
           "level": 2,
           "paragraphs": [
             {
-              "en": "Every year, millions of visitors descend on the small town of Furano in central Hokkaido to witness one of Japan's most spectacular natural phenomena — vast fields of purple lavender rolling across the gentle hills beneath the Tokachi mountain range.",
-              "ja": "毎年、数百万人の観光客が北海道中央部の小さな町・富良野を訪れ、日本で最も壮大な自然現象の一つを目にします — 十勝山脈のなだらかな丘に広がる紫色のラベンダー畑です。"
-            },
-            {
-              "en": "Peak lavender season is from mid-July to early August, with the absolute peak usually around the third week of July. Early bloomers can be seen from late June.",
-              "ja": "ラベンダーの見頃は7月中旬から8月上旬で、最盛期は通常7月の第3週頃です。早咲きの品種は6月下旬から見ることができます。"
+              "en": "Lavender season in the Furano valley runs through July into early August, with the strongest colour usually in the middle weeks of July. Early varieties start showing from late June. The exact peak moves with the weather each year, so if you are travelling specifically for it, check the farms' own updates in the week before you go rather than booking months ahead on a guess.",
+              "ja": "富良野エリアのラベンダーシーズンは7月から8月初旬にかけてで、色が最も濃くなるのは通常7月の中旬です。早咲きの品種は6月下旬から色づき始めます。見頃の正確な時期はその年の天候によって前後しますので、これを目的に旅行される場合は、数ヶ月前に見込みで予約するより、出発前の週に各農園の最新情報をご確認ください。"
             }
           ]
         },
         {
           "heading": {
-            "en": "Best Lavender Farms to Visit",
-            "ja": "おすすめラベンダー農園"
+            "en": "What the Season Does to the Valley",
+            "ja": "シーズン中の谷の様子"
           },
           "level": 2,
           "paragraphs": [
             {
-              "en": "Farm Tomita is the most famous lavender farm in Furano, offering free admission and multiple flower fields to explore. Nakafurano Lavender Park offers panoramic views from a hilltop location. Choei Lavender Farm is great for a quieter experience away from the crowds.",
-              "ja": "ファーム富田は富良野で最も有名なラベンダー農園で、入場無料で複数の花畑を探索できます。中富良野ラベンダー園は丘の上からのパノラマビューが楽しめます。町営ラベンダー園は混雑を避けた静かな体験に最適です。"
+              "en": "This is the busiest few weeks of the year here. Roads that are empty in May take much longer in July, car parks at the well-known farms fill by mid-morning, and restaurants that normally seat you straight away have a wait at lunchtime. None of that is a reason to avoid the season — it is a reason to start early.",
+              "ja": "この数週間が一年で最も混み合う時期です。5月にはがらがらの道も7月には時間がかかり、有名な農園の駐車場は午前中には埋まり、普段ならすぐに座れる飲食店も昼どきは待ちが出ます。これはシーズンを避ける理由ではなく、早めに動く理由です。"
+            },
+            {
+              "en": "The practical pattern that works: fields first thing, lunch early rather than at noon, and the afternoon somewhere quieter. Nakafurano and Kamifurano are both worth a look while you are between farms.",
+              "ja": "うまくいく組み立てはこうです。朝いちばんに花畑、昼食は正午ではなく早めに、午後は少し静かな場所で。農園の移動の合間に、中富良野と上富良野にも立ち寄る価値があります。"
             }
           ]
         },
         {
           "heading": {
-            "en": "Where to Eat During Lavender Season",
-            "ja": "ラベンダーシーズンのグルメ"
+            "en": "Eating Around a Field Day",
+            "ja": "花畑の日の食事"
           },
           "level": 2,
           "paragraphs": [
             {
-              "en": "During lavender season, we recommend arriving early for lunch at Nepal Dining (the kitchen opens at 11:00) to beat the midday rush. The Soup Curry is a must-try — a Hokkaido specialty that combines warm, spiced broth with fresh seasonal vegetables.",
-              "ja": "ラベンダーシーズン中は、ネパールダイニングのランチに早めに到着することをお勧めします（キッチンは11:00オープン）。スープカレーは必食です — 温かいスパイスブロスに新鮮な旬の野菜を組み合わせた北海道の名物です。"
+              "en": "We open at 11:00, and in July and August the first hour is the easy one — after about half past twelve the lunch service is busy. We are in Nakafurano, in the middle of the valley, so we are a short drive from most of the farms, and there is free parking.",
+              "ja": "当店は11:00に開店します。7月・8月は最初の1時間が狙い目で、12時半を過ぎるとランチタイムは混み合います。当店は谷の中ほどの中富良野にありますので、多くの農園から車ですぐです。無料駐車場もございます。"
             },
             {
-              "en": "For dinner, the tandoori specialties — chicken tikka, tandoori chicken, and freshly baked naan — make for an unforgettable evening. Pro tip: Book at least two weeks in advance during July and August.",
-              "ja": "ディナーにはタンドリー料理 — チキンティッカ、タンドリーチキン、焼きたてナン — が忘れられない夜を演出します。プロのアドバイス：7〜8月は少なくとも2週間前には予約しましょう。"
+              "en": "In hot weather people tend to order lighter — the soup curries go well in summer, and momo before them. If you are a group of more than four, call 0167-44-2444 ahead; in season the evening sitting fills up. Our hours are 11:00 to 15:00 and 17:00 to 21:00, Tuesday to Sunday, closed the second and fourth Wednesday.",
+              "ja": "暑い時期は軽めのご注文が多くなります。夏はスープカレーがよく合い、その前にモモもおすすめです。5名以上のグループの方は、0167-44-2444まで事前にお電話ください。シーズン中は夜の席が埋まります。営業時間は火曜日から日曜日の11:00〜15:00と17:00〜21:00、第2・第4水曜日は定休日です。"
             }
           ]
         }
@@ -1116,21 +1116,41 @@ export const blogPosts: BlogPost[] = [
         {
           "q": {
             "en": "When is the best time to see lavender in Furano?",
-            "ja": "富良野でラベンダーを見るのに最適な時期は？"
+            "ja": "富良野のラベンダーの見頃はいつですか？"
           },
           "a": {
-            "en": "Peak season is mid-July to early August, with the absolute peak around the third week of July.",
-            "ja": "見頃は7月中旬から8月上旬で、最盛期は7月の第3週頃です。"
+            "en": "July, with the strongest colour usually in the middle weeks. Early varieties show from late June. The peak shifts with the weather, so check the farms' own updates in the week before you travel.",
+            "ja": "7月で、色が最も濃くなるのは通常中旬です。早咲きは6月下旬から。見頃は天候で前後しますので、出発前の週に各農園の最新情報をご確認ください。"
           }
         },
         {
           "q": {
-            "en": "How do I get to Furano from Sapporo?",
-            "ja": "札幌から富良野へのアクセスは？"
+            "en": "How busy does it get?",
+            "ja": "どのくらい混みますか？"
           },
           "a": {
-            "en": "Take the JR Furano Line from Sapporo (about 2 hours), or drive via the Doto Expressway (about 2.5 hours).",
-            "ja": "JR富良野線で約2時間、または道東自動車道経由で約2.5時間です。"
+            "en": "These are the busiest weeks of the year in the valley. Car parks fill by mid-morning and lunch service is busy from about half past twelve. Starting early solves most of it.",
+            "ja": "一年で最も混み合う時期です。駐車場は午前中に埋まり、ランチは12時半ごろから混み合います。早めに動けばたいていは解決します。"
+          }
+        },
+        {
+          "q": {
+            "en": "Can we eat lunch near the lavender farms?",
+            "ja": "ラベンダー農園の近くで昼食はとれますか？"
+          },
+          "a": {
+            "en": "We are in Nakafurano, a short drive from most of the farms, open from 11:00 with free parking. The first hour is the quietest.",
+            "ja": "当店は中富良野にあり、多くの農園から車ですぐです。11:00開店、無料駐車場ございます。最初の1時間が最も空いています。"
+          }
+        },
+        {
+          "q": {
+            "en": "Should we book?",
+            "ja": "予約は必要ですか？"
+          },
+          "a": {
+            "en": "For a group of more than four in July and August, yes — call 0167-44-2444. Otherwise walk-ins are fine, especially at lunch.",
+            "ja": "7月・8月に5名以上のグループでお越しの場合はお願いします。0167-44-2444までお電話ください。それ以外、特にランチはご予約なしでも大丈夫です。"
           }
         }
       ]
@@ -1306,12 +1326,12 @@ export const blogPosts: BlogPost[] = [
     {
       "slug": "nepalese-food-guide",
       "title": {
-        "en": "A Complete Guide to Nepalese Cuisine: Dal Bhat, Momos & More",
-        "ja": "ネパール料理完全ガイド：ダルバート、モモなど"
+        "en": "Nepalese Food Explained: Momo, Curry and What to Order First",
+        "ja": "ネパール料理入門：モモ、カレー、最初に頼むなら"
       },
       "description": {
-        "en": "Discover the rich flavours of Nepalese cuisine — from the iconic dal bhat to crispy momos and fragrant curries. Learn what makes Himalayan food special.",
-        "ja": "ネパール料理の豊かな味わいを発見 — 象徴的なダルバートからモモ、香り高いカレーまで。ヒマラヤの食の魅力を学びましょう。"
+        "en": "What Nepalese food actually is, how it differs from Indian cooking, and — if you have never eaten it before — what to order on your first visit.",
+        "ja": "ネパール料理とはどんな料理か、インド料理とどう違うのか。そして初めて召し上がる方が最初に何を頼めばよいかをご案内します。"
       },
       "date": "2025-02-28",
       "author": "Nepal Dining Team",
@@ -1333,53 +1353,69 @@ export const blogPosts: BlogPost[] = [
       "sections": [
         {
           "heading": {
-            "en": "The Soul of Himalayan Cooking",
-            "ja": "ヒマラヤ料理の魂"
+            "en": "Where Nepalese Cooking Sits",
+            "ja": "ネパール料理の位置づけ"
           },
           "level": 2,
           "paragraphs": [
             {
-              "en": "Nepalese cuisine is a fascinating blend of Himalayan, Tibetan, and Indian influences, shaped by centuries of geography, trade routes, and cultural exchange. Unlike the bold, intense spicing of Indian cuisine, Nepalese cooking tends toward balance — aromatic without overwhelming, warming without burning.",
-              "ja": "ネパール料理はヒマラヤ、チベット、インドの影響が融合した魅力的な料理で、何世紀にもわたる地理、交易路、文化交流によって形作られてきました。インド料理の大胆で強いスパイスとは異なり、ネパール料理はバランスを重視します — 圧倒することなく香り高く、燃えるように辛くなく温かい。"
+              "en": "Nepal sits between Tibet and northern India, and its food shows it. From the north come the steamed dumplings and the simpler, warming dishes; from the south the spice blends and the tandoor. The result is its own thing rather than a version of either.",
+              "ja": "ネパールはチベットと北インドの間に位置しており、その食文化にもそれが表れています。北からは蒸し餃子や素朴で体の温まる料理が、南からはスパイスの調合とタンドールが伝わりました。その結果生まれたのは、どちらかの亜流ではない独自の料理です。"
+            },
+            {
+              "en": "The usual difference people notice is restraint. Nepalese cooking generally leans less on cream and oil than the Indian restaurant food most visitors know, and more on letting the main ingredient taste of itself. That is a matter of tendency, not a rule — plenty of Nepalese dishes are rich.",
+              "ja": "多くの方が最初に気づく違いは「控えめさ」です。ネパール料理は、一般的な海外のインド料理店の味に比べ、生クリームや油に頼ることが少なく、主となる食材そのものの味を活かす傾向があります。ただしこれは傾向であって規則ではありません。濃厚なネパール料理もたくさんあります。"
             }
           ]
         },
         {
           "heading": {
-            "en": "Dal Bhat: The National Dish",
-            "ja": "ダルバート：国民食"
+            "en": "Momo: Start Here",
+            "ja": "モモ：まずはここから"
           },
           "level": 2,
           "paragraphs": [
             {
-              "en": "Dal Bhat is the cornerstone of Nepalese cuisine — a complete meal of steamed rice (bhat) served with lentil soup (dal), vegetable curry (tarkari), and pickles (achar). It is eaten twice daily in Nepal and is deeply nutritious. At Nepal Dining, our Dal Bhat is prepared using traditional family recipes.",
-              "ja": "ダルバートはネパール料理の基本 — 蒸しご飯（バート）にレンズ豆のスープ（ダル）、野菜カレー（タルカリ）、漬物（アチャール）を添えた完全な食事です。ネパールでは1日2回食べられる栄養たっぷりの料理です。ネパールダイニングでは、伝統的な家庭のレシピで調理しています。"
+              "en": "If you have never eaten Nepalese food, order momo first. They are steamed dumplings, related to Tibetan momo and not far in spirit from gyoza, seasoned with ginger, garlic and spices rather than soy. They come six to a portion, and you can have them with a chicken or a vegetable filling.",
+              "ja": "ネパール料理が初めての方は、まずモモをご注文ください。チベットのモモに連なる蒸し餃子で、餃子と発想は遠くありませんが、醤油ではなく生姜・にんにく・スパイスで味付けします。6個入りで、餡はチキンまたは野菜からお選びいただけます。"
+            },
+            {
+              "en": "They are mild, they arrive before the curries, and they give a table something to share while the rest of the order is still cooking. We also serve them in a soup curry — the Momo and Vegetable Soup Curry is the dish people most often come back for.",
+              "ja": "辛くなく、カレーより先にお出しできますので、残りのお料理ができあがるまでテーブルで取り分けていただけます。スープカレーに入れたメニューもございます。モモ野菜スープカレーは、リピーターの多い一品です。"
             }
           ]
         },
         {
           "heading": {
-            "en": "Momos: Nepal's Beloved Dumplings",
-            "ja": "モモ：ネパールの人気餃子"
+            "en": "Dal Bhat, and What We Actually Serve",
+            "ja": "ダルバートについて、そして当店でお出ししているもの"
           },
           "level": 2,
           "paragraphs": [
             {
-              "en": "Momos are Tibetan-Nepalese steamed dumplings similar in concept to Chinese dumplings or Japanese gyoza, but with distinct spicing using ginger, garlic, and Himalayan spices. They are typically served with a spicy tomato-sesame dipping sauce. At Nepal Dining, our momos are handmade fresh daily.",
-              "ja": "モモはチベット・ネパール風の蒸し餃子で、中国の餃子や日本の餃子に似ていますが、ショウガ、ニンニク、ヒマラヤのスパイスを使った独特の味付けが特徴です。通常、スパイシーなトマトごまのディップソースと一緒に提供されます。ネパールダイニングのモモは毎日手作りです。"
+              "en": "Dal bhat is the everyday meal of Nepal: rice with lentil soup, a vegetable curry and pickles, eaten twice a day by much of the country. It is the dish people mean when they talk about Nepalese home cooking, and it is worth knowing about.",
+              "ja": "ダルバートはネパールの日常食です。ライスに、レンズ豆のスープ、野菜のカレー、漬物を添えたもので、国内の多くの人が一日二回これを食べます。ネパールの家庭料理といえばこの料理を指し、知っておく価値があります。"
+            },
+            {
+              "en": "To be straight with you: dal bhat as a set is not on our menu. What we serve is a curry menu — around twenty curries, three soup curries, naan baked to order, rice, tandoori chicken, chicken tikka and momo. Our two dal dishes, Dal Mutton and Dal Chicken, are lentil curries cooked with meat, so they are not the vegetarian dal of a dal bhat plate. We would rather tell you that here than have you arrive expecting something else.",
+              "ja": "正直にお伝えします。セットとしてのダルバートは当店のメニューにはございません。当店はカレーを中心としたメニューで、カレー約20種類、スープカレー3種類、その都度焼き上げるナン、ライス、タンドリーチキン、チキンティッカ、モモをご用意しています。ダルを使った料理はダルマトンカレーとダルチキンカレーの2品ですが、いずれも肉と一緒に煮込んだレンズ豆のカレーですので、ダルバートのベジタリアンのダルとは別のものです。お越しになってから違ったということのないよう、ここでお伝えしておきます。"
             }
           ]
         },
         {
           "heading": {
-            "en": "Nepalese Curry Traditions",
-            "ja": "ネパールのカレー伝統"
+            "en": "Heat, and Asking for Changes",
+            "ja": "辛さとご要望について"
           },
           "level": 2,
           "paragraphs": [
             {
-              "en": "Nepalese curries differ from their Indian counterparts in subtle but important ways. They tend to be less oily, less creamy, and more focused on the natural flavour of the main ingredient. At Nepal Dining, we can adjust the spice level to suit your preference — from mild to traditional heat.",
-              "ja": "ネパールのカレーはインドのカレーと微妙ですが重要な違いがあります。油分やクリームが少なく、主食材の自然な風味をより重視しています。ネパールダイニングでは、マイルドから伝統的な辛さまで、お好みに合わせてスパイスレベルを調整できます。"
+              "en": "You choose the spice level yourself, so \"Nepalese food is spicy\" is not a reason to stay away. Ordered mild, butter chicken has no heat in it at all. Ordered at the top of the range, several curries will take the roof off. Tell us where on that scale you want to be.",
+              "ja": "辛さはお客様ご自身でお選びいただけますので、「ネパール料理は辛い」というのは敬遠する理由にはなりません。マイルドでご注文いただければ、バターチキンに辛みはまったくありません。一番上の辛さでは、かなり刺激的なカレーもございます。どのあたりがお好みか、遠慮なくお申し付けください。"
+            },
+            {
+              "en": "The same applies to what goes in. Vegetarian dishes are on the standard menu. Our standard naan dough contains dairy and egg and several curries are finished with cream or yoghurt, but the kitchen will prepare dishes without them on request — and the same for nut-free cooking and allergies. Ask when you order, not after.",
+              "ja": "内容についても同様です。ベジタリアン料理は通常メニューにございます。当店の通常のナン生地には乳製品と卵を使用し、いくつかのカレーは生クリームやヨーグルトで仕上げていますが、ご要望に応じてそれらを使わずにお作りします。ナッツ不使用やアレルギー対応も同じです。お料理が届いてからではなく、ご注文の際にお申し付けください。"
             }
           ]
         }
@@ -1388,11 +1424,21 @@ export const blogPosts: BlogPost[] = [
         {
           "q": {
             "en": "What is dal bhat?",
-            "ja": "ダルバートとは？"
+            "ja": "ダルバートとは何ですか？"
           },
           "a": {
-            "en": "Dal bhat is the national dish of Nepal — steamed rice with lentil soup, vegetable curry, and pickles. It is eaten twice daily and is deeply nutritious.",
-            "ja": "ダルバートはネパールの国民食 — 蒸しご飯にレンズ豆のスープ、野菜カレー、漬物を添えたものです。1日2回食べられ、栄養たっぷりです。"
+            "en": "The everyday meal of Nepal — rice with lentil soup, vegetable curry and pickles. It is not on our menu as a set; we serve a curry menu instead, and our two dal dishes are cooked with mutton or chicken.",
+            "ja": "ネパールの日常食で、ライスにレンズ豆のスープ、野菜カレー、漬物を添えたものです。当店ではセットとしてのご用意はなく、カレー中心のメニューとなっております。当店のダル料理2品はマトンまたはチキンと一緒に調理しています。"
+          }
+        },
+        {
+          "q": {
+            "en": "What should I order if I have never had Nepalese food?",
+            "ja": "ネパール料理が初めてなら何を頼めばよいですか？"
+          },
+          "a": {
+            "en": "Momo first — mild steamed dumplings, six to a portion, chicken or vegetable. Then butter chicken if you want something gentle, or a soup curry if you want the Hokkaido speciality.",
+            "ja": "まずはモモです。辛くない蒸し餃子で6個入り、チキンまたは野菜からお選びいただけます。そのあとは、やさしい味がお好みならバターチキン、北海道名物を試すならスープカレーがおすすめです。"
           }
         },
         {
@@ -1401,8 +1447,18 @@ export const blogPosts: BlogPost[] = [
             "ja": "ネパール料理は辛いですか？"
           },
           "a": {
-            "en": "It can be, but typically more moderate than Indian food. At Nepal Dining, we adjust the spice level to your preference.",
-            "ja": "辛くすることもできますが、通常はインド料理よりマイルドです。ネパールダイニングではお好みに合わせて辛さを調整できます。"
+            "en": "Only if you order it that way. You set the spice level, and mild really is mild.",
+            "ja": "ご注文次第です。辛さはお選びいただけますし、マイルドは本当にマイルドです。"
+          }
+        },
+        {
+          "q": {
+            "en": "Is momo vegetarian?",
+            "ja": "モモはベジタリアンですか？"
+          },
+          "a": {
+            "en": "It comes both ways. Ask for the vegetable filling when you order.",
+            "ja": "チキンと野菜の2種類がございます。ご注文の際に「野菜」とお伝えください。"
           }
         }
       ]
@@ -1410,12 +1466,12 @@ export const blogPosts: BlogPost[] = [
     {
       "slug": "hokkaido-food-guide",
       "title": {
-        "en": "Hokkaido Food Guide: Must-Try Dishes in Japan's Food Paradise",
-        "ja": "北海道グルメガイド：日本の食の楽園で食べるべき料理"
+        "en": "Soup Curry and Hokkaido Food: What to Eat in the Furano Area",
+        "ja": "スープカレーと北海道の食：富良野エリアで何を食べるか"
       },
       "description": {
-        "en": "Hokkaido is Japan's culinary crown jewel. This guide covers essential dishes from fresh seafood and miso ramen to lavender ice cream and Nepalese curry in Furano.",
-        "ja": "北海道は日本の食の王冠。新鮮なシーフード、味噌ラーメンからラベンダーアイスクリーム、富良野のネパールカレーまで。"
+        "en": "Hokkaido food explained for visitors — what the island is known for, what soup curry actually is, and what you can eat in the Furano valley without a long drive.",
+        "ja": "旅行者のための北海道グルメガイド。北海道の食の特徴、スープカレーとは何か、そして遠出をせずに富良野エリアで食べられるものをご紹介します。"
       },
       "date": "2025-01-05",
       "author": "Nepal Dining Team",
@@ -1432,57 +1488,73 @@ export const blogPosts: BlogPost[] = [
       "image": "https://www.nepaldining.online/wp-content/uploads/2026/06/chicken-tikka-masala.jpg",
       "featured": false,
       "popular": true,
-      "readingTime": "8 min",
+      "readingTime": "5 min",
       "sections": [
         {
           "heading": {
-            "en": "Why Hokkaido is Japan's Food Capital",
-            "ja": "なぜ北海道は日本のグルメの首都なのか"
+            "en": "What Hokkaido Is Known For",
+            "ja": "北海道の食の特徴"
           },
           "level": 2,
           "paragraphs": [
             {
-              "en": "Ask any Japanese person where the best food in Japan comes from, and more often than not, they will say Hokkaido. Japan's northernmost main island produces a disproportionate amount of the country's finest ingredients — from crab and sea urchin to butter, cheese, and melons.",
-              "ja": "「日本で一番おいしい食べ物はどこの?」と日本人に聞くと、多くの人が北海道と答えるでしょう。日本最北の主要島は、カニやウニからバター、チーズ、メロンまで、日本最高品質の食材を豊富に生産しています。"
+              "en": "Hokkaido has a reputation in Japan for its ingredients rather than for any one dish. Dairy, potatoes, corn, onions and melons come off the land; crab, scallops, sea urchin and salmon come out of the cold water around it. Much of what you eat here is good because of what went into it, not because of what was done to it.",
+              "ja": "北海道は日本国内で、特定の料理というより「食材」で知られています。陸からは乳製品、じゃがいも、とうもろこし、玉ねぎ、メロン。周囲の冷たい海からは、かに、ほたて、うに、鮭。この土地の食事の多くは、凝った調理よりも素材の良さでおいしいのです。"
+            },
+            {
+              "en": "The seafood is mostly a coastal experience, and Furano is inland — a couple of hours from either coast. Plan a market visit around a trip to Sapporo or Hakodate rather than expecting it on your doorstep here.",
+              "ja": "海産物は基本的に沿岸で楽しむものです。富良野は内陸にあり、どちらの海岸からも車で2時間ほどかかります。市場めぐりは札幌や函館への移動に合わせて計画されるとよいでしょう。"
             }
           ]
         },
         {
           "heading": {
-            "en": "Seafood: Hokkaido's Greatest Treasure",
-            "ja": "シーフード：北海道最大の宝"
+            "en": "Soup Curry: The One to Try",
+            "ja": "スープカレー：試すならこれ"
           },
           "level": 2,
           "paragraphs": [
             {
-              "en": "Hokkaido's cold waters produce extraordinary seafood. Tarabagani (king crab) is the king of Hokkaido seafood — succulent, sweet, and available at most seafood markets. Uni (sea urchin), Hotate (scallops), and fresh salmon are equally spectacular. The best seafood markets include Sapporo's Nijo Market and Hakodate Morning Market.",
-              "ja": "北海道の冷たい海は素晴らしいシーフードを生み出します。タラバガニは北海道シーフードの王様 — 甘くてジューシー。ウニ、ホタテ、新鮮なサーモンも同様に素晴らしいです。おすすめの海鮮市場は札幌の二条市場と函館朝市です。"
+              "en": "Soup curry is Hokkaido's own contribution to Japanese food. It began in Sapporo and it is exactly what the name says — not a thick curry sauce but a thin, aromatic spiced broth, served with vegetables and a protein, and eaten with rice on the side.",
+              "ja": "スープカレーは、北海道が日本の食に加えた独自の一品です。札幌で生まれ、その名のとおり、とろみのあるカレーソースではなく、さらりとした香り高いスパイススープに、野菜とメインの具材を合わせ、ライスを添えていただきます。"
+            },
+            {
+              "en": "It suits this climate. In winter it is the most warming thing on any menu, and because you choose the heat level, it works for people who do not normally eat spicy food. We serve three: Mix Vegetable, Chicken and Vegetable, and Momo and Vegetable — the last is the one people come back for.",
+              "ja": "この気候によく合います。冬にはどのメニューよりも体を温めてくれますし、辛さを選べるため、普段辛いものを召し上がらない方にも向いています。当店では3種類ご用意しています。ミックス野菜、チキン＆野菜、そしてモモ＆野菜です。最後のものはリピーターの多い一品です。"
             }
           ]
         },
         {
           "heading": {
-            "en": "Ramen & Soup Curry",
-            "ja": "ラーメンとスープカレー"
+            "en": "Eating in the Furano Valley",
+            "ja": "富良野エリアでの食事"
           },
           "level": 2,
           "paragraphs": [
             {
-              "en": "Sapporo miso ramen is world-famous — rich, buttery broth with thick noodles. But don't miss Hokkaido's unique contribution to curry culture: soup curry. Born in Sapporo in the 1970s, soup curry combines Indian-inspired spiced broth with Japanese vegetables and ingredients. Nepal Dining's soup curry blends this Hokkaido tradition with authentic Himalayan flavours.",
-              "ja": "札幌味噌ラーメンは世界的に有名 — 濃厚でバターの香る味噌スープと太麺。そして北海道独自のカレー文化：スープカレーも見逃せません。1970年代に札幌で生まれたスープカレーは、インド風のスパイスブロスに日本の野菜を組み合わせたもの。ネパールダイニングのスープカレーはこの北海道の伝統とヒマラヤの本格的な味わいを融合しています。"
+              "en": "The valley is farming country, so what it does well is what it grows — corn, dairy, melons in season. Restaurants are spread out and many close between lunch and dinner, so distances and opening hours matter more here than in a city.",
+              "ja": "この谷は農業地帯ですので、得意なのは育てているものです。とうもろこし、乳製品、そして旬のメロン。飲食店は点在しており、ランチとディナーの間に閉まる店も多いため、都市部よりも距離と営業時間が重要になります。"
+            },
+            {
+              "en": "We are a Nepalese and Indian restaurant based in Nakafurano, the town in the middle of the valley — about fifteen minutes by car from Furano Ski Resort and from Kamifurano, around thirty from Biei. Free parking, sixty seats, and English-speaking staff.",
+              "ja": "当店は谷の中ほどの町、中富良野にあるネパール・インド料理店です。富良野スキー場および上富良野から車でおよそ15分、美瑛からは30分ほどです。無料駐車場、60席、英語対応のスタッフがおります。"
             }
           ]
         },
         {
           "heading": {
-            "en": "Furano's Unique Food Scene",
-            "ja": "富良野独自のグルメシーン"
+            "en": "If You Have Dietary Requirements",
+            "ja": "食事制限のある方へ"
           },
           "level": 2,
           "paragraphs": [
             {
-              "en": "Furano is famous for its corn, lavender soft serve ice cream, Furano melons, and local cheese. Nepal Dining adds an international dimension to this food scene, offering halal-friendly options and authentic South Asian cuisine using Furano's excellent local produce.",
-              "ja": "富良野はトウモロコシ、ラベンダーソフトクリーム、富良野メロン、地元チーズで有名です。ネパールダイニングはこのグルメシーンに国際的な次元を加え、富良野の優れた地元食材を使ったハラール対応の本格南アジア料理を提供しています。"
+              "en": "Vegetarian dishes are on our standard menu: Mix Vegetable Curry, Mix Vegetable Soup Curry, and momo with a vegetable filling. Please note that our two dal dishes are cooked with mutton or chicken, so they are not vegetarian despite the name.",
+              "ja": "ベジタリアン料理は通常メニューにございます。ミックス野菜カレー、ミックス野菜スープカレー、そして野菜餡のモモです。なお、当店のダル料理2品はマトンまたはチキンと一緒に調理しておりますので、名前に反してベジタリアンではございません。"
+            },
+            {
+              "en": "We are halal-friendly — not halal-certified, and we say so plainly. Vegan, nut-free and allergy requests are possible on request: our standard naan contains dairy and egg, but the kitchen will work around it if you tell us when you order.",
+              "ja": "当店はハラールフレンドリーです。ハラール認証店ではありませんので、その点ははっきりとお伝えしています。ヴィーガン、ナッツ不使用、アレルギー対応もご相談いただけます。当店の通常のナンには乳製品と卵が入っていますが、ご注文時にお申し付けいただければ対応いたします。"
             }
           ]
         }
@@ -1490,22 +1562,42 @@ export const blogPosts: BlogPost[] = [
       "faq": [
         {
           "q": {
-            "en": "What food is Hokkaido most famous for?",
-            "ja": "北海道で最も有名な食べ物は？"
+            "en": "What is soup curry?",
+            "ja": "スープカレーとは何ですか？"
           },
           "a": {
-            "en": "Hokkaido is famous for fresh seafood (crab, sea urchin, scallops), Sapporo miso ramen, dairy products, corn, potatoes, and lamb.",
-            "ja": "北海道は新鮮なシーフード（カニ、ウニ、ホタテ）、札幌味噌ラーメン、乳製品、トウモロコシ、ジャガイモ、ラム肉で有名です。"
+            "en": "A Hokkaido dish that began in Sapporo: a thin, aromatic spiced broth with vegetables and a protein, eaten with rice on the side rather than poured over it. You choose the heat level.",
+            "ja": "札幌で生まれた北海道の料理です。さらりとした香り高いスパイススープに野菜とメインの具材を合わせ、ライスはかけずに添えていただきます。辛さはお選びいただけます。"
           }
         },
         {
           "q": {
-            "en": "Can vegetarians eat well in Hokkaido?",
-            "ja": "ベジタリアンは北海道で楽しめますか？"
+            "en": "Can I eat good seafood in Furano?",
+            "ja": "富良野で海鮮は食べられますか？"
           },
           "a": {
-            "en": "Yes! Nepal Dining in Furano offers a wide range of vegetarian curries, dal, and vegetable momos.",
-            "ja": "はい！富良野のネパールダイニングでは、ベジタリアンカレー、ダル、野菜モモなど幅広いベジタリアンメニューがあります。"
+            "en": "Furano is inland, a couple of hours from either coast, so the seafood markets are better combined with a trip to Sapporo or Hakodate.",
+            "ja": "富良野は内陸にあり、どちらの海岸からも2時間ほどかかります。海鮮市場は札幌や函館への旅程に組み込まれるのがおすすめです。"
+          }
+        },
+        {
+          "q": {
+            "en": "Is there vegetarian food in the Furano area?",
+            "ja": "富良野エリアにベジタリアン料理はありますか？"
+          },
+          "a": {
+            "en": "On our menu: Mix Vegetable Curry, Mix Vegetable Soup Curry and vegetable momo. Our dal dishes are cooked with meat, so they are not an option.",
+            "ja": "当店では、ミックス野菜カレー、ミックス野菜スープカレー、野菜餡のモモがございます。ダル料理は肉と一緒に調理しているため、対象外となります。"
+          }
+        },
+        {
+          "q": {
+            "en": "Where exactly are you?",
+            "ja": "場所はどこですか？"
+          },
+          "a": {
+            "en": "Nakafurano, in the middle of the Furano valley. About fifteen minutes by car from Furano Ski Resort and from Kamifurano, around thirty from Biei. Free parking.",
+            "ja": "富良野エリアの中ほど、中富良野です。富良野スキー場および上富良野から車でおよそ15分、美瑛からは30分ほどです。無料駐車場がございます。"
           }
         }
       ]
@@ -1517,8 +1609,8 @@ export const blogPosts: BlogPost[] = [
         "ja": "美瑛青い池：富良野からの完全ガイド"
       },
       "description": {
-        "en": "Discover the ethereal Biei Blue Pond — one of Japan's most photographed natural wonders. How to get there from Furano, best times to visit, and photography tips.",
-        "ja": "幻想的な美瑛青い池を発見 — 日本で最も撮影される自然の驚異の一つ。富良野からのアクセス、ベストシーズン、撮影のヒント。"
+        "en": "Visiting the Biei Blue Pond from the Furano valley: why it is that colour, when to go, what winter changes, and where to eat on the way back.",
+        "ja": "富良野エリアから美瑛の青い池へ。なぜあの色なのか、いつ行くとよいか、冬はどう変わるか、そして帰り道の食事どころをご案内します。"
       },
       "date": "2025-01-20",
       "author": "Yuki Tanaka",
@@ -1539,44 +1631,65 @@ export const blogPosts: BlogPost[] = [
       "sections": [
         {
           "heading": {
-            "en": "A Natural Wonder",
-            "ja": "自然の驚異"
+            "en": "Why It Is That Colour",
+            "ja": "なぜあの色なのか"
           },
           "level": 2,
           "paragraphs": [
             {
-              "en": "There are few sights in Japan as otherworldly as Biei's Blue Pond. An accidental wonder — the pond formed when sediment dams were built to protect Biei from volcanic activity — it now draws visitors from across the globe to marvel at its impossible shade of turquoise.",
-              "ja": "美瑛の青い池ほど幻想的な光景は日本にもほとんどありません。偶然の産物 — 火山活動から美瑛を守るための砂防ダムで形成された池 — 今では世界中から訪れる人々がその信じられないようなターコイズブルーに魅了されています。"
+              "en": "The Blue Pond was not built to be looked at. It formed behind erosion-control dams put in to protect Biei from volcanic mudflows, and the flooded trees still standing in it are the ones that were there before the water arrived.",
+              "ja": "青い池は、見せるためにつくられたものではありません。美瑛を火山泥流から守るための治山ダムによって水が溜まり、できあがった池です。水中に立ち枯れた木々は、水が来る前からそこにあったものです。"
             },
             {
-              "en": "The vivid turquoise colour comes from naturally occurring aluminium hydroxide particles that scatter light in a distinctive way.",
-              "ja": "鮮やかなターコイズの色は、天然の水酸化アルミニウム粒子が光を独特の方法で散乱させることによるものです。"
+              "en": "The colour comes from mineral particles suspended in the water — aluminium compounds carried in from upstream — which scatter light towards the blue end. It is genuinely that colour rather than a trick of photography, though it does shift with the light and the weather, and a flat grey day will not look like the postcards.",
+              "ja": "あの色は、水中に漂う鉱物の微粒子によるものです。上流から流れ込むアルミニウムの化合物が光を散乱させ、青系の色に見せています。写真の加工ではなく実際にあの色ですが、光や天候によって変化しますので、曇り空の日には絵葉書のようには見えません。"
             }
           ]
         },
         {
           "heading": {
-            "en": "Getting There from Furano",
-            "ja": "富良野からのアクセス"
+            "en": "When to Go",
+            "ja": "訪れる時期"
           },
           "level": 2,
           "paragraphs": [
             {
-              "en": "Biei Blue Pond is approximately 30 km from central Furano, about a 35-40 minute drive. The most popular route combines Furano, Biei's flower fields, Blue Pond, and Asahikawa in a single day trip. Public transport is limited, so renting a car is recommended.",
-              "ja": "美瑛青い池は富良野中心部から約30km、車で約35〜40分です。最も人気のあるルートは、富良野、美瑛の花畑、青い池、旭川を1日で巡るコースです。公共交通機関は限られているため、レンタカーがおすすめです。"
+              "en": "Summer gives the strongest contrast, with the turquoise set against green. Autumn is quieter. In winter the pond is lit in the evenings — the illumination is run by the town and the dates move from year to year, so check locally before making a special trip for it.",
+              "ja": "夏は緑とのコントラストが最も強く出ます。秋は静かです。冬は夕方にライトアップが行われますが、これは町が主催しており日程は年によって変わりますので、これを目当てに行かれる場合は現地の情報をご確認ください。"
+            },
+            {
+              "en": "Early morning is the calmest water and the best reflections, at any time of year. Later in the day the surface picks up wind and the mirror effect goes.",
+              "ja": "一年を通して、水面が最も静かで反射が美しいのは早朝です。日が高くなると風で水面が波立ち、鏡のような映り込みは失われます。"
             }
           ]
         },
         {
           "heading": {
-            "en": "Best Times to Visit",
-            "ja": "おすすめの時期"
+            "en": "Getting There, and Getting Back",
+            "ja": "行き方と帰り道"
           },
           "level": 2,
           "paragraphs": [
             {
-              "en": "The pond is beautiful year-round. In summer, the turquoise is most vivid against green foliage. In winter (December through March), the pond is illuminated at night, creating a magical blue glow amid the snowy landscape. Early morning visits offer the calmest water and best reflections.",
-              "ja": "池は一年中美しいです。夏は緑の木々を背景にターコイズが最も鮮やかです。冬（12月〜3月）は夜間ライトアップがあり、雪景色の中で幻想的な青い輝きを創り出します。早朝は水面が最も穏やかで、最高のリフレクションが撮れます。"
+              "en": "The pond is north of the Furano valley, past Biei. Public transport is limited and seasonal, so most visitors drive. We would rather not quote you a journey time we have not driven ourselves — check it on the day, and in winter allow noticeably longer than the map says, because the roads are snow-covered for months.",
+              "ja": "青い池は富良野エリアの北、美瑛のさらに先にあります。公共交通は本数が限られ季節によっても変わるため、多くの方は車で向かわれます。当店が実際に走っていない区間の所要時間を申し上げるのは控えます。当日ご確認ください。冬は道路が何ヶ月も雪に覆われますので、地図の表示よりかなり余裕をみてください。"
+            },
+            {
+              "en": "What we can tell you is our own end of it: from Biei down to us in Nakafurano is around thirty minutes by car in winter conditions. If you are heading back south towards Furano after the pond, we are roughly on the way, with free parking.",
+              "ja": "お伝えできるのは当店側の距離です。美瑛から中富良野の当店までは、冬の路面状況で車でおよそ30分です。青い池のあと富良野方面へ南下される場合、当店はおおむね通り道にあたります。無料駐車場もございます。"
+            }
+          ]
+        },
+        {
+          "heading": {
+            "en": "Eating on the Way",
+            "ja": "道中の食事"
+          },
+          "level": 2,
+          "paragraphs": [
+            {
+              "en": "A day trip north tends to end cold and late, which is the point at which soup curry earns its reputation. We open 11:00 to 15:00 and 17:00 to 21:00, Tuesday to Sunday, and close on the second and fourth Wednesday of each month. The number is 0167-44-2444.",
+              "ja": "北への日帰り旅行は、体が冷えて遅くなりがちです。そんなときこそスープカレーの出番です。当店の営業は火曜日から日曜日、11:00〜15:00と17:00〜21:00。毎月第2・第4水曜日は定休日です。お電話は0167-44-2444です。"
             }
           ]
         }
@@ -1584,22 +1697,42 @@ export const blogPosts: BlogPost[] = [
       "faq": [
         {
           "q": {
-            "en": "Why is Biei Blue Pond so blue?",
-            "ja": "なぜ美瑛の青い池はあんなに青いの？"
+            "en": "Why is the Biei Blue Pond blue?",
+            "ja": "なぜ美瑛の青い池は青いのですか？"
           },
           "a": {
-            "en": "The vivid turquoise colour comes from naturally occurring aluminium hydroxide particles that scatter light distinctively.",
-            "ja": "鮮やかなターコイズの色は、天然の水酸化アルミニウム粒子が光を独特に散乱させることで生まれます。"
+            "en": "Mineral particles suspended in the water scatter light towards the blue. It really is that colour, though it changes with light and weather.",
+            "ja": "水中に漂う鉱物の微粒子が光を散乱させ、青く見せています。実際にあの色ですが、光と天候によって変化します。"
           }
         },
         {
           "q": {
-            "en": "How far is Biei Blue Pond from Furano?",
-            "ja": "美瑛青い池は富良野からどのくらい？"
+            "en": "Is the Blue Pond worth visiting in winter?",
+            "ja": "冬に青い池へ行く価値はありますか？"
           },
           "a": {
-            "en": "About 30 km, approximately 35-40 minutes by car.",
-            "ja": "約30km、車で約35〜40分です。"
+            "en": "It is lit in the evenings in winter, but the illumination is run by the town and the dates change each year — check locally before planning a trip around it.",
+            "ja": "冬は夕方にライトアップされますが、町の主催で日程が毎年変わります。これを目的に計画される場合は現地の情報をご確認ください。"
+          }
+        },
+        {
+          "q": {
+            "en": "How far is the Blue Pond from Furano?",
+            "ja": "富良野から青い池までどのくらいですか？"
+          },
+          "a": {
+            "en": "It is north of Biei, and we would rather not quote a drive time we have not measured. From Biei down to us in Nakafurano is about thirty minutes in winter.",
+            "ja": "美瑛の北にあります。当店が実測していない区間の所要時間は申し上げません。美瑛から中富良野の当店までは、冬でおよそ30分です。"
+          }
+        },
+        {
+          "q": {
+            "en": "Do I need a car?",
+            "ja": "車は必要ですか？"
+          },
+          "a": {
+            "en": "Realistically yes. Public transport to the pond is limited and seasonal.",
+            "ja": "実質的には必要です。青い池への公共交通は本数が限られ、季節によっても変わります。"
           }
         }
       ]
